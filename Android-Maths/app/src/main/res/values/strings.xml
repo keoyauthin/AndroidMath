@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Android-Maths</string>
+
+    <!-- String related to the navigation drawer -->
+    <string name="nav_drawer_grp_defaut_home">Accueil</string>
+    <string name="nav_drawer_grp_math_polynome">Polynômes</string>
+    <string name="nav_drawer_grp_math_stat">Séries statistiques</string>
+    <string name="nav_drawer_grp_math_proba">Probabilités</string>
+    <string name="nav_drawer_grp_math_moyennes">Moyennes</string>
+    <string name="nav_drawer_grp_math_matriciel">Calculs matriciels</string>
+    <string name="nav_drawer_grp_item_infos">A propos</string>
+</resources>
