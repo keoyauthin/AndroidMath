@@ -2,6 +2,8 @@
     <string name="app_name">Android-Maths</string>
 
     <!-- String related to the navigation drawer -->
+    <string name="nav_drawer_open">Ouvrir le menu de navigation</string>
+    <string name="nav_drawer_close">Fermer le menu de navigation</string>
     <string name="nav_drawer_grp_defaut_home">Accueil</string>
     <string name="nav_drawer_grp_math_polynome">Polynômes</string>
     <string name="nav_drawer_grp_math_stat">Séries statistiques</string>
