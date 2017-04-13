@@ -1,45 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
-
     <group
         android:id="@+id/nav_drawer_grp_default"
         android:checkableBehavior="single"
-        android:orderInCategory="1">
+        android:orderInCategory="0">
         <item
             android:id="@+id/nav_drawer_grp_default_item_home"
-            android:title="@string/nav_drawer_grp_defaut_home"/>
+            android:title="@string/nav_drawer_grp_defaut_home"
+            android:icon="@drawable/ic_home_black_24dp"/>
     </group>
 
     <group
+        android:id="@+id/nav_drawer_grp_ope"
         android:checkableBehavior="single"
-        android:orderInCategory="2">
+        android:orderInCategory="1">
         <item
             android:id="@+id/nav_drawer_grp_math_item_polynomes"
-            android:title="@string/nav_drawer_grp_math_polynome"/>
+            android:title="@string/nav_drawer_grp_math_polynome"
+            android:icon="@drawable/ic_icon_polynome"/>
         <item
             android:id="@+id/digital_nav_drawer_grp_math_item_stat"
-            android:title="@string/nav_drawer_grp_math_stat"/>
+            android:title="@string/nav_drawer_grp_math_stat"
+            android:icon="@drawable/ic_icon_analytics"/>
         <item
             android:id="@+id/digital_nav_drawer_grp_math_item_proba"
-            android:title="@string/nav_drawer_grp_math_proba"/>
+            android:title="@string/nav_drawer_grp_math_proba"
+            android:icon="@drawable/ic_icon_probability"/>
         <item
             android:id="@+id/digital_nav_drawer_grp_math_item_moyenne"
-            android:title="@string/nav_drawer_grp_math_moyennes"/>
+            android:title="@string/nav_drawer_grp_math_moyennes"
+            android:icon="@drawable/ic_icon_moyenne"/>
         <item
             android:id="@+id/digital_nav_drawer_grp_math_item_matriciel"
-            android:title="@string/nav_drawer_grp_math_matriciel"/>
-
+            android:title="@string/nav_drawer_grp_math_matriciel"
+            android:icon="@drawable/ic_icon_matrix"/>
     </group>
-
 
     <group
+        android:id="@+id/nav_drawer_grp_infos"
         android:checkableBehavior="single"
-        android:orderInCategory="3">
-        <item
-            android:id="@+id/nav_drawer_item_communicate_item_infos"
-            android:title="@string/nav_drawer_grp_item_infos" />
+        android:orderInCategory="2">
+            <item
+                android:id="@+id/nav_drawer_item_communicate_item_infos"
+                android:title="@string/nav_drawer_grp_item_infos"
+                android:icon="@drawable/ic_info_outline_black_24dp"/>
     </group>
+
 
 
 </menu>

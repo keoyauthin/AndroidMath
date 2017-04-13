@@ -1,6 +1,31 @@
 <resources>
     <string name="app_name">Android-Maths</string>
 
+    <!-- String related to actions -->
+    <string name="action_ok">OK</string>
+
+    <!-- String related to Home Activity -->
+    <string name="home_activity_title">Accueil</string>
+
+    <!-- String related to Polynome Activity -->
+    <string name="polynome_activity_title">Polynômes</string>
+
+    <!-- String related to Statistiques Activity -->
+    <string name="statistique_activity_title">Séries statistiques</string>
+
+    <!-- String related to Proba Activity -->
+    <string name="proba_activity_title">Probabilités</string>
+
+    <!-- String related to Moyenne Activity -->
+    <string name="moyenne_activity_title">Moyenne</string>
+
+    <!-- String related to Matrice Activity -->
+    <string name="matrice_activity_title">Calculs matriciels</string>
+
+    <!-- String related to the Infos Dialog -->
+    <string name="info_dialog_title">Informations</string>
+    <string name="info_dialog_message">Utils-Maths</string>
+
     <!-- String related to the navigation drawer -->
     <string name="nav_drawer_open">Ouvrir le menu de navigation</string>
     <string name="nav_drawer_close">Fermer le menu de navigation</string>

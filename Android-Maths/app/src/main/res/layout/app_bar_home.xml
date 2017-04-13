@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity">
+    tools:context=".views.HomeActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_height="wrap_content"
@@ -23,6 +23,13 @@
     </android.support.design.widget.AppBarLayout>
 
     <!-- Todo: include Home content -->
+    <!--<FrameLayout
+        android:id="@+id/content_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize">
+
+    </FrameLayout>-->
 
 
 </android.support.design.widget.CoordinatorLayout>
