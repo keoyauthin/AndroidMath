@@ -19,7 +19,6 @@ public class PolynomeActivity extends NavigationDrawer {
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        mNavigationView.getMenu().findItem(R.id.digital_nav_drawer_grp_math_item_matriciel).setCheckable(true);
         mNavigationView.getMenu().findItem(R.id.nav_drawer_grp_math_item_polynomes).setChecked(true);
     }
 

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Android-Maths</string>
+    <string name="app_name">Outils-Maths</string>
 
     <!-- String related to actions -->
     <string name="action_ok">OK</string>
@@ -24,16 +24,34 @@
 
     <!-- String related to the Infos Dialog -->
     <string name="info_dialog_title">Informations</string>
-    <string name="info_dialog_message">Utils-Maths</string>
+    <string name="info_dialog_message">Outils-Maths</string>
 
     <!-- String related to the navigation drawer -->
     <string name="nav_drawer_open">Ouvrir le menu de navigation</string>
     <string name="nav_drawer_close">Fermer le menu de navigation</string>
     <string name="nav_drawer_grp_defaut_home">Accueil</string>
+
     <string name="nav_drawer_grp_math_polynome">Polynômes</string>
+    <string name="nav_drawer_grp_math_polynome_second_ordre">Second ordre</string>
+    <string name="nav_drawer_grp_math_polynome_troisieme_ordre">Troisième ordre</string>
+
     <string name="nav_drawer_grp_math_stat">Séries statistiques</string>
+    <string name="nav_drawer_grp_math_stat_manuelle">Entrée manuelle</string>
+    <string name="nav_drawer_grp_math_stat_auto">Sasie automatique</string>
+
     <string name="nav_drawer_grp_math_proba">Probabilités</string>
-    <string name="nav_drawer_grp_math_moyennes">Moyennes</string>
-    <string name="nav_drawer_grp_math_matriciel">Calculs matriciels</string>
-    <string name="nav_drawer_grp_item_infos">A propos</string>
+    <string name="nav_drawer_grp_math_proba_uniforme">Loi uniforme</string>
+    <string name="nav_drawer_grp_math_proba_binomiale">Loi binomiale</string>
+    <string name="nav_drawer_grp_math_proba_poisson">Loi de poisson</string>
+    <string name="nav_drawer_grp_math_proba_normale">Loi normale</string>
+    <string name="nav_drawer_grp_math_proba_test_khi">Test de KHI</string>
+
+    <string name="nav_drawer_grp_math_moyennes">Moyenne</string>
+
+    <string name="nav_drawer_grp_math_matrice">Calculs matriciels</string>
+    <string name="nav_drawer_grp_math_matrice_operations">Opérations de matrices</string>
+    <string name="nav_drawer_grp_math_matrice_inverse">Inverse</string>
+    <string name="nav_drawer_grp_math_matrice_vecteurs_propres">Vecteurs propres</string>
+
+    <string name="nav_drawer_grp_item_infos">À propos</string>
 </resources>

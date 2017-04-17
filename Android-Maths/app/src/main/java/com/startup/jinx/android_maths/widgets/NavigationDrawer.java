@@ -26,7 +26,7 @@ import com.startup.jinx.android_maths.views.StatistiqueActivity;
  * Created by Jinx on 12/04/2017.
  */
 
-public class NavigationDrawer extends AppCompatActivity implements NavigationView
+public abstract class NavigationDrawer extends AppCompatActivity implements NavigationView
         .OnNavigationItemSelectedListener {
 
     protected NavigationView mNavigationView;
@@ -39,8 +39,6 @@ public class NavigationDrawer extends AppCompatActivity implements NavigationVie
         super.onCreate(savedInstanceState);
 
         // Set the correct view
-        // If the fragment matches search or home, it displays digiwag_activity_wagon_search
-        // Or if the fragment matches tab layout (expertise), it displays activity_main_expertise
         String activityStr = getClass().getSimpleName();
 
         if (activityStr.equals(HomeActivity.class.getSimpleName())) {
@@ -109,6 +107,7 @@ public class NavigationDrawer extends AppCompatActivity implements NavigationVie
 
         mNavigationView = (NavigationView) findViewById(R.id.nav_view);
         assert mNavigationView != null;
+        mNavigationView.getMenu().findItem(R.id.nav_drawer_item_communicate_item_infos).setCheckable(false);
         mNavigationView.setNavigationItemSelectedListener(this);
 
     }
@@ -122,39 +121,27 @@ public class NavigationDrawer extends AppCompatActivity implements NavigationVie
         switch (id){
             case R.id.nav_drawer_grp_default_item_home:
                 intent = new Intent(this, HomeActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
-                finish();
                 break;
             case R.id.nav_drawer_grp_math_item_polynomes:
                 intent = new Intent(this,PolynomeActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
-                finish();
                 break;
             case R.id.digital_nav_drawer_grp_math_item_stat:
                 intent = new Intent(this, StatistiqueActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
-                finish();
                 break;
             case R.id.digital_nav_drawer_grp_math_item_proba:
                 intent = new Intent(this,ProbaActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
-                finish();
                 break;
             case R.id.digital_nav_drawer_grp_math_item_moyenne:
                 intent = new Intent(this, MoyenneActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
-                finish();
                 break;
-            case R.id.digital_nav_drawer_grp_math_item_matriciel:
+            case R.id.digital_nav_drawer_grp_math_item_matrice:
                 intent = new Intent(this, MatriceActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
-                finish();
                 break;
             case R.id.nav_drawer_item_communicate_item_infos:
                 DialogInformations dialogInformations = new DialogInformations();

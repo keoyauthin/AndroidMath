@@ -18,23 +18,29 @@
         <item
             android:id="@+id/nav_drawer_grp_math_item_polynomes"
             android:title="@string/nav_drawer_grp_math_polynome"
-            android:icon="@drawable/ic_icon_polynome"/>
+            android:icon="@drawable/ic_icon_polynome">
+        </item>
         <item
             android:id="@+id/digital_nav_drawer_grp_math_item_stat"
             android:title="@string/nav_drawer_grp_math_stat"
-            android:icon="@drawable/ic_icon_analytics"/>
+            android:icon="@drawable/ic_icon_analytics">
+        </item>
         <item
             android:id="@+id/digital_nav_drawer_grp_math_item_proba"
             android:title="@string/nav_drawer_grp_math_proba"
-            android:icon="@drawable/ic_icon_probability"/>
+            android:icon="@drawable/ic_icon_probability">
+        </item>
+
         <item
             android:id="@+id/digital_nav_drawer_grp_math_item_moyenne"
             android:title="@string/nav_drawer_grp_math_moyennes"
             android:icon="@drawable/ic_icon_moyenne"/>
+
         <item
-            android:id="@+id/digital_nav_drawer_grp_math_item_matriciel"
-            android:title="@string/nav_drawer_grp_math_matriciel"
-            android:icon="@drawable/ic_icon_matrix"/>
+            android:id="@+id/digital_nav_drawer_grp_math_item_matrice"
+            android:title="@string/nav_drawer_grp_math_matrice"
+            android:icon="@drawable/ic_icon_matrix">
+        </item>
     </group>
 
     <group
@@ -46,7 +52,4 @@
                 android:title="@string/nav_drawer_grp_item_infos"
                 android:icon="@drawable/ic_info_outline_black_24dp"/>
     </group>
-
-
-
 </menu>

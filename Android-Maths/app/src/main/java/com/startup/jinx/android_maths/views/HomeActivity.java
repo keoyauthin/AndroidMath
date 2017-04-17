@@ -15,11 +15,11 @@ public class HomeActivity extends NavigationDrawer {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mNavigationView.getMenu().findItem(R.id.digital_nav_drawer_grp_math_item_matriciel).setCheckable(true);
         mNavigationView.getMenu().findItem(R.id.nav_drawer_grp_default_item_home).setChecked(true);
     }
 
-
-
-
+    @Override
+    public void onResume() {
+        super.onResume();  // Always call the superclass method
+    }
 }
