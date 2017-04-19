@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -11,12 +11,21 @@
     tools:showIn="@layout/app_bar_proba"
     android:id="@+id/content_proba">
 
-    <Button
-        android:id="@+id/content_proba_graphismes_btn"
-        android:layout_width="wrap_content"
+    <android.support.design.widget.TabLayout
+        android:id="@+id/proba_tablayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Graphismes"
-        android:onClick="goToNextFragment"/>
+        android:background="@color/indigo_700"
+        app:tabMode="fixed"
+        app:tabGravity="fill"
+        style="@style/TabLayoutStyle">
 
-</FrameLayout>
+    </android.support.design.widget.TabLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/proba_viewpager"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

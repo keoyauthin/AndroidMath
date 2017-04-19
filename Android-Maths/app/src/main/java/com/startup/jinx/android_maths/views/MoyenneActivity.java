@@ -23,6 +23,10 @@ public class MoyenneActivity extends NavigationDrawer {
         mNavigationView.getMenu().findItem(R.id.digital_nav_drawer_grp_math_item_moyenne).setChecked(true);
     }
 
+    /**
+     * Check the state of the navigation drawer. Close it if open or go back to the main activity
+     *
+     */
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

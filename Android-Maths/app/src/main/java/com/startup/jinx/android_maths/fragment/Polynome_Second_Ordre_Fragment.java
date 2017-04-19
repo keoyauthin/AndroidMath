@@ -7,5 +7,5 @@ import android.support.v4.app.Fragment;
  * Project Utils-Math
  */
 
-public class Polynome_Second_Ordre extends Fragment {
+public class Polynome_Second_Ordre_Fragment extends Fragment {
 }

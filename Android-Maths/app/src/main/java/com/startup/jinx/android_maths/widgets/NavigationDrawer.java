@@ -33,6 +33,8 @@ public abstract class NavigationDrawer extends AppCompatActivity implements Navi
     protected Toolbar mToolbar;
     protected DrawerLayout mDrawerLayout;
 
+    //TODO:ADD FLAGS
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -154,6 +156,12 @@ public abstract class NavigationDrawer extends AppCompatActivity implements Navi
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         assert drawer != null;
         drawer.closeDrawer(GravityCompat.START);
+
+        // Arrête les activites au fur et a mesure sauf l'activité home
+        if(this.getClass() != HomeActivity.class)
+        {
+            finish();
+        }
         return true;
     }
 

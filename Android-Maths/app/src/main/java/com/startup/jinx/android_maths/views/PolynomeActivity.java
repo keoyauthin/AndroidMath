@@ -1,12 +1,16 @@
 package com.startup.jinx.android_maths.views;
 
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
 import android.support.v4.view.GravityCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 
 import com.startup.jinx.android_maths.R;
+import com.startup.jinx.android_maths.adapter.ViewPagerAdapter;
+import com.startup.jinx.android_maths.fragment.OnFragmentInteractionListener;
+import com.startup.jinx.android_maths.fragment.Polynome_Second_Ordre_Fragment;
+import com.startup.jinx.android_maths.fragment.Polynome_Troisieme_Ordre_Fragment;
 import com.startup.jinx.android_maths.widgets.NavigationDrawer;
 
 /**
@@ -16,10 +20,22 @@ import com.startup.jinx.android_maths.widgets.NavigationDrawer;
 
 public class PolynomeActivity extends NavigationDrawer {
 
+    // Listener
+    private OnFragmentInteractionListener mListener;
+
+    //UI elements
+    private TabLayout mTabLayout;
+    private ViewPager mViewPager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         mNavigationView.getMenu().findItem(R.id.nav_drawer_grp_math_item_polynomes).setChecked(true);
+        mTabLayout = (TabLayout) findViewById(R.id.polynome_tablayout);
+        mViewPager = (ViewPager) findViewById(R.id.polynome_viewpager);
+
+        setupViewPager(mViewPager);
+        mTabLayout.setupWithViewPager(mViewPager);
     }
 
     @Override
@@ -35,5 +51,15 @@ public class PolynomeActivity extends NavigationDrawer {
                 super.onBackPressed();
             }
         }
+    }
+
+    private void setupViewPager(ViewPager mViewPager) {
+
+        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
+
+        adapter.addFragment(new Polynome_Second_Ordre_Fragment(),"Second Ordre");
+        adapter.addFragment(new Polynome_Troisieme_Ordre_Fragment(),"Troisième Ordre");
+
+        mViewPager.setAdapter(adapter);
     }
 }

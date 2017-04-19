@@ -7,5 +7,5 @@ import android.support.v4.app.Fragment;
  * Project Utils-Math
  */
 
-public class Proba_Loi_Uniforme extends Fragment {
+public class Proba_Loi_Uniforme_Fragment extends Fragment {
 }
