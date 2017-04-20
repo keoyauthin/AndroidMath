@@ -15,7 +15,20 @@
 
     <!-- String related to Proba Activity -->
     <string name="proba_activity_title">Probabilités</string>
-
+    <string name="proba_activity_hint_a">a</string>
+    <string name="proba_activity_hint_b">b</string>
+    <string name="proba_activity_hint_c">c</string>
+    <string name="proba_activity_hint_d">d</string>
+    <string name="proba_activity_equation">Équation =</string>
+    <string name="proba_activity_addition">+</string>
+    <string name="proba_activity_soustraction">-</string>
+    <string name="proba_activity_hint_image_X2">X au carré</string>
+    <string name="proba_activity_hint_image_X">X</string>
+    
+    <string-array name="signe_operatoire_spinner">
+        <item>+</item>
+        <item>-</item>
+    </string-array>
     <!-- String related to Moyenne Activity -->
     <string name="moyenne_activity_title">Moyenne</string>
 

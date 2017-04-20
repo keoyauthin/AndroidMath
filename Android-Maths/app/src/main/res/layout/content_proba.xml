@@ -14,7 +14,7 @@
     <android.support.design.widget.TabLayout
         android:id="@+id/proba_tablayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/tablayout_height"
         android:background="@color/indigo_700"
         app:tabMode="fixed"
         app:tabGravity="fill"

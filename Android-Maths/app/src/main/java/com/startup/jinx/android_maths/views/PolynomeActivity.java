@@ -18,7 +18,7 @@ import com.startup.jinx.android_maths.widgets.NavigationDrawer;
  * Project Utils-Math
  */
 
-public class PolynomeActivity extends NavigationDrawer {
+public class PolynomeActivity extends NavigationDrawer  {
 
     // Listener
     private OnFragmentInteractionListener mListener;

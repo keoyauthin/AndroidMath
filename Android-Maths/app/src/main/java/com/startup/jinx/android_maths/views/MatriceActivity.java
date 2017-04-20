@@ -60,7 +60,6 @@ public class MatriceActivity extends NavigationDrawer {
             }
         }
     }
-    //TODO: CREER FRAGMENT
     private void setupViewPager(ViewPager mViewPager) {
 
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());

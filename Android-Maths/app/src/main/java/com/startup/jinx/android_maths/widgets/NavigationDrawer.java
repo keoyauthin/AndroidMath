@@ -109,7 +109,6 @@ public abstract class NavigationDrawer extends AppCompatActivity implements Navi
 
         mNavigationView = (NavigationView) findViewById(R.id.nav_view);
         assert mNavigationView != null;
-        mNavigationView.getMenu().findItem(R.id.nav_drawer_item_communicate_item_infos).setCheckable(false);
         mNavigationView.setNavigationItemSelectedListener(this);
 
     }
@@ -145,9 +144,6 @@ public abstract class NavigationDrawer extends AppCompatActivity implements Navi
                 intent = new Intent(this, MatriceActivity.class);
                 startActivity(intent);
                 break;
-            case R.id.nav_drawer_item_communicate_item_infos:
-                DialogInformations dialogInformations = new DialogInformations();
-                dialogInformations.show(getFragmentManager(), "infos");
             default:
                 break;
 

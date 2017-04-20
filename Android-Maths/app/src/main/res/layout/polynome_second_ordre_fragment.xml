@@ -1,6 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin">
 
-</LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/proba_activity_equation"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:layout_marginEnd="16dp"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/polynome_second_ordre_a"
+            android:inputType="numberDecimal|numberSigned|number"
+            android:hint="@string/proba_activity_hint_a"
+            android:layout_marginEnd="8dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_icon_polynome"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@string/proba_activity_hint_image_X2"/>
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/polynome_activity_spinner"></Spinner>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/polynome_second_ordre_b"
+            android:inputType="numberDecimal|numberSigned|number"
+            android:hint="@string/proba_activity_hint_b"
+            android:layout_marginEnd="8dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_x"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@string/proba_activity_hint_image_X" />
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/polynome_activity_spinner2"></Spinner>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/polynome_second_ordre_c"
+            android:inputType="numberDecimal|numberSigned|number"
+            android:hint="@string/proba_activity_hint_c"
+            android:layout_marginEnd="8dp"/>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
+

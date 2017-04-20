@@ -31,5 +31,16 @@
         <item name="android:textColor">@color/transparent_white_50</item>
         <item name="textAllCaps">true</item>
     </style>
+    <style name="HomeButtons">
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_width">110dp</item>
+        <item name="android:layout_height">110dp</item>
+        <item name="android:tint">@color/indigo_100</item>
+        <item name="android:backgroundTintMode">src_in</item>
+        <item name="android:backgroundTint">@color/indigo_500</item>
+    </style>
 
 </resources>
