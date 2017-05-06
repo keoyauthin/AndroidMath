@@ -9,7 +9,7 @@
         android:layout_height="30dp"
         android:text="@string/info_dialog_title"
         android:gravity="center_vertical|center"
-        android:background="@color/indigo_500"/>
+        android:background="@color/blue_500"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

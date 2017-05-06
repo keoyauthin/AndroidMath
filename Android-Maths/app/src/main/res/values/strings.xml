@@ -10,25 +10,33 @@
     <!-- String related to Polynome Activity -->
     <string name="polynome_activity_title">Polynômes</string>
 
-    <!-- String related to Statistiques Activity -->
-    <string name="statistique_activity_title">Séries statistiques</string>
+    <string name="polynome_activity_hint_a">a</string>
+    <string name="polynome_activity_hint_b">b</string>
+    <string name="polynome_activity_hint_c">c</string>
+    <string name="polynome_activity_hint_d">d</string>
+    <string name="polynome_activity_equation">= 0</string>
+    <string name="polynome_activity_addition">+</string>
+    <string name="polynome_activity_soustraction">-</string>
+    <string name="polynome_activity_hint_image_X2">X au carré</string>
+    <string name="polynome_activity_hint_image_X">X</string>
+    <string name="polynome_activity_delta_formule">Delta = b²-4ac </string>
+    <string name="polynome_activity_calcul">Calcul</string>
+    <string name="polynome_activity_calcul_delta">Calcul du discriminant</string>
+    <string name="polynome_activity_calcul_solutions">Calcul des solutions</string>
+    <string name="polynome_activity_facorisation">Factorisation</string>
 
-    <!-- String related to Proba Activity -->
-    <string name="proba_activity_title">Probabilités</string>
-    <string name="proba_activity_hint_a">a</string>
-    <string name="proba_activity_hint_b">b</string>
-    <string name="proba_activity_hint_c">c</string>
-    <string name="proba_activity_hint_d">d</string>
-    <string name="proba_activity_equation">Équation =</string>
-    <string name="proba_activity_addition">+</string>
-    <string name="proba_activity_soustraction">-</string>
-    <string name="proba_activity_hint_image_X2">X au carré</string>
-    <string name="proba_activity_hint_image_X">X</string>
-    
     <string-array name="signe_operatoire_spinner">
         <item>+</item>
         <item>-</item>
     </string-array>
+
+    <!-- String related to Statistiques Activity -->
+    <string name="statistique_activity_title">Séries statistiques</string>
+
+    <!-- String related to Proba Activity -->
+
+    <string name="proba_activity_title">Probabilités</string>
+
     <!-- String related to Moyenne Activity -->
     <string name="moyenne_activity_title">Moyenne</string>
 

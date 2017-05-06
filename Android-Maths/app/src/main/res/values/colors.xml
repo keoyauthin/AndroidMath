@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimary">#2196F3</color>
+    <color name="colorPrimaryDark">#1976D2</color>
     <color name="colorAccent">#FF4081</color>
 
+    <!-- Blue -->
+    <color name="blue_50">#E3F2FD</color>
+    <color name="blue_100">#BBDEFB</color>
+    <color name="blue_200">#90CAF9</color>
+    <color name="blue_300">#64B5F6</color>
+    <color name="blue_400">#42A5F5</color>
+    <color name="blue_500">#2196F3</color>
+    <color name="blue_600">#1E88E5</color>
+    <color name="blue_700">#1976D2</color>
+    <color name="blue_800">#1565C0</color>
+    <color name="blue_900">#0D47A1</color>
 
-
-    <!-- Indigo -->
-    <color name="indigo_50">#E8EAF6</color>
-    <color name="indigo_100">#C5CAE9</color>
-    <color name="indigo_200">#9FA8DA</color>
-    <color name="indigo_300">#7986CB</color>
-    <color name="indigo_400">#5C6BC0</color>
-    <color name="indigo_500">#3F51B5</color>
-    <color name="indigo_600">#3949AB</color>
-    <color name="indigo_700">#303F9F</color>
-    <color name="indigo_800">#283593</color>
-    <color name="indigo_900">#1A237E</color>
-
-
-    <!-- Transparent white -->
+    <!-- White -->
     <color name="transparent_white_50">#80FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+
+    <!--- Deep purple -->
+    <color name="dark_purple_50">#EDE7F6</color>
 
 </resources>

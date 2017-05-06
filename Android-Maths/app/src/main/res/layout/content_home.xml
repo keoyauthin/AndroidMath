@@ -16,27 +16,32 @@
     <ImageButton
         style="@style/HomeButtons"
         android:layout_gravity="start|top"
-        android:src="@drawable/ic_icon_polynome"/>
+        android:src="@drawable/ic_icon_polynome"
+        android:id="@+id/home_activity_polynome_btn"/>
 
     <ImageButton
         style="@style/HomeButtons"
         android:src="@drawable/ic_icon_analytics"
-        android:layout_gravity="end|top"/>
+        android:layout_gravity="end|top"
+        android:id="@+id/home_activity_statistique_btn"/>
 
     <ImageButton
         style="@style/HomeButtons"
         android:src="@drawable/ic_icon_probability"
-        android:layout_gravity="start|top" />
+        android:layout_gravity="start|top"
+        android:id="@+id/home_activity_proba_btn"/>
 
     <ImageButton
         style="@style/HomeButtons"
         android:src="@drawable/ic_icon_moyenne"
-        android:layout_gravity="end|top" />
+        android:layout_gravity="end|top"
+        android:id="@+id/home_activity_moyenne_btn"/>
 
     <ImageButton
         style="@style/HomeButtons"
         android:src="@drawable/ic_icon_matrix"
-        android:layout_gravity="start|top" />
+        android:layout_gravity="start|top"
+        android:id="@+id/home_activity_matrice_btn"/>
     <ImageButton
         style="@style/HomeButtons"
         android:src="@drawable/ic_live_help"
