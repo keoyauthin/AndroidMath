@@ -22,8 +22,10 @@
     <string name="polynome_activity_delta_formule">Delta = b²-4ac </string>
     <string name="polynome_activity_calcul">Calcul</string>
     <string name="polynome_activity_calcul_delta">Calcul du discriminant</string>
+    <string name="polynome_activity_delta_delta_ope">Delta = %1$ x4 x %2$ x %3$</string>
     <string name="polynome_activity_calcul_solutions">Calcul des solutions</string>
     <string name="polynome_activity_facorisation">Factorisation</string>
+    <string name="polynome_activity_zero_solution">Il n\'existe pas de solutions possibles pour cette équation</string>
 
     <string-array name="signe_operatoire_spinner">
         <item>+</item>
