@@ -2,13 +2,11 @@ package com.startup.jinx.android_maths.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.inputmethod.EditorInfo;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -160,15 +158,28 @@ public class Polynome_Second_Ordre_Fragment extends Fragment {
         double b =0;
         double c =0;
 
-        if (!Edit_a.getText().toString().isEmpty()) {
-            a = Double.parseDouble(Edit_a.getText().toString());
-        }
-        if (!Edit_b.getText().toString().isEmpty()) {
-            b = Double.parseDouble(Edit_b.getText().toString());
+        try {
+            if (!Edit_a.getText().toString().isEmpty()) {
+                a = Double.parseDouble(Edit_a.getText().toString());
+            }
+        } catch (Exception e){
+            Edit_a.setError(getString(R.string.polynome_activity_edittext_error));
         }
 
-        if (!Edit_c.getText().toString().isEmpty()) {
-            c = Double.parseDouble(Edit_c.getText().toString());
+        try{
+            if (!Edit_b.getText().toString().isEmpty()) {
+                b = Double.parseDouble(Edit_b.getText().toString());
+            }
+        } catch (Exception e){
+            Edit_b.setError(getString(R.string.polynome_activity_edittext_error));
+        }
+
+        try {
+            if (!Edit_c.getText().toString().isEmpty()) {
+                c = Double.parseDouble(Edit_c.getText().toString());
+            }
+        } catch (Exception e){
+            Edit_c.setError(getString(R.string.polynome_activity_edittext_error));
         }
 
 
@@ -198,7 +209,7 @@ public class Polynome_Second_Ordre_Fragment extends Fragment {
 
         if(a==0){
             X1 = (a-c) /b;
-            resulat_X1.setText("X1 = " + String.valueOf(Math_Functions.Round_Doucle(X1,3)));
+            resulat_X1.setText("X1 = " + String.valueOf(Math_Functions.Round_Double(X1,3)));
         }else
         {
             delta = Math_Functions.Delta(a,b,c);
@@ -209,18 +220,18 @@ public class Polynome_Second_Ordre_Fragment extends Fragment {
             //delta_ope.setText(getString(R.string.polynome_activity_delta_delta_ope), b, a ,c);
 
             delta_resultat.setVisibility(View.VISIBLE);
-            delta_resultat.setText("Delta = " + String.valueOf(Math_Functions.Round_Doucle(delta,3)));
+            delta_resultat.setText("Delta = " + String.valueOf(Math_Functions.Round_Double(delta,3)));
             if(delta == 0){
                 X1 = ((b*-1)+Math.sqrt(delta)) / (2*a);
-                resulat_X1.setText("X1= " + String.valueOf(Math_Functions.Round_Doucle(X1,3)));
-                factorisation_resultat.setText("P(X) = " + String.valueOf(a) + "( x - " + String.valueOf(Math_Functions.Round_Doucle(X1,3)) + " )");
+                resulat_X1.setText("X1= " + String.valueOf(Math_Functions.Round_Double(X1,3)));
+                factorisation_resultat.setText("P(X) = " + String.valueOf(a) + "( x - " + String.valueOf(Math_Functions.Round_Double(X1,3)) + " )");
             }
             else if (delta > 0){
                 X1 = ((b*-1) + Math.sqrt(delta)) / (2*a);
                 X2 = ((b*-1) - Math.sqrt(delta)) / (2*a);
-                resulat_X1.setText("X1= " + String.valueOf(Math_Functions.Round_Doucle(X1,3)));
-                resultat_X2.setText("X2= " + String.valueOf(Math_Functions.Round_Doucle(X2,3)));
-                factorisation_resultat.setText("P(X) = " + String.valueOf(a) + "( x - (" + String.valueOf(Math_Functions.Round_Doucle(X1,3)) + " ))( x - (" + String.valueOf(Math_Functions.Round_Doucle(X2,3)) + "))" );
+                resulat_X1.setText("X1= " + String.valueOf(Math_Functions.Round_Double(X1,3)));
+                resultat_X2.setText("X2= " + String.valueOf(Math_Functions.Round_Double(X2,3)));
+                factorisation_resultat.setText("P(X) = " + String.valueOf(a) + "( x - (" + String.valueOf(Math_Functions.Round_Double(X1,3)) + " ))( x - (" + String.valueOf(Math_Functions.Round_Double(X2,3)) + "))" );
             }
             else if (delta <0){
                 ////Pas de solutions possibles

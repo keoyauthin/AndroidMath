@@ -38,8 +38,8 @@ public class Math_FunctionsTest {
 
     @Test
     public void round_double() throws Exception{
-        assertEquals(0.912,Math_Functions.Round_Doucle(0.912385,3),0.001);
-        assertEquals(5.125,Math_Functions.Round_Doucle(5.1245865,3),0.001);
+        assertEquals(0.912,Math_Functions.Round_Double(0.912385,3),0.001);
+        assertEquals(5.125,Math_Functions.Round_Double(5.1245865,3),0.001);
     }
 
 }

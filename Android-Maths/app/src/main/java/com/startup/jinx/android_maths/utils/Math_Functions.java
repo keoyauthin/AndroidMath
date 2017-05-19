@@ -75,7 +75,7 @@ public class Math_Functions {
      * @param nbapVig Nombres de chiffres après la virgule
      * @return Résultat
      */
-    public static double Round_Doucle(double number, double nbapVig)
+    public static double Round_Double(double number, double nbapVig)
     {
         return(double)((int)(number * Math.pow(10,nbapVig) + .5)) / Math.pow(10,nbapVig);
     }

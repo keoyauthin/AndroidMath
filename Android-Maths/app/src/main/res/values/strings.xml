@@ -26,6 +26,7 @@
     <string name="polynome_activity_calcul_solutions">Calcul des solutions</string>
     <string name="polynome_activity_facorisation">Factorisation</string>
     <string name="polynome_activity_zero_solution">Il n\'existe pas de solutions possibles pour cette équation</string>
+    <string name="polynome_activity_edittext_error">Vous devez entrer une valeur numérique</string>
 
     <string-array name="signe_operatoire_spinner">
         <item>+</item>
