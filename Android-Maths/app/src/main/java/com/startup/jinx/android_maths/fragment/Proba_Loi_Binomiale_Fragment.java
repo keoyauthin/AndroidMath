@@ -154,14 +154,13 @@ public class Proba_Loi_Binomiale_Fragment extends Fragment {
         esperance = Math_Functions.Esperance_Binomiale(n,p);
         variance = Math_Functions.Variance_Binomiale(esperance,p);
         ecarttype = Math_Functions.Ecart_Binomiale(variance);
-        fonction_repartition = Math_Functions.Funtion_Binomiale(n,p,kMax) - Math_Functions.Funtion_Binomiale(n,p,kMin-1);
+        fonction_repartition = Math_Functions.Function_Binomiale(n,p,kMax) - Math_Functions.Function_Binomiale(n,p,kMin-1);
 
         textView_esperance.setText(String.valueOf(Math_Functions.Round_Double(esperance,3)));
         textView_variance.setText(String.valueOf(Math_Functions.Round_Double(variance,3)));
         textView_ecarttype.setText(String.valueOf(Math_Functions.Round_Double(ecarttype,3)));
         textView_function_Binomiale_resulat.setText(String.valueOf(Math_Functions.Round_Double(Math_Functions.function_Binomiale(n,p,k),3)));
         textView_fuction_repartition_resulat.setText(String.valueOf(Math_Functions.Round_Double(fonction_repartition,3)));
-
 
     }
 

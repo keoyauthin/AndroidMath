@@ -44,6 +44,8 @@
         <string name="proba_variance">Variance :</string>
         <string name="proba_ecart_type">Ecart_Type : </string>
         <string name="proba_function">P(X = K) = </string>
+        <string name="proba_interval">Sur un intervalle de :</string>
+
         <string name="proba_fonction_repartition">Foncion de répartition :</string>
 
         <string name="nav_drawer_grp_math_proba_uniforme">Loi uniforme</string>
@@ -57,7 +59,7 @@
             <string name="proba_binomiale_p_hint">p</string>
             <string name="proba_binomiale_k">Nombre de réussites:</string>
             <string name="proba_binomiale_k_hint">k</string>
-            <string name="proba_binomiale_interval">Sur un intervalle de :</string>
+
             <string name="proba_binomiale_kMin_hint">KMin</string>
             <string name="proba_binomiale_KMax_hint">KMax</string>
 
@@ -65,6 +67,13 @@
 
 
         <string name="nav_drawer_grp_math_proba_poisson">Loi de poisson</string>
+
+            <string name="proba_poisson_lambda">Nombre moyen d\'occurences</string>
+            <string name="proba_poisson_lambda_hint">Lambda</string>
+            <string name="proba_poisson_k">Nombres d\'occurences</string>
+            <string name="proba_poisson_k_hint">k</string>
+            <string name="proba_poisson_kMin_hint">KMin</string>
+            <string name="proba_poisson_KMax_hint">KMax</string>
 
         <string name="nav_drawer_grp_math_proba_normale">Loi normale</string>
 

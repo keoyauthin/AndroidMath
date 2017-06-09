@@ -76,12 +76,34 @@ public class Math_Functions {
         return resulat;
     }
 
-    public static double Funtion_Binomiale(double n, double p, double k)
+    public static double Function_Binomiale(double n, double p, double k)
     {
         double resultat = 0;
 
         for(int i = 0; i<=k;i++){
             resultat += function_Binomiale(n,p,i);
+        }
+
+        return resultat;
+    }
+
+    public static double Ecart_Poisson(double lambda){
+        return  Math.sqrt(lambda);
+    }
+
+    public static double function_Poisson(double lambda, double k){
+        double resultat =0;
+
+        resultat = Math.exp(lambda*-1) * Math.pow(lambda,k) / Factorielle(k);
+
+        return resultat;
+    }
+
+    public static double Function_Poisson(double lambda, double k){
+        double resultat = 0;
+
+        for(int i = 0; i<=k;i++){
+            resultat += function_Poisson(lambda,i);
         }
 
         return resultat;
