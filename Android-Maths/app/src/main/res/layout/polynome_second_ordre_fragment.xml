@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/polynome_second_ordre_a"
-            android:inputType="numberDecimal|number"
+            android:inputType="numberDecimal|number|numberSigned"
             android:imeOptions="actionNext"
             android:hint="@string/polynome_activity_hint_a"
             android:layout_marginEnd="8dp"/>
@@ -79,7 +79,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/polynome_activity_Calcul_btn"
-            android:text="@string/polynome_activity_calcul"/>
+            android:text="@string/action_calcul"/>
 
     </LinearLayout>
 

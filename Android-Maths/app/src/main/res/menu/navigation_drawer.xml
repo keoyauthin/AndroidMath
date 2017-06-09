@@ -17,28 +17,28 @@
         android:orderInCategory="1">
         <item
             android:id="@+id/nav_drawer_grp_math_item_polynomes"
-            android:title="@string/nav_drawer_grp_math_polynome"
+            android:title="@string/polynome_activity_title"
             android:icon="@drawable/ic_icon_polynome">
         </item>
         <item
             android:id="@+id/digital_nav_drawer_grp_math_item_stat"
-            android:title="@string/nav_drawer_grp_math_stat"
+            android:title="@string/statistique_activity_title"
             android:icon="@drawable/ic_icon_analytics">
         </item>
         <item
             android:id="@+id/digital_nav_drawer_grp_math_item_proba"
-            android:title="@string/nav_drawer_grp_math_proba"
+            android:title="@string/proba_activity_title"
             android:icon="@drawable/ic_icon_probability">
         </item>
 
         <item
             android:id="@+id/digital_nav_drawer_grp_math_item_moyenne"
-            android:title="@string/nav_drawer_grp_math_moyennes"
+            android:title="@string/moyenne_activity_title"
             android:icon="@drawable/ic_icon_moyenne"/>
 
         <item
             android:id="@+id/digital_nav_drawer_grp_math_item_matrice"
-            android:title="@string/nav_drawer_grp_math_matrice"
+            android:title="@string/matrice_activity_title"
             android:icon="@drawable/ic_icon_matrix">
         </item>
     </group>

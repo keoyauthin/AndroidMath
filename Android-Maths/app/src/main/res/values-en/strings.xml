@@ -1,4 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Outils-Maths</string>
+    <string name="app_name">Math_Utils</string>
+    <string name="action_ok">OK</string>
+    <string name="home_activity_title">Home</string>
+    <string name="info_dialog_message">Math_Utils</string>
+    <string name="info_dialog_title">About</string>
+    <string name="matrice_activity_title">Matrix calculations</string>
+    <string name="moyenne_activity_title">Average</string>
+    <string name="nav_drawer_close">Close the drawer</string>
+    <string name="nav_drawer_grp_defaut_home">Home</string>
+    <string name="nav_drawer_grp_item_infos">About</string>
+    <string name="nav_drawer_grp_math_matrice_inverse">Reverse</string>
+    <string name="nav_drawer_grp_math_matrice_operations">Matrix operations</string>
+    <string name="nav_drawer_grp_math_matrice_vecteurs_propres">Eigenvector</string>
+    <string name="nav_drawer_grp_math_polynome_second_ordre">Second order</string>
+    <string name="nav_drawer_grp_math_polynome_troisieme_ordre">Third order</string>
+    <string name="nav_drawer_grp_math_proba_binomiale">Binomial distribution</string>
+    <string name="nav_drawer_grp_math_proba_normale">Normal distribution</string>
+    <string name="nav_drawer_grp_math_proba_poisson">Poisson distribution</string>
+    <string name="nav_drawer_grp_math_proba_test_khi">Chi-squared test</string>
+    <string name="nav_drawer_grp_math_proba_uniforme">Uniform distribution</string>
+    <string name="nav_drawer_grp_math_stat_auto">Automatic data entry</string>
+    <string name="nav_drawer_grp_math_stat_manuelle">Manual data entry</string>
+    <string name="nav_drawer_open">Open the drawer</string>
+    <string name="polynome_activity_addition">+</string>
+    <string name="polynome_activity_calcul">Calculation</string>
+    <string name="polynome_activity_calcul_delta">Calculation of the discriminant</string>
+    <string name="polynome_activity_calcul_solutions">Calculation of solutions</string>
+    <string name="polynome_activity_delta_delta_ope">Delta = %1$ x4 x %2$ x %3$</string>
+    <string name="polynome_activity_delta_formule">"Delta = b²-4ac "</string>
+    <string name="polynome_activity_edittext_error">You must enter a numerical value</string>
+    <string name="polynome_activity_equation">= 0</string>
+    <string name="polynome_activity_facorisation">Factorization</string>
+    <string name="polynome_activity_hint_a">a</string>
+    <string name="polynome_activity_hint_b">b</string>
+    <string name="polynome_activity_hint_c">c</string>
+    <string name="polynome_activity_hint_d">d</string>
+    <string name="polynome_activity_hint_image_X">X</string>
+    <string name="polynome_activity_hint_image_X2">X²</string>
+    <string name="polynome_activity_soustraction">-</string>
+    <string name="polynome_activity_title">Polynomial</string>
+    <string name="proba_activity_title">Probabilities</string>
+    <string name="statistique_activity_title">Statistical series</string>
+    <string name="polynome_activity_zero_solution">There is no solutions</string>
 </resources>

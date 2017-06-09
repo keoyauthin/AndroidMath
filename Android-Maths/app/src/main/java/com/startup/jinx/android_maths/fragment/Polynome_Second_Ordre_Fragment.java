@@ -54,7 +54,7 @@ public class Polynome_Second_Ordre_Fragment extends Fragment {
      * Racine X2.
      */
     resultat_X2, /**
-     * Opération pour calculer Delta.
+     * Opération pour calculer Delta_Second_Ordre.
      */
     delta_ope, /**
      * Discrimant.
@@ -64,13 +64,13 @@ public class Polynome_Second_Ordre_Fragment extends Fragment {
      */
     factorisation_resultat;
     /**
-     * The Linear layout delta.
+     * Linear layout delta.
      */
     LinearLayout linearLayoutDelta, /**
      * The Linear layout resultats.
      */
     linearLayoutResultats, /**
-     * The Polynome second ordre factorisation.
+     * Polynome second ordre factorisation.
      */
     linearLayoutFactorisation;
 
@@ -95,6 +95,8 @@ public class Polynome_Second_Ordre_Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState)
     {
         final View view = inflater.inflate(R.layout.polynome_second_ordre_fragment,container,false);
+
+        //Initialisation des différents composants
 
         spinner = (Spinner) view.findViewById(R.id.polynome_activity_spinner);
         spinner2 = (Spinner) view.findViewById(R.id.polynome_activity_spinner2);
@@ -124,6 +126,7 @@ public class Polynome_Second_Ordre_Fragment extends Fragment {
         spinner.setAdapter(adapter);
         spinner2.setAdapter(adapter);
 
+        //Execute la fonction de calcul en cas de validation de l'utilisateur
         Edit_c.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
@@ -132,7 +135,7 @@ public class Polynome_Second_Ordre_Fragment extends Fragment {
                 return true;
             }
         });
-
+        //Execute la fonction de calcul en cas d'appui sur le bouton
         Calculbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -151,12 +154,13 @@ public class Polynome_Second_Ordre_Fragment extends Fragment {
 
     /**
      * Vérifie les valeurs saisies par l'utilisateur.
+     *
      */
     public void Check_Values()
     {
-        double a =0;
-        double b =0;
-        double c =0;
+        double a =1;
+        double b =1;
+        double c =1;
 
         try {
             if (!Edit_a.getText().toString().isEmpty()) {
@@ -182,10 +186,12 @@ public class Polynome_Second_Ordre_Fragment extends Fragment {
             Edit_c.setError(getString(R.string.polynome_activity_edittext_error));
         }
 
-
+        //Changement de signe si le signe opératoire est négatif
         if(spinner.getSelectedItem().toString().equals("-")){
             b= b*-1;
-        }else if (spinner2.getSelectedItem().toString().equals("-")){
+        }
+
+        if (spinner2.getSelectedItem().toString().equals("-")){
             c = c*-1;
         }
 
@@ -209,18 +215,19 @@ public class Polynome_Second_Ordre_Fragment extends Fragment {
 
         if(a==0){
             X1 = (a-c) /b;
+            //TODO: Ajouter String + paramètres
             resulat_X1.setText("X1 = " + String.valueOf(Math_Functions.Round_Double(X1,3)));
         }else
         {
-            delta = Math_Functions.Delta(a,b,c);
+            delta = Math_Functions.Delta_Second_Ordre(a,b,c);
 
             linearLayoutDelta.setVisibility(View.VISIBLE);
 
-            delta_ope.setText("Delta = " + String.valueOf(b) +"² +  4x" + String.valueOf(a) + "x" +String.valueOf(c) );
+            delta_ope.setText("Delta_Second_Ordre = " + String.valueOf(b) +"² +  4 x " + String.valueOf(a) + " x " +String.valueOf(c) );
             //delta_ope.setText(getString(R.string.polynome_activity_delta_delta_ope), b, a ,c);
 
             delta_resultat.setVisibility(View.VISIBLE);
-            delta_resultat.setText("Delta = " + String.valueOf(Math_Functions.Round_Double(delta,3)));
+            delta_resultat.setText("Delta_Second_Ordre = " + String.valueOf(Math_Functions.Round_Double(delta,3)));
             if(delta == 0){
                 X1 = ((b*-1)+Math.sqrt(delta)) / (2*a);
                 resulat_X1.setText("X1= " + String.valueOf(Math_Functions.Round_Double(X1,3)));

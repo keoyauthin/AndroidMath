@@ -11,9 +11,9 @@ import static org.junit.Assert.*;
 public class Math_FunctionsTest {
     @Test
     public void delta() throws Exception {
-        assertEquals(-59,Math_Functions.Delta(3,5,7),0.001 );
-        assertEquals(49,Math_Functions.Delta(2,-5,-3),0.001);
-        assertEquals(-4,Math_Functions.Delta(1,-4,5),0.001);
+        assertEquals(-59,Math_Functions.Delta_Second_Ordre(3,5,7),0.001 );
+        assertEquals(49,Math_Functions.Delta_Second_Ordre(2,-5,-3),0.001);
+        assertEquals(-4,Math_Functions.Delta_Second_Ordre(1,-4,5),0.001);
     }
 
     @Test
@@ -23,17 +23,17 @@ public class Math_FunctionsTest {
 
     @Test
     public void esperance() throws Exception {
-        assertEquals(25,Math_Functions.Esperance(5,5),00.1);
+        assertEquals(25,Math_Functions.Esperance_Binomiale(5,5),00.1);
     }
 
     @Test
     public void variance() throws Exception {
-        assertEquals(-100,Math_Functions.Variance(25,5),0.001);
+        assertEquals(-100,Math_Functions.Variance_Binomiale(25,5),0.001);
     }
 
     @Test
     public void ecart() throws Exception {
-        assertEquals(10,Math_Functions.Ecart(100),0.001);
+        assertEquals(10,Math_Functions.Ecart_Binomiale(100),0.001);
     }
 
     @Test

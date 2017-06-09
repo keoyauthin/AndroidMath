@@ -18,7 +18,7 @@ public class Math_Functions {
      * @param c  c
      * @return Résulats
      */
-    public static double Delta(double a,double b,double c){
+    public static double Delta_Second_Ordre(double a, double b, double c){
 
         return (b*b) - (4*a*c);
     }
@@ -41,7 +41,7 @@ public class Math_Functions {
      * @param p Probabilités de succès
      * @return Résultat
      */
-    public static double Esperance(double n, double p)
+    public static double Esperance_Binomiale(double n, double p)
     {
         return n*p;
     }
@@ -53,7 +53,7 @@ public class Math_Functions {
      * @param p         Probabilités de succès
      * @return Résulat
      */
-    public static double Variance(double esperance, double p)
+    public static double Variance_Binomiale(double esperance, double p)
     {
         return esperance * (1-p);
     }
@@ -61,11 +61,30 @@ public class Math_Functions {
     /**
      * Calcule l'écart type d'une variable aléatoire et retourne le résultat.
      *
-     * @param variance Variance
+     * @param variance Variance_Binomiale
      * @return Résultat
      */
-    public static double Ecart(double variance){
+    public static double Ecart_Binomiale(double variance){
         return Math.sqrt(variance);
+    }
+
+    public static double function_Binomiale(double n, double p , double k)
+    {
+        double resulat =0;
+
+        resulat = Factorielle(n) / (Factorielle(k)*Factorielle(n-k)) * Math.pow(p,k) * Math.pow(1-p,n-k);
+        return resulat;
+    }
+
+    public static double Funtion_Binomiale(double n, double p, double k)
+    {
+        double resultat = 0;
+
+        for(int i = 0; i<=k;i++){
+            resultat += function_Binomiale(n,p,i);
+        }
+
+        return resultat;
     }
 
     /**
