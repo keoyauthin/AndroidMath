@@ -76,6 +76,12 @@
             <string name="proba_poisson_KMax_hint">KMax</string>
 
         <string name="nav_drawer_grp_math_proba_normale">Loi normale</string>
+            <string name="proba_normale_esperance">Espérance</string>
+            <string name="proba_normale_esperance_hint">Espérance</string>
+            <string name="proba_normale_ecarttype">Écart-type</string>
+            <string name="proba_normale_ecarttype_hint">Écart-type</string>
+            <string name="proba_normale_kMin_hint">KMin</string>
+            <string name="proba_normale_KMax_hint">KMax</string>
 
         <string name="nav_drawer_grp_math_proba_test_khi">Test de KHI</string>
 

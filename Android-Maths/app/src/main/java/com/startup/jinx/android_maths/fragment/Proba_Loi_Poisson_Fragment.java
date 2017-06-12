@@ -66,7 +66,7 @@ public class Proba_Loi_Poisson_Fragment extends Fragment {
         textView_variance = (TextView) view.findViewById(R.id.textView_variance_resultat);
         textView_ecarttype = (TextView) view.findViewById(R.id.textView_ecarttype_resultat);
         textView_function_Poisson_resulat = (TextView) view.findViewById(R.id.textView_function_Binomiale_resulat);
-        textView_function_repartition_resulat = (TextView) view.findViewById(R.id.textView_function_repartion_resulat);
+        textView_function_repartition_resulat = (TextView) view.findViewById(R.id.textView_function_repartition_resulat);
 
         btnCalcul = (Button) view.findViewById(R.id.btnCalcul);
 

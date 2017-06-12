@@ -72,7 +72,7 @@ public class Proba_Loi_Binomiale_Fragment extends Fragment {
         textView_esperance = (TextView) view.findViewById(R.id.textView_esperance_resultat);
         textView_variance = (TextView) view.findViewById(R.id.textView_variance_resultat);
         textView_ecarttype = (TextView) view.findViewById(R.id.textView_ecarttype_resultat);
-        textView_fuction_repartition_resulat = (TextView) view.findViewById(R.id.textView_function_repartion_resulat);
+        textView_fuction_repartition_resulat = (TextView) view.findViewById(R.id.textView_function_repartition_resulat);
 
         editText_kMax.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
