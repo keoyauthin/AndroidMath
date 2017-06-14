@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="@dimen/activity_vertical_margin"
+    android:layout_marginBottom="@dimen/activity_vertical_margin"
+    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+    android:layout_marginTop="64dp"
+    tools:context=".views.HomeActivity"
+    android:columnCount="2"
+    android:rowCount="3">
+
+    <ImageButton
+        style="@style/HomeButtons"
+        android:layout_gravity="start|top"
+        android:src="@drawable/ic_icon_polynome"
+        android:id="@+id/home_activity_polynome_btn"/>
+
+    <ImageButton
+        style="@style/HomeButtons"
+        android:src="@drawable/ic_icon_analytics"
+        android:layout_gravity="end|top"
+        android:id="@+id/home_activity_statistique_btn"/>
+
+    <ImageButton
+        style="@style/HomeButtons"
+        android:src="@drawable/ic_icon_probability"
+        android:layout_gravity="start|top"
+        android:id="@+id/home_activity_proba_btn"/>
+
+    <ImageButton
+        style="@style/HomeButtons"
+        android:src="@drawable/ic_icon_moyenne"
+        android:layout_gravity="end|top"
+        android:id="@+id/home_activity_moyenne_btn"/>
+
+    <ImageButton
+        style="@style/HomeButtons"
+        android:src="@drawable/ic_icon_matrix"
+        android:layout_gravity="start|top"
+        android:id="@+id/home_activity_matrice_btn"/>
+    <ImageButton
+        style="@style/HomeButtons"
+        android:src="@drawable/ic_live_help"
+        android:layout_gravity="end|top"/>
+
+</GridLayout>
