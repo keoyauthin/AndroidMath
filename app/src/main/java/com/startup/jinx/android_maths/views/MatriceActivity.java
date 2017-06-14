@@ -48,8 +48,6 @@ public class MatriceActivity extends NavigationDrawer {
         super.onCreate(savedInstanceState);
         mNavigationView.getMenu().findItem(R.id.digital_nav_drawer_grp_math_item_matrice).setChecked(true);
 
-        //setContentView(R.layout.content_matrice);
-
         View Matrice1 = findViewById(R.id.matrice1);
         View Matrice2 = findViewById(R.id.matrice2);
         View Matrice3 = findViewById(R.id.matrice3);
@@ -175,7 +173,7 @@ public class MatriceActivity extends NavigationDrawer {
 
     private void Build_Matrice(int row, int col){
 
-        switch (row){
+        switch (col){
             case 1:
                 Hide_Row(2);
                 Hide_Row(3);
@@ -669,8 +667,5 @@ public class MatriceActivity extends NavigationDrawer {
         }catch (Exception e){
             Matrice1_editText1.setError(getString(R.string.matrice_erreurs));
         }
-
-
-
     }
 }
