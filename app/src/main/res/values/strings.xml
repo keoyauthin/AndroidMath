@@ -5,6 +5,7 @@
         <string name="action_ok">OK</string>
         <string name="action_cancel">Annuler</string>
         <string name="action_calcul">Calcul</string>
+        <string name="action_reset">Réinitialiser</string>
 
     <!-- String related to Home Activity -->
         <string name="home_activity_title">Accueil</string>
@@ -91,6 +92,10 @@
 
     <!-- String related to Matrice Activity -->
         <string name="matrice_activity_title">Calculs matriciels</string>
+            <string name="matrice_row">Lignes de la matrice</string>
+            <string name="matrice_col">Colonnes de la matrice</string>
+            <string name="matrice_erreur">Une valeur doit être saisie</string>
+            <string name="matrice_erreurs">Tous les valeurs doivent êtres renseignées </string>
 
     <!-- String related to the Infos Dialog -->
         <string name="info_dialog_title">Informations</string>
