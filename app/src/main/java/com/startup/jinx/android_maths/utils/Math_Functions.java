@@ -109,6 +109,8 @@ public class Math_Functions {
         return resultat;
     }
 
+
+
     /**
      * Arrondit un nombre et reourne le résulat.
      *

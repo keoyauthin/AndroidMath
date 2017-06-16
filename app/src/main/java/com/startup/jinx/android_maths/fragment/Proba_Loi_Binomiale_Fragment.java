@@ -19,22 +19,54 @@ import com.startup.jinx.android_maths.utils.Math_Utils;
  * Created by Mégane Vilain on 18/04/2017.
  * Project Utils-Math
  */
-
 public class Proba_Loi_Binomiale_Fragment extends Fragment {
 
+    /**
+     * The Edit text n.
+     */
     EditText editText_n;
+    /**
+     * The Edit text p.
+     */
     EditText editText_p;
+    /**
+     * The Edit text k.
+     */
     EditText editText_k;
+    /**
+     * The Edit text k min.
+     */
     EditText editText_kMin;
+    /**
+     * The Edit text k max.
+     */
     EditText editText_kMax;
 
 
+    /**
+     * The Text view function binomiale resulat.
+     */
     TextView textView_function_Binomiale_resulat;
+    /**
+     * The Text view variance.
+     */
     TextView textView_variance;
+    /**
+     * The Text view esperance.
+     */
     TextView textView_esperance;
+    /**
+     * The Text view ecarttype.
+     */
     TextView textView_ecarttype;
+    /**
+     * The Text view fuction repartition resulat.
+     */
     TextView textView_fuction_repartition_resulat;
 
+    /**
+     * The Btn calcul.
+     */
     Button btnCalcul;
 
     /**
@@ -102,7 +134,10 @@ public class Proba_Loi_Binomiale_Fragment extends Fragment {
         super.onDetach();
     }
 
-    private void Check_Values()
+    /**
+     * Vérifie les valeurs saisies par l'utilisateur.
+     */
+    public void Check_Values()
     {
         double n =0 ,p = 0,k = 0, kMin = 0, kMax =0 ;
         boolean cancel = false;
@@ -147,7 +182,16 @@ public class Proba_Loi_Binomiale_Fragment extends Fragment {
 
     }
 
-    private void Function_Binomiale(double n, double p, double k , double kMin, double kMax)
+    /**
+     * Calcul de la fonction binomiale .
+     *
+     * @param n    Nombre d'expérience réalisées
+     * @param p    Probabilités de succès
+     * @param k    Nombre de réussités
+     * @param kMin Valeur minimum de l'interval
+     * @param kMax Valeur maximale de l'intervale
+     */
+    public void Function_Binomiale(double n, double p, double k , double kMin, double kMax)
     {
         double esperance, variance, ecarttype, fonction_repartition;
 

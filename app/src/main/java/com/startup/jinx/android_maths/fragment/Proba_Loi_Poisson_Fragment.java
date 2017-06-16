@@ -19,20 +19,49 @@ import com.startup.jinx.android_maths.utils.Math_Utils;
  * Created by Mégane Vilain on 18/04/2017.
  * Project Utils-Math
  */
-
 public class Proba_Loi_Poisson_Fragment extends Fragment {
 
+    /**
+     * The Edit text lambda.
+     */
     EditText editText_lambda;
+    /**
+     * The Edit text k.
+     */
     EditText editText_k;
+    /**
+     * The Edit text k min.
+     */
     EditText editText_kMin;
+    /**
+     * The Edit text k max.
+     */
     EditText editText_kMax;
 
+    /**
+     * The Text view esperance.
+     */
     TextView textView_esperance;
+    /**
+     * The Text view variance.
+     */
     TextView textView_variance;
+    /**
+     * The Text view ecarttype.
+     */
     TextView textView_ecarttype;
+    /**
+     * The Text view function poisson resulat.
+     */
     TextView textView_function_Poisson_resulat;
+    /**
+     * The Text view function repartition resulat.
+     */
     TextView textView_function_repartition_resulat;
 
+    /**
+     * The Btn calcul.
+     */
     Button btnCalcul;
 
     /**
@@ -97,7 +126,10 @@ public class Proba_Loi_Poisson_Fragment extends Fragment {
         super.onDetach();
     }
 
-    private void Check_Values(){
+    /**
+     * Vérifie les valeurs saisies par l'utilisateur.
+     */
+    public void Check_Values(){
         double lambda = 0 , k =0 ,  kMin = 0 ,  kMax = 0;
         boolean cancel = false;
 
@@ -134,7 +166,15 @@ public class Proba_Loi_Poisson_Fragment extends Fragment {
 
     }
 
-    private void Function_Poisson(double lambda, double k, double kMin, double kMax){
+    /**
+     * Function poisson.
+     *
+     * @param lambda Nombre moyen d'occurences
+     * @param k      Nombre d'occurences
+     * @param kMin Valeur minimum de l'interval
+     * @param kMax Valeur maximale de l'intervale
+     */
+    public void Function_Poisson(double lambda, double k, double kMin, double kMax){
 
         double fonction_repartition;
 

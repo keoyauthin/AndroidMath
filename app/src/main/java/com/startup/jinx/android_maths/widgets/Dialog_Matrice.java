@@ -1,4 +1,4 @@
-package com.startup.jinx.android_maths.views;
+package com.startup.jinx.android_maths.widgets;
 
 import android.app.Activity;
 import android.content.Intent;

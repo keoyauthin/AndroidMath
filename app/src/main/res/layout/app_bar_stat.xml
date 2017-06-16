@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.MoyenneActivity">
+    tools:context=".views.StatistiqueActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_height="wrap_content"
@@ -22,6 +22,6 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_moyenne" />
+    <include layout="@layout/content_stat" />
 
 </android.support.design.widget.CoordinatorLayout>

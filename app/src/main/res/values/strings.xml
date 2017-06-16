@@ -37,6 +37,12 @@
 
     <!-- String related to Statistiques Activity -->
     <string name="statistique_activity_title">Séries statistiques</string>
+        <string name="statistique_activity_moyenne">Moyenne :</string>
+        <string name="statistique_activity_ecarttype">Écart type :</string>
+        <string name="statistique_ativity_mode">Mode :</string>
+        <string name="statistique_activity_mediane">Médiane :</string>
+        <string name="statistique_activity_delete_value">Voulez vous supprimer cette valeur ? </string>
+        <string name="statistique_activity_change_value">Voulez vous modifier cette valeur ?</string>
 
     <!-- String related to Proba Activity -->
 
@@ -89,12 +95,6 @@
         <string name="nav_drawer_grp_math_proba_test_khi">Test de KHI</string>
 
 
-    <!-- String related to Moyenne Activity -->
-        <string name="moyenne_activity_title">Moyenne</string>
-            <string name="moyenne_activity_moyenne">Moyenne :</string>
-            <string name="moyenne_activity_ecarttype">Écart type :</string>
-            <string name="moyenne_ativity_mode">Mode :</string>
-            <string name="moyenne_activity_mediane">Médiane</string>
 
 
     <!-- String related to Matrice Activity -->

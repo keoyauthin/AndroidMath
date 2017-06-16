@@ -32,11 +32,6 @@
         </item>
 
         <item
-            android:id="@+id/digital_nav_drawer_grp_math_item_moyenne"
-            android:title="@string/moyenne_activity_title"
-            android:icon="@drawable/ic_icon_moyenne"/>
-
-        <item
             android:id="@+id/digital_nav_drawer_grp_math_item_matrice"
             android:title="@string/matrice_activity_title"
             android:icon="@drawable/ic_icon_matrix">

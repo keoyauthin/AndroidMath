@@ -1,7 +1,6 @@
 package com.startup.jinx.android_maths.views;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.GravityCompat;
@@ -10,37 +9,187 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RadioButton;
 import android.widget.Spinner;
 
 import com.startup.jinx.android_maths.R;
+import com.startup.jinx.android_maths.utils.Math_Utils;
+import com.startup.jinx.android_maths.widgets.Dialog_Matrice;
 import com.startup.jinx.android_maths.widgets.NavigationDrawer;
 
 /**
  * Created by Mégane Vilain on ${DATE}.
  * Project Utils-Math
  */
-
 public class MatriceActivity extends NavigationDrawer {
 
 
-    EditText Matrice1_editText1, Matrice1_editText2, Matrice1_editText3, Matrice1_editText4,
-            Matrice1_editText5, Matrice1_editText6, Matrice1_editText7, Matrice1_editText8,
-            Matrice1_editText9, Matrice1_editText10, Matrice1_editText11, Matrice1_editText12,
-            Matrice1_editText13, Matrice1_editText14, Matrice1_editText15, Matrice1_editText16;
+    /**
+     * The Matrice 1 edit text 1.
+     */
+    EditText Matrice1_editText1, /**
+     * The Matrice 1 edit text 2.
+     */
+    Matrice1_editText2, /**
+     * The Matrice 1 edit text 3.
+     */
+    Matrice1_editText3, /**
+     * The Matrice 1 edit text 4.
+     */
+    Matrice1_editText4,
+    /**
+     * The Matrice 1 edit text 5.
+     */
+    Matrice1_editText5, /**
+     * The Matrice 1 edit text 6.
+     */
+    Matrice1_editText6, /**
+     * The Matrice 1 edit text 7.
+     */
+    Matrice1_editText7, /**
+     * The Matrice 1 edit text 8.
+     */
+    Matrice1_editText8,
+    /**
+     * The Matrice 1 edit text 9.
+     */
+    Matrice1_editText9, /**
+     * The Matrice 1 edit text 10.
+     */
+    Matrice1_editText10, /**
+     * The Matrice 1 edit text 11.
+     */
+    Matrice1_editText11, /**
+     * The Matrice 1 edit text 12.
+     */
+    Matrice1_editText12,
+    /**
+     * The Matrice 1 edit text 13.
+     */
+    Matrice1_editText13, /**
+     * The Matrice 1 edit text 14.
+     */
+    Matrice1_editText14, /**
+     * The Matrice 1 edit text 15.
+     */
+    Matrice1_editText15, /**
+     * The Matrice 1 edit text 16.
+     */
+    Matrice1_editText16;
 
-    EditText Matrice2_editText1, Matrice2_editText2, Matrice2_editText3, Matrice2_editText4,
-            Matrice2_editText5, Matrice2_editText6, Matrice2_editText7, Matrice2_editText8,
-            Matrice2_editText9, Matrice2_editText10, Matrice2_editText11, Matrice2_editText12,
-            Matrice2_editText13, Matrice2_editText14, Matrice2_editText15, Matrice2_editText16;
+    /**
+     * The Matrice 2 edit text 1.
+     */
+    EditText Matrice2_editText1, /**
+     * The Matrice 2 edit text 2.
+     */
+    Matrice2_editText2, /**
+     * The Matrice 2 edit text 3.
+     */
+    Matrice2_editText3, /**
+     * The Matrice 2 edit text 4.
+     */
+    Matrice2_editText4,
+    /**
+     * The Matrice 2 edit text 5.
+     */
+    Matrice2_editText5, /**
+     * The Matrice 2 edit text 6.
+     */
+    Matrice2_editText6, /**
+     * The Matrice 2 edit text 7.
+     */
+    Matrice2_editText7, /**
+     * The Matrice 2 edit text 8.
+     */
+    Matrice2_editText8,
+    /**
+     * The Matrice 2 edit text 9.
+     */
+    Matrice2_editText9, /**
+     * The Matrice 2 edit text 10.
+     */
+    Matrice2_editText10, /**
+     * The Matrice 2 edit text 11.
+     */
+    Matrice2_editText11, /**
+     * The Matrice 2 edit text 12.
+     */
+    Matrice2_editText12,
+    /**
+     * The Matrice 2 edit text 13.
+     */
+    Matrice2_editText13, /**
+     * The Matrice 2 edit text 14.
+     */
+    Matrice2_editText14, /**
+     * The Matrice 2 edit text 15.
+     */
+    Matrice2_editText15, /**
+     * The Matrice 2 edit text 16.
+     */
+    Matrice2_editText16;
 
-    EditText Matrice3_editText1, Matrice3_editText2, Matrice3_editText3, Matrice3_editText4,
-            Matrice3_editText5, Matrice3_editText6, Matrice3_editText7, Matrice3_editText8,
-            Matrice3_editText9, Matrice3_editText10, Matrice3_editText11, Matrice3_editText12,
-            Matrice3_editText13, Matrice3_editText14, Matrice3_editText15, Matrice3_editText16;
+    /**
+     * The Matrice 3 edit text 1.
+     */
+    EditText Matrice3_editText1, /**
+     * The Matrice 3 edit text 2.
+     */
+    Matrice3_editText2, /**
+     * The Matrice 3 edit text 3.
+     */
+    Matrice3_editText3, /**
+     * The Matrice 3 edit text 4.
+     */
+    Matrice3_editText4,
+    /**
+     * The Matrice 3 edit text 5.
+     */
+    Matrice3_editText5, /**
+     * The Matrice 3 edit text 6.
+     */
+    Matrice3_editText6, /**
+     * The Matrice 3 edit text 7.
+     */
+    Matrice3_editText7, /**
+     * The Matrice 3 edit text 8.
+     */
+    Matrice3_editText8,
+    /**
+     * The Matrice 3 edit text 9.
+     */
+    Matrice3_editText9, /**
+     * The Matrice 3 edit text 10.
+     */
+    Matrice3_editText10, /**
+     * The Matrice 3 edit text 11.
+     */
+    Matrice3_editText11, /**
+     * The Matrice 3 edit text 12.
+     */
+    Matrice3_editText12,
+    /**
+     * The Matrice 3 edit text 13.
+     */
+    Matrice3_editText13, /**
+     * The Matrice 3 edit text 14.
+     */
+    Matrice3_editText14, /**
+     * The Matrice 3 edit text 15.
+     */
+    Matrice3_editText15, /**
+     * The Matrice 3 edit text 16.
+     */
+    Matrice3_editText16;
 
-    Button btnCalcul, btnReset;
+    /**
+     * The Btn calcul.
+     */
+    Button btnCalcul;
 
+    /**
+     * The Spinner.
+     */
     Spinner spinner;
 
     @Override
@@ -53,7 +202,6 @@ public class MatriceActivity extends NavigationDrawer {
         View Matrice3 = findViewById(R.id.matrice3);
 
         btnCalcul = (Button) findViewById(R.id.btnCalcul);
-        btnReset =(Button) findViewById(R.id.btnReset);
 
         spinner = (Spinner) findViewById(R.id.matrice_activity_spinner);
 
@@ -108,12 +256,6 @@ public class MatriceActivity extends NavigationDrawer {
         Matrice3_editText15 = (EditText) Matrice3.findViewById(R.id.editText15);
         Matrice3_editText16 = (EditText) Matrice3.findViewById(R.id.editText16);
 
-        btnReset.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Dialog_Order();
-            }
-        });
 
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.signe_operatoire_spinner,android.R.layout.simple_spinner_item);
@@ -152,6 +294,7 @@ public class MatriceActivity extends NavigationDrawer {
                 btnCalcul.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                        Math_Utils.hideKeyboard(MatriceActivity.this,  getWindow().getDecorView().getRootView() );
                         if(spinner.getSelectedItem().toString().equals("-")){
                             Soustaction_Matrices(col, row);
                         }
@@ -166,14 +309,23 @@ public class MatriceActivity extends NavigationDrawer {
         }
     }
 
+    /**
+     * Dialog order.
+     */
     public void Dialog_Order(){
         Intent intent = new Intent(this, Dialog_Matrice.class);
         startActivityForResult(intent,1);
     }
 
-    private void Build_Matrice(int row, int col){
+    /**
+     * Constuit la matrice en fonction du nombre de lignes et de colonnes selectionnés .
+     *
+     * @param row Lignes
+     * @param col Colonnes
+     */
+    public void Build_Matrice(int row, int col){
 
-        switch (col){
+        switch (row){
             case 1:
                 Hide_Row(2);
                 Hide_Row(3);
@@ -211,7 +363,12 @@ public class MatriceActivity extends NavigationDrawer {
 
     }
 
-    private void Hide_Col(int col){
+    /**
+     * Cache une colonne des matrices .
+     *
+     * @param col La colonne à cacher
+     */
+    public void Hide_Col(int col){
 
         switch (col){
             case 1:
@@ -281,7 +438,13 @@ public class MatriceActivity extends NavigationDrawer {
         }
 
     }
-    private void Hide_Row(int row){
+
+    /**
+     * Cache une ligne des matrices.
+     *
+     * @param row La ligne à cacher
+     */
+    public void Hide_Row(int row){
         switch (row){
             case 1:
                 Matrice1_editText1.setVisibility(View.INVISIBLE);
@@ -350,6 +513,12 @@ public class MatriceActivity extends NavigationDrawer {
         }
     }
 
+    /**
+     * Soustaction de deux matrices.
+     *
+     * @param col Nombre de colonnes des matrices
+     * @param row Nombre de lignes des matrices
+     */
     public void Soustaction_Matrices(int col, int row){
 
         try {
@@ -510,6 +679,12 @@ public class MatriceActivity extends NavigationDrawer {
 
     }
 
+    /**
+     * Aditionne deux matrices .
+     *
+     * @param col Nombre de colonnes des matrices
+     * @param row Nombre de lignes des matrices
+     */
     public void Addition_Matrices(int col, int row) {
 
         try{

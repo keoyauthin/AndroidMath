@@ -1,7 +1,6 @@
 package com.startup.jinx.android_maths.views;
 
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -19,9 +18,8 @@ public class HomeActivity extends NavigationDrawer {
 
     Intent intent;
     ImageButton polynome_btn;
-    ImageButton statistique_btn;
     ImageButton proba_btn;
-    ImageButton moyenne_btn;
+    ImageButton statistique_btn;
     ImageButton matrice_btn;
 
 
@@ -31,9 +29,8 @@ public class HomeActivity extends NavigationDrawer {
         mNavigationView.getMenu().findItem(R.id.nav_drawer_grp_default_item_home).setChecked(true);
 
         polynome_btn = (ImageButton) findViewById(R.id.home_activity_polynome_btn);
-        statistique_btn =(ImageButton) findViewById(R.id.home_activity_statistique_btn);
         proba_btn = (ImageButton) findViewById(R.id.home_activity_proba_btn);
-        moyenne_btn =(ImageButton) findViewById(R.id.home_activity_moyenne_btn);
+        statistique_btn =(ImageButton) findViewById(R.id.home_activity_statistique_btn);
         matrice_btn = (ImageButton) findViewById(R.id.home_activity_matrice_btn);
 
         polynome_btn.setOnLongClickListener(new View.OnLongClickListener() {
@@ -49,23 +46,6 @@ public class HomeActivity extends NavigationDrawer {
             @Override
             public void onClick(View view) {
                 intent = new Intent(getApplicationContext(),PolynomeActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        statistique_btn.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View view) {
-                Toast toast = Toast.makeText(getApplicationContext(),"Statistiques",Toast.LENGTH_SHORT);
-                toast.show();
-                return true;
-            }
-        });
-
-        statistique_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                intent = new Intent(getApplicationContext(),StatistiqueActivity.class);
                 startActivity(intent);
             }
         });
@@ -87,7 +67,7 @@ public class HomeActivity extends NavigationDrawer {
             }
         });
 
-        moyenne_btn.setOnLongClickListener(new View.OnLongClickListener() {
+        statistique_btn.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
                 Toast toast = Toast.makeText(getApplicationContext(),"Moyenne",Toast.LENGTH_SHORT);
@@ -96,10 +76,10 @@ public class HomeActivity extends NavigationDrawer {
             }
         });
 
-        moyenne_btn.setOnClickListener(new View.OnClickListener() {
+        statistique_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent = new Intent(getApplicationContext(),MoyenneActivity.class);
+                intent = new Intent(getApplicationContext(),StatistiqueActivity.class);
                 startActivity(intent);
             }
         });

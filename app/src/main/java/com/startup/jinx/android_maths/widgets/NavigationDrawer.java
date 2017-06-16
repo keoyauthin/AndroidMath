@@ -12,15 +12,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
 import com.startup.jinx.android_maths.R;
 import com.startup.jinx.android_maths.views.HomeActivity;
 import com.startup.jinx.android_maths.views.MatriceActivity;
-import com.startup.jinx.android_maths.views.MoyenneActivity;
+import com.startup.jinx.android_maths.views.StatistiqueActivity;
 import com.startup.jinx.android_maths.views.PolynomeActivity;
 import com.startup.jinx.android_maths.views.ProbaActivity;
-import com.startup.jinx.android_maths.views.StatistiqueActivity;
 
 /**
  * Created by Mégane Vilain on 12/04/2017.
@@ -75,14 +73,6 @@ public abstract class NavigationDrawer extends AppCompatActivity implements Navi
             assert getSupportActionBar() != null;
             getSupportActionBar().setTitle(R.string.polynome_activity_title);
 
-        } else if (activityStr.equals(StatistiqueActivity.class.getSimpleName())) {
-            setContentView(R.layout.statistique_activity);
-            Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-            toolbar.setTitleTextColor(0xFFFFFFFF);
-            setSupportActionBar(toolbar);
-            assert getSupportActionBar() != null;
-            getSupportActionBar().setTitle(R.string.statistique_activity_title);
-
         } else if (activityStr.equals(ProbaActivity.class.getSimpleName())) {
             setContentView(R.layout.proba_activity);
             Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -91,16 +81,16 @@ public abstract class NavigationDrawer extends AppCompatActivity implements Navi
             assert getSupportActionBar() != null;
             getSupportActionBar().setTitle(R.string.proba_activity_title);
 
-        } else if (activityStr.equals(MoyenneActivity.class.getSimpleName())){
+        } else if (activityStr.equals(StatistiqueActivity.class.getSimpleName())){
             setContentView(R.layout.moyenne_activity);
             Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
             toolbar.setTitleTextColor(0xFFFFFFFF);
             setSupportActionBar(toolbar);
             assert getSupportActionBar() != null;
-            getSupportActionBar().setTitle(R.string.moyenne_activity_title);
+            getSupportActionBar().setTitle(R.string.statistique_activity_title);
 
         }else if (activityStr.equals(MatriceActivity.class.getSimpleName())){
-            setContentView(R.layout.matrice_activity);
+            setContentView(R.layout.statistique_activity);
             Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
             toolbar.setTitleTextColor(0xFFFFFFFF);
             setSupportActionBar(toolbar);
@@ -158,16 +148,12 @@ public abstract class NavigationDrawer extends AppCompatActivity implements Navi
                 intent = new Intent(this,PolynomeActivity.class);
                 startActivity(intent);
                 break;
-            case R.id.digital_nav_drawer_grp_math_item_stat:
-                intent = new Intent(this, StatistiqueActivity.class);
-                startActivity(intent);
-                break;
             case R.id.digital_nav_drawer_grp_math_item_proba:
                 intent = new Intent(this,ProbaActivity.class);
                 startActivity(intent);
                 break;
-            case R.id.digital_nav_drawer_grp_math_item_moyenne:
-                intent = new Intent(this, MoyenneActivity.class);
+            case R.id.digital_nav_drawer_grp_math_item_stat:
+                intent = new Intent(this, StatistiqueActivity.class);
                 startActivity(intent);
                 break;
             case R.id.digital_nav_drawer_grp_math_item_matrice:

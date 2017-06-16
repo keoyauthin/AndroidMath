@@ -6,9 +6,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_marginStart="64dp"
+    android:layout_marginEnd="64dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".views.MoyenneActivity"
-    tools:showIn="@layout/app_bar_moyenne">
+    tools:context=".views.StatistiqueActivity"
+    tools:showIn="@layout/app_bar_stat">
 
 
     <EditText
@@ -20,7 +22,6 @@
         android:inputType="numberSigned|numberDecimal"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="32dp"
-        android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginStart="8dp" />
 
@@ -30,72 +31,87 @@
         android:layout_height="wrap_content"
         android:text="@string/action_add"
         app:layout_constraintLeft_toRightOf="@+id/editText_Number"
-        android:layout_marginLeft="8dp"
         app:layout_constraintBaseline_toBaselineOf="@+id/editText_Number"
         android:layout_marginStart="8dp" />
+
+    <Button
+        android:id="@id/btnCalcul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/action_calcul"
+        android:layout_marginStart="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/btnAdd"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editText_Number"/>
 
     <TextView
         android:id="@+id/textView_Moyenne"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/moyenne_activity_moyenne"
-        android:layout_marginTop="0dp"
+        android:text="@string/statistique_activity_moyenne"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@+id/editText_Number"
-        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
         app:layout_constraintLeft_toLeftOf="parent" />
 
     <TextView
         android:id="@+id/textView_Moyenne_Data"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
         app:layout_constraintLeft_toRightOf="@+id/textView_Moyenne"
-        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView_Moyenne" />
 
     <TextView
         android:id="@+id/textView_ecarttype"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/moyenne_activity_ecarttype"
+        android:text="@string/statistique_activity_ecarttype"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
         android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@+id/textView_Moyenne"
-        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
         app:layout_constraintLeft_toLeftOf="parent" />
 
     <TextView
         android:id="@+id/textView_ecarttype_Data"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView_ecarttype"
         app:layout_constraintLeft_toRightOf="@+id/textView_ecarttype"
-        android:layout_marginLeft="8dp" />
+        android:layout_marginStart="8dp" />
 
     <TextView
         android:id="@+id/textView_Mode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/moyenne_ativity_mode"
+        android:text="@string/statistique_ativity_mode"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
         android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@+id/textView_ecarttype"
-        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
         app:layout_constraintLeft_toLeftOf="parent" />
 
     <TextView
         android:id="@+id/textView_Mode_Data"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
         app:layout_constraintLeft_toRightOf="@+id/textView_Mode"
-        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView_Mode" />
 
     <TextView
         android:id="@+id/textView_mediane"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/moyenne_activity_mediane"
+        android:text="@string/statistique_activity_mediane"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
         android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@+id/textView_Mode"
-        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
         app:layout_constraintLeft_toLeftOf="parent" />
 
     <TextView
@@ -103,14 +119,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toRightOf="@+id/textView_mediane"
-        android:layout_marginLeft="8dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:layout_marginStart="8dp"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView_mediane" />
 
     <ListView
         android:id="@+id/listView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="16dp"
         android:visibility="visible"
         app:layout_constraintLeft_toLeftOf="parent"
