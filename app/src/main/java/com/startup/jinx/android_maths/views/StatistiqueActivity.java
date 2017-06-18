@@ -91,7 +91,6 @@ public class StatistiqueActivity extends NavigationDrawer {
         btnCalcul = (Button) findViewById(R.id.btnCalcul);
 
         numbers_list_string = new ArrayList<String>();
-        number_list_double = new ArrayList<Double>();
 
         final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, numbers_list_string);
 
@@ -209,6 +208,8 @@ public class StatistiqueActivity extends NavigationDrawer {
      */
     public void Calcul(){
 
+        number_list_double = new ArrayList<Double>();
+
         double Moyenne = 0 , ecarttype =0;
         listView.getCount();
 
@@ -216,7 +217,7 @@ public class StatistiqueActivity extends NavigationDrawer {
             Moyenne = Moyenne + Double.parseDouble(numbers_list_string.get(i));
         }
         Moyenne = Moyenne / listView.getCount();
-        textView_moyenne.setText(String.valueOf(Moyenne));
+        textView_moyenne.setText(String.valueOf(Math_Functions.Round_Double(Moyenne,3)));
 
         for(int i =0; i < listView.getCount();i++){
             ecarttype = ecarttype + Math.pow((Double.parseDouble(numbers_list_string.get(i)) - Moyenne),2);
@@ -233,6 +234,8 @@ public class StatistiqueActivity extends NavigationDrawer {
         number_list_double = quickSort(0, number_list_double.size() -1 , number_list_double);
 
         Mediane(number_list_double);
+
+        Mode(number_list_double);
 
     }
 
@@ -293,19 +296,6 @@ public class StatistiqueActivity extends NavigationDrawer {
         return inputArr;
     }
 
-    public void Mediane(List<Double> number_list_double){
-
-        double mediane =0 ;
-
-        if(number_list_double.size() / 2 == 0){
-            mediane = number_list_double.get(number_list_double.size()/2);
-        }else{
-            mediane = number_list_double.get((number_list_double.size()+1)/2);;
-        }
-        textView_mode.setText(String.valueOf(Math_Functions.Round_Double(mediane,3)));
-
-    }
-
     /**
      * Échange la position de deux éléments d'un tableau.
      *
@@ -320,4 +310,53 @@ public class StatistiqueActivity extends NavigationDrawer {
         inputArr.set(j,temp);
         return  inputArr;
     }
+
+    /**
+     * Calcule la médiane d'une liste numérique.
+     *
+     * @param number_list_double Liste numérique
+     */
+    public void Mediane(List<Double> number_list_double){
+
+        double mediane =0 ;
+
+        if(number_list_double.size() % 2 == 0){
+            mediane = (number_list_double.get(number_list_double.size()/2) + number_list_double.get((number_list_double.size()/2))-1) /2 ;
+        }else{
+            mediane = number_list_double.get(((number_list_double.size()+1)/2)-1);;
+        }
+        textView_mediane.setText(String.valueOf(Math_Functions.Round_Double(mediane,3)));
+
+    }
+
+    /**
+     * Calcule le mode d'une liste numérique.
+     *
+     * @param number_list_double Liste numérique
+     */
+    public void Mode(List<Double> number_list_double){
+        double truc =0;
+        for(int i =0; i<number_list_double.size();i++){
+            if (truc < Count_presence_number(number_list_double,i)){
+                truc = number_list_double.get(i);
+            }
+        }
+        textView_mode.setText(String.valueOf(truc));
+    }
+
+    /**
+     * Calcule le nombre de fois ou une valeur est présente dans la liste.
+     *
+     * @param number_list_double Liste numérique
+     */
+    public double Count_presence_number(List<Double> number_list_double, int i ){
+        double mode = 0;
+        for (int y  = i; i< number_list_double.size()-1; i++) {
+            if(number_list_double.get(y).equals(number_list_double.get(y+1))  ){
+                mode = mode+1;
+            }
+        }
+        return mode;
+    }
+
 }
