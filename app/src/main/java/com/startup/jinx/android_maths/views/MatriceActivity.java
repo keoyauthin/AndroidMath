@@ -10,8 +10,10 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.startup.jinx.android_maths.R;
+import com.startup.jinx.android_maths.utils.Math_Functions;
 import com.startup.jinx.android_maths.utils.Math_Utils;
 import com.startup.jinx.android_maths.widgets.Dialog_Matrice;
 import com.startup.jinx.android_maths.widgets.NavigationDrawer;
@@ -183,25 +185,108 @@ public class MatriceActivity extends NavigationDrawer {
     Matrice3_editText16;
 
     /**
-     * The Btn calcul.
+     * Matrice_Inverce edit text 1.
+     */
+
+    EditText Matrice_Inverce_editText1,
+    /**
+     * Matrice_Inverce edit text 2.
+     */
+    Matrice_Inverce_editText2,
+    /**
+     * Matrice_Inverce edit text 3.
+     */
+    Matrice_Inverce_editText3, /**
+     * Matrice_Inverce edit text 4.
+     */
+    Matrice_Inverce_editText4,
+    /**
+     * Matrice_Inverce edit text 5.
+     */
+    Matrice_Inverce_editText5, /**
+     * Matrice_Inverce edit text 6.
+     */
+    Matrice_Inverce_editText6, /**
+     * Matrice_Inverce edit text 7.
+     */
+    Matrice_Inverce_editText7, /**
+     * Matrice_Inverce edit text 8.
+     */
+    Matrice_Inverce_editText8,
+    /**
+     * Matrice_Inverce edit text 9.
+     */
+    Matrice_Inverce_editText9, /**
+     * Matrice_Inverce edit text 10.
+     */
+    Matrice_Inverce_editText10, /**
+     * Matrice_Inverce edit text 11.
+     */
+    Matrice_Inverce_editText11, /**
+     * Matrice_Inverceedit text 12.
+     */
+    Matrice_Inverce_editText12,
+    /**
+     * Matrice_Inverce edit text 13.
+     */
+    Matrice_Inverce_editText13, /**
+     * Matrice_Inverce edit text 14.
+     */
+    Matrice_Inverce_editText14, /**
+     * Matrice_Inverce edit text 15.
+     */
+    Matrice_Inverce_editText15, /**
+     * Matrice_Inverce edit text 16.
+     */
+    Matrice_Inverce_editText16;
+
+    /**
+     * Boutton pour effectuer l'opération.
      */
     Button btnCalcul;
+
+    /**
+     * Boutton pour calculer l'inverse de la matrice.
+     */
+    Button btnInverce;
 
     /**
      * The Spinner.
      */
     Spinner spinner;
 
+    /**
+     * The Matrice 1.
+     */
+    View Matrice1;
+
+    /**
+     * The Matrice 2.
+     */
+    View Matrice2;
+
+    /**
+     * The Matrice 3.
+     */
+    View Matrice3;
+
+    /**
+     * The Matrice inverce.
+     */
+    View Matrice_Inverce;
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         mNavigationView.getMenu().findItem(R.id.digital_nav_drawer_grp_math_item_matrice).setChecked(true);
 
-        View Matrice1 = findViewById(R.id.matrice1);
-        View Matrice2 = findViewById(R.id.matrice2);
-        View Matrice3 = findViewById(R.id.matrice3);
+        Matrice1 = findViewById(R.id.matrice1);
+        Matrice2 = findViewById(R.id.matrice2);
+        Matrice3 = findViewById(R.id.matrice3);
+        Matrice_Inverce = findViewById(R.id.matrice_inverse);
 
         btnCalcul = (Button) findViewById(R.id.btnCalcul);
+        btnInverce = (Button) findViewById(R.id.btnInverce);
 
         spinner = (Spinner) findViewById(R.id.matrice_activity_spinner);
 
@@ -256,7 +341,22 @@ public class MatriceActivity extends NavigationDrawer {
         Matrice3_editText15 = (EditText) Matrice3.findViewById(R.id.editText15);
         Matrice3_editText16 = (EditText) Matrice3.findViewById(R.id.editText16);
 
-
+        Matrice_Inverce_editText1 = (EditText) Matrice_Inverce.findViewById(R.id.editText1);
+        Matrice_Inverce_editText2 = (EditText) Matrice_Inverce.findViewById(R.id.editText2);
+        Matrice_Inverce_editText3 = (EditText) Matrice_Inverce.findViewById(R.id.editText3);
+        Matrice_Inverce_editText4 = (EditText) Matrice_Inverce.findViewById(R.id.editText4);
+        Matrice_Inverce_editText5 = (EditText) Matrice_Inverce.findViewById(R.id.editText5);
+        Matrice_Inverce_editText6 = (EditText) Matrice_Inverce.findViewById(R.id.editText6);
+        Matrice_Inverce_editText7 = (EditText) Matrice_Inverce.findViewById(R.id.editText7);
+        Matrice_Inverce_editText8 = (EditText) Matrice_Inverce.findViewById(R.id.editText8);
+        Matrice_Inverce_editText9 = (EditText) Matrice_Inverce.findViewById(R.id.editText9);
+        Matrice_Inverce_editText10 = (EditText) Matrice_Inverce.findViewById(R.id.editText10);
+        Matrice_Inverce_editText11 = (EditText) Matrice_Inverce.findViewById(R.id.editText11);
+        Matrice_Inverce_editText12 = (EditText) Matrice_Inverce.findViewById(R.id.editText12);
+        Matrice_Inverce_editText13 = (EditText) Matrice_Inverce.findViewById(R.id.editText13);
+        Matrice_Inverce_editText14 = (EditText) Matrice_Inverce.findViewById(R.id.editText14);
+        Matrice_Inverce_editText15 = (EditText) Matrice_Inverce.findViewById(R.id.editText15);
+        Matrice_Inverce_editText16 = (EditText) Matrice_Inverce.findViewById(R.id.editText16);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.signe_operatoire_spinner,android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -301,6 +401,14 @@ public class MatriceActivity extends NavigationDrawer {
                         else{
                             Addition_Matrices(col, row);
                         }
+                    }
+                });
+
+                btnInverce.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Math_Utils.hideKeyboard(MatriceActivity.this, getWindow().getDecorView().getRootView());
+                        Inverce_Matrix(row, col);
                     }
                 });
             }
@@ -386,6 +494,12 @@ public class MatriceActivity extends NavigationDrawer {
                 Matrice3_editText5.setVisibility(View.INVISIBLE);
                 Matrice3_editText9.setVisibility(View.INVISIBLE);
                 Matrice3_editText13.setVisibility(View.INVISIBLE);
+
+                Matrice_Inverce_editText1.setVisibility(View.INVISIBLE);
+                Matrice_Inverce_editText5.setVisibility(View.INVISIBLE);
+                Matrice_Inverce_editText9.setVisibility(View.INVISIBLE);
+                Matrice_Inverce_editText13.setVisibility(View.INVISIBLE);
+                
                 break;
             case 2:
                 Matrice1_editText2.setVisibility(View.INVISIBLE);
@@ -402,6 +516,12 @@ public class MatriceActivity extends NavigationDrawer {
                 Matrice3_editText6.setVisibility(View.INVISIBLE);
                 Matrice3_editText10.setVisibility(View.INVISIBLE);
                 Matrice3_editText14.setVisibility(View.INVISIBLE);
+
+                Matrice_Inverce_editText2.setVisibility(View.INVISIBLE);
+                Matrice_Inverce_editText6.setVisibility(View.INVISIBLE);
+                Matrice_Inverce_editText10.setVisibility(View.INVISIBLE);
+                Matrice_Inverce_editText14.setVisibility(View.INVISIBLE);
+                
                 break;
             case 3:
                 Matrice1_editText3.setVisibility(View.INVISIBLE);
@@ -418,6 +538,12 @@ public class MatriceActivity extends NavigationDrawer {
                 Matrice3_editText7.setVisibility(View.INVISIBLE);
                 Matrice3_editText11.setVisibility(View.INVISIBLE);
                 Matrice3_editText15.setVisibility(View.INVISIBLE);
+
+                Matrice_Inverce_editText3.setVisibility(View.INVISIBLE);
+                Matrice_Inverce_editText7.setVisibility(View.INVISIBLE);
+                Matrice_Inverce_editText11.setVisibility(View.INVISIBLE);
+                Matrice_Inverce_editText15.setVisibility(View.INVISIBLE);
+                
                 break;
             case 4:
                 Matrice1_editText4.setVisibility(View.INVISIBLE);
@@ -434,6 +560,12 @@ public class MatriceActivity extends NavigationDrawer {
                 Matrice3_editText8.setVisibility(View.INVISIBLE);
                 Matrice3_editText12.setVisibility(View.INVISIBLE);
                 Matrice3_editText16.setVisibility(View.INVISIBLE);
+
+                Matrice_Inverce_editText4.setVisibility(View.INVISIBLE);
+                Matrice_Inverce_editText8.setVisibility(View.INVISIBLE);
+                Matrice_Inverce_editText12.setVisibility(View.INVISIBLE);
+                Matrice_Inverce_editText16.setVisibility(View.INVISIBLE);
+                
                 break;
         }
 
@@ -461,6 +593,11 @@ public class MatriceActivity extends NavigationDrawer {
                 Matrice3_editText2.setVisibility(View.INVISIBLE);
                 Matrice3_editText3.setVisibility(View.INVISIBLE);
                 Matrice3_editText4.setVisibility(View.INVISIBLE);
+
+                Matrice_Inverce_editText1.setVisibility(View.INVISIBLE);
+                Matrice_Inverce_editText2.setVisibility(View.INVISIBLE);
+                Matrice_Inverce_editText3.setVisibility(View.INVISIBLE);
+                Matrice_Inverce_editText4.setVisibility(View.INVISIBLE);
                 break;
             case 2:
                 Matrice1_editText5.setVisibility(View.INVISIBLE);
@@ -477,6 +614,12 @@ public class MatriceActivity extends NavigationDrawer {
                 Matrice3_editText6.setVisibility(View.INVISIBLE);
                 Matrice3_editText7.setVisibility(View.INVISIBLE);
                 Matrice3_editText8.setVisibility(View.INVISIBLE);
+
+                Matrice_Inverce_editText5.setVisibility(View.INVISIBLE);
+                Matrice_Inverce_editText6.setVisibility(View.INVISIBLE);
+                Matrice_Inverce_editText7.setVisibility(View.INVISIBLE);
+                Matrice_Inverce_editText8.setVisibility(View.INVISIBLE);
+                
                 break;
             case 3:
                 Matrice1_editText9.setVisibility(View.INVISIBLE);
@@ -493,6 +636,12 @@ public class MatriceActivity extends NavigationDrawer {
                 Matrice3_editText10.setVisibility(View.INVISIBLE);
                 Matrice3_editText11.setVisibility(View.INVISIBLE);
                 Matrice3_editText12.setVisibility(View.INVISIBLE);
+
+                Matrice_Inverce_editText9.setVisibility(View.INVISIBLE);
+                Matrice_Inverce_editText10.setVisibility(View.INVISIBLE);
+                Matrice_Inverce_editText11.setVisibility(View.INVISIBLE);
+                Matrice_Inverce_editText12.setVisibility(View.INVISIBLE);
+                
                 break;
             case 4:
                 Matrice1_editText13.setVisibility(View.INVISIBLE);
@@ -509,6 +658,12 @@ public class MatriceActivity extends NavigationDrawer {
                 Matrice3_editText14.setVisibility(View.INVISIBLE);
                 Matrice3_editText15.setVisibility(View.INVISIBLE);
                 Matrice3_editText16.setVisibility(View.INVISIBLE);
+
+                Matrice_Inverce_editText13.setVisibility(View.INVISIBLE);
+                Matrice_Inverce_editText14.setVisibility(View.INVISIBLE);
+                Matrice_Inverce_editText15.setVisibility(View.INVISIBLE);
+                Matrice_Inverce_editText16.setVisibility(View.INVISIBLE);
+                
                 break;
         }
     }
@@ -520,7 +675,6 @@ public class MatriceActivity extends NavigationDrawer {
      * @param row Nombre de lignes des matrices
      */
     public void Soustaction_Matrices(int col, int row){
-
         try {
             switch (col) {
                 case 1:
@@ -672,6 +826,8 @@ public class MatriceActivity extends NavigationDrawer {
                     }
                     break;
             }
+            Matrice3.setVisibility(View.VISIBLE);
+            btnInverce.setVisibility(View.VISIBLE);
         }catch (Exception e)
         {
             Matrice1_editText1.setError(getString(R.string.matrice_erreurs));
@@ -722,13 +878,13 @@ public class MatriceActivity extends NavigationDrawer {
                             Matrice3_editText1.setText(String.valueOf(Double.valueOf(Matrice1_editText1.getText().toString()) + Double.valueOf(Matrice2_editText1.getText().toString())));
                             Matrice3_editText2.setText(String.valueOf(Double.valueOf(Matrice1_editText2.getText().toString()) + Double.valueOf(Matrice2_editText2.getText().toString())));
                             Matrice3_editText5.setText(String.valueOf(Double.valueOf(Matrice1_editText5.getText().toString()) + Double.valueOf(Matrice2_editText5.getText().toString())));
-                            Matrice3_editText6.setText(String.valueOf(Double.valueOf(Matrice1_editText6.getText().toString()) + Double.valueOf(Matrice2_editText2.getText().toString())));
+                            Matrice3_editText6.setText(String.valueOf(Double.valueOf(Matrice1_editText6.getText().toString()) + Double.valueOf(Matrice2_editText6.getText().toString())));
                             break;
                         case 3:
                             Matrice3_editText1.setText(String.valueOf(Double.valueOf(Matrice1_editText1.getText().toString()) + Double.valueOf(Matrice2_editText1.getText().toString())));
                             Matrice3_editText2.setText(String.valueOf(Double.valueOf(Matrice1_editText2.getText().toString()) + Double.valueOf(Matrice2_editText2.getText().toString())));
                             Matrice3_editText5.setText(String.valueOf(Double.valueOf(Matrice1_editText5.getText().toString()) + Double.valueOf(Matrice2_editText5.getText().toString())));
-                            Matrice3_editText6.setText(String.valueOf(Double.valueOf(Matrice1_editText6.getText().toString()) + Double.valueOf(Matrice2_editText2.getText().toString())));
+                            Matrice3_editText6.setText(String.valueOf(Double.valueOf(Matrice1_editText6.getText().toString()) + Double.valueOf(Matrice2_editText6.getText().toString())));
                             Matrice3_editText9.setText(String.valueOf(Double.valueOf(Matrice1_editText9.getText().toString()) + Double.valueOf(Matrice2_editText9.getText().toString())));
                             Matrice3_editText10.setText(String.valueOf(Double.valueOf(Matrice1_editText10.getText().toString()) + Double.valueOf(Matrice2_editText10.getText().toString())));
                             break;
@@ -736,7 +892,7 @@ public class MatriceActivity extends NavigationDrawer {
                             Matrice3_editText1.setText(String.valueOf(Double.valueOf(Matrice1_editText1.getText().toString()) + Double.valueOf(Matrice2_editText1.getText().toString())));
                             Matrice3_editText2.setText(String.valueOf(Double.valueOf(Matrice1_editText2.getText().toString()) + Double.valueOf(Matrice2_editText2.getText().toString())));
                             Matrice3_editText5.setText(String.valueOf(Double.valueOf(Matrice1_editText5.getText().toString()) + Double.valueOf(Matrice2_editText5.getText().toString())));
-                            Matrice3_editText6.setText(String.valueOf(Double.valueOf(Matrice1_editText6.getText().toString()) + Double.valueOf(Matrice2_editText2.getText().toString())));
+                            Matrice3_editText6.setText(String.valueOf(Double.valueOf(Matrice1_editText6.getText().toString()) + Double.valueOf(Matrice2_editText6.getText().toString())));
                             Matrice3_editText9.setText(String.valueOf(Double.valueOf(Matrice1_editText9.getText().toString()) + Double.valueOf(Matrice2_editText9.getText().toString())));
                             Matrice3_editText10.setText(String.valueOf(Double.valueOf(Matrice1_editText10.getText().toString()) + Double.valueOf(Matrice2_editText10.getText().toString())));
                             Matrice3_editText13.setText(String.valueOf(Double.valueOf(Matrice1_editText13.getText().toString()) + Double.valueOf(Matrice2_editText13.getText().toString())));
@@ -839,8 +995,70 @@ public class MatriceActivity extends NavigationDrawer {
                     }
                     break;
             }
+            Matrice3.setVisibility(View.VISIBLE);
+            btnInverce.setVisibility(View.VISIBLE);
         }catch (Exception e){
             Matrice1_editText1.setError(getString(R.string.matrice_erreurs));
         }
+    }
+
+    public void Inverce_Matrix(double row, double col){
+        if(row != col){
+            Toast toast = Toast.makeText(getApplicationContext(),getString(R.string.matrice_inverce_error),Toast.LENGTH_LONG);
+            toast.show();
+        }else{
+            //Matrice_Inverce.setVisibility(View.VISIBLE);
+            if(row == 2){
+                Inverce_Matrix_Order_two();
+            }else if(row == 3){
+                Inverce_Matrix_Order_three();
+            }
+        }
+
+    }
+
+    /**
+     * Calcule l'inverce d'une matrice de second ordre ordre.
+     */
+    public void Inverce_Matrix_Order_two()
+    {
+        double determinant,a,b,c,d;
+
+        a = Double.parseDouble(Matrice3_editText1.getText().toString());
+        b = Double.parseDouble(Matrice3_editText2.getText().toString());
+        c = Double.parseDouble(Matrice3_editText5.getText().toString());
+        d = Double.parseDouble(Matrice3_editText6.getText().toString());
+
+        determinant = a*d - b*c;
+
+        Matrice_Inverce_editText1.setText(String.valueOf(Math_Functions.Round_Double(  (1/determinant) * d,3  )));
+        Matrice_Inverce_editText2.setText(String.valueOf(Math_Functions.Round_Double(  (1/determinant) * (b*-1),3  )));
+        Matrice_Inverce_editText5.setText(String.valueOf(Math_Functions.Round_Double(  (1/determinant) * (c*-1),3  )));
+        Matrice_Inverce_editText6.setText(String.valueOf(Math_Functions.Round_Double(  (1/determinant) * a,3  )));
+    }
+
+    public void Inverce_Matrix_Order_three(){
+        double determinant, a,b,c,d,e,f,g,h,i;
+        a = Double.parseDouble(Matrice3_editText1.getText().toString());
+        b = Double.parseDouble(Matrice3_editText2.getText().toString());
+        c = Double.parseDouble(Matrice3_editText3.getText().toString());
+        d = Double.parseDouble(Matrice3_editText5.getText().toString());
+        e = Double.parseDouble(Matrice3_editText6.getText().toString());
+        f = Double.parseDouble(Matrice3_editText7.getText().toString());
+        g = Double.parseDouble(Matrice3_editText9.getText().toString());
+        h = Double.parseDouble(Matrice3_editText10.getText().toString());
+        i = Double.parseDouble(Matrice3_editText11.getText().toString());
+
+        determinant = a * (e*i - f*h) - ( b* (d*i - g*f)) + ( c * (d*h - g*e) ) ;
+
+        Matrice_Inverce_editText1.setText(String.valueOf(Math_Functions.Round_Double(  (1/determinant)  * (e*i - f*h) ,3)));
+        Matrice_Inverce_editText2.setText(String.valueOf(Math_Functions.Round_Double(  (1/determinant)  *( (b*i - h*c) *-1) ,3)));
+        Matrice_Inverce_editText3.setText(String.valueOf(Math_Functions.Round_Double(  (1/determinant)  * (f*b - e*c) ,3)));
+        Matrice_Inverce_editText5.setText(String.valueOf(Math_Functions.Round_Double(  (1/determinant)  *( (d*i - f*g) *-1) ,3)));
+        Matrice_Inverce_editText6.setText(String.valueOf(Math_Functions.Round_Double(  (1/determinant)  * (a*i - g*c) ,3)));
+        Matrice_Inverce_editText7.setText(String.valueOf(Math_Functions.Round_Double(  (1/determinant)  *( (a*f - d*c) *-1)  ,3)));
+        Matrice_Inverce_editText9.setText(String.valueOf(Math_Functions.Round_Double(  (1/determinant)  * (d*h - g*e) ,3)));
+        Matrice_Inverce_editText10.setText(String.valueOf(Math_Functions.Round_Double(  (1/determinant)  *( (a*h - g*b) *-1) ,3)));
+        Matrice_Inverce_editText11.setText(String.valueOf(Math_Functions.Round_Double(  (1/determinant)  * (a*e - b*d) ,3)));
     }
 }

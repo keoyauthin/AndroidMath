@@ -106,6 +106,8 @@
             <string name="matrice_row">Lignes de la matrice</string>
             <string name="matrice_col">Colonnes de la matrice</string>
             <string name="matrice_erreurs">Tous les valeurs doivent êtres renseignées </string>
+            <string name="matrice_btn_inverce">Inverse</string>
+            <string name="matrice_inverce_error">La matrice doit être d\'ordre carée</string>
 
     <!-- String related to the navigation drawer -->
         <string name="nav_drawer_open">Ouvrir le menu de navigation</string>
