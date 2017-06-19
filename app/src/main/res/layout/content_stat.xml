@@ -123,6 +123,16 @@
         android:layout_marginStart="8dp"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView_mediane" />
 
+    <Button
+        android:id="@+id/btn_proba_normale"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/statistique_btn_proba_normale"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        app:layout_constraintTop_toBottomOf="@+id/textView_mediane"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
     <ListView
         android:id="@+id/listView"
         android:layout_width="wrap_content"
@@ -131,7 +141,7 @@
         android:layout_marginTop="16dp"
         android:visibility="visible"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_mediane" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_proba_normale" />
 
 
 </android.support.constraint.ConstraintLayout>

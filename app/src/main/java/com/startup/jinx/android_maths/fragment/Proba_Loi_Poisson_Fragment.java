@@ -136,31 +136,36 @@ public class Proba_Loi_Poisson_Fragment extends Fragment {
         try{
             lambda = Double.parseDouble(editText_lambda.getText().toString());
         } catch (Exception e){
-            editText_lambda.setError(getString(R.string.polynome_activity_edittext_error));
+            editText_lambda.setError(getString(R.string.error_input));
             cancel = true;
         }
 
         try{
             k = Double.parseDouble(editText_k.getText().toString());
         } catch (Exception e){
-            editText_k.setError(getString(R.string.polynome_activity_edittext_error));
+            editText_k.setError(getString(R.string.error_input));
             cancel = true;
         }
 
         try{
             kMin = Double.parseDouble(editText_kMin.getText().toString());
         } catch (Exception e){
-            editText_kMin.setError(getString(R.string.polynome_activity_edittext_error));
+            editText_kMin.setError(getString(R.string.error_input));
             cancel = true;
         }
 
         try{
             kMax = Double.parseDouble(editText_kMax.getText().toString());
         } catch (Exception e){
-            editText_kMax.setError(getString(R.string.polynome_activity_edittext_error));
+            editText_kMax.setError(getString(R.string.error_input));
             cancel = true;
         }
-        if(cancel != true){
+        if(!Math_Functions.Check_Interval(kMin,kMax)){
+            editText_kMin.setError(getString(R.string.proba_interval_error));
+            editText_kMax.setError(getString(R.string.proba_interval_error));
+            cancel = true;
+        }
+        if(cancel != true ){
             Function_Poisson(lambda,k, kMin,kMax);
         }
 

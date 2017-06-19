@@ -43,4 +43,12 @@
     <string name="proba_activity_title">Probabilities</string>
     <string name="statistique_activity_title">Statistical series</string>
     <string name="polynome_activity_zero_solution">There is no solutions</string>
+    <string name="action_add">Add</string>
+    <string name="action_calcul">Calculate</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_reset">Reset</string>
+    <string name="matrice_col">Matrix columns</string>
+    <string name="matrice_erreur">You must enter a numerical value</string>
+    <string name="matrice_erreurs">You must enter all values of the matrix</string>
+    <string name="matrice_row">Matrix rows</string>
 </resources>

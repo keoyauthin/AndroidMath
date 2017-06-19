@@ -2,6 +2,7 @@ package com.startup.jinx.android_maths.views;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -72,6 +73,11 @@ public class StatistiqueActivity extends NavigationDrawer {
      * Boutton servant à lancer la fonction de calcul.
      */
     Button btnCalcul;
+
+    /**
+     * Boutton servant à aller sur la vue Loi normale.
+     */
+    Button btnProbaNormale;
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -89,6 +95,7 @@ public class StatistiqueActivity extends NavigationDrawer {
 
         btnAdd = (Button) findViewById(R.id.btnAdd);
         btnCalcul = (Button) findViewById(R.id.btnCalcul);
+        btnProbaNormale = (Button) findViewById(R.id.btn_proba_normale);
 
         numbers_list_string = new ArrayList<String>();
 
@@ -103,11 +110,11 @@ public class StatistiqueActivity extends NavigationDrawer {
                     Double.parseDouble(editText_Number.getText().toString());
                 }catch (Exception e){
                     //TODO: Bonne valeur
-                    editText_Number.setError(getString(R.string.matrice_erreur));
+                    editText_Number.setError(getString(R.string.error_input));
                 }
                 if(editText_Number.getText().toString().equals(""))
                 {
-                    editText_Number.setError(getString(R.string.matrice_erreur));
+                    editText_Number.setError(getString(R.string.error_input));
                 }else {
                     numbers_list_string.add(editText_Number.getText().toString());
                     arrayAdapter.notifyDataSetChanged();
@@ -127,6 +134,7 @@ public class StatistiqueActivity extends NavigationDrawer {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         numbers_list_string.remove(id_list);
+                        number_list_double.remove(id_list);
                         arrayAdapter.notifyDataSetChanged();
                         Calcul();
                     }
@@ -159,11 +167,11 @@ public class StatistiqueActivity extends NavigationDrawer {
                     Double.parseDouble(editText_Number.getText().toString());
                 }catch (Exception e){
                     //TODO: Bonne valeur
-                    editText_Number.setError(getString(R.string.matrice_erreur));
+                    editText_Number.setError(getString(R.string.error_input));
                 }
                 if(editText_Number.getText().toString().equals(""))
                 {
-                    editText_Number.setError(getString(R.string.matrice_erreur));
+                    editText_Number.setError(getString(R.string.error_input));
                 }else {
                     numbers_list_string.add(editText_Number.getText().toString());
                     arrayAdapter.notifyDataSetChanged();
@@ -178,7 +186,21 @@ public class StatistiqueActivity extends NavigationDrawer {
             @Override
             public void onClick(View view) {
                 Math_Utils.hideKeyboard(StatistiqueActivity.this, getWindow().getDecorView().getRootView());
-                Calcul();
+                if (numbers_list_string.isEmpty()) {
+                    editText_Number.setError(getString(R.string.error_input));
+                }else{
+                    Calcul();
+                }
+
+            }
+        });
+
+        btnProbaNormale.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(StatistiqueActivity.this, ProbaActivity.class);
+                intent.putExtra("ecart-type", textView_ecarttype.getText().toString());
+                startActivity(intent);
             }
         });
     }
@@ -236,6 +258,8 @@ public class StatistiqueActivity extends NavigationDrawer {
         Mediane(number_list_double);
 
         Mode(number_list_double);
+
+        //btnProbaNormale.setVisibility(View.VISIBLE);
 
     }
 
@@ -335,13 +359,16 @@ public class StatistiqueActivity extends NavigationDrawer {
      * @param number_list_double Liste numérique
      */
     public void Mode(List<Double> number_list_double){
-        double truc =0;
+        double mode =0;
+        double count =0;
         for(int i =0; i<number_list_double.size();i++){
-            if (truc < Count_presence_number(number_list_double,i)){
-                truc = number_list_double.get(i);
+            double Count = Count_presence_number(number_list_double,i);
+            if (count < Count ){
+                count = Count;
+                mode = number_list_double.get(i);
             }
         }
-        textView_mode.setText(String.valueOf(truc));
+        textView_mode.setText(String.valueOf(mode));
     }
 
     /**

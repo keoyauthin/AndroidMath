@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView_n"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/proba_uniforme_n"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_n"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="2"
+        android:imeOptions="actionNext"
+        android:hint="@string/proba_uniforme_n_hint"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/textView_n"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView_n" />
+
+    <TextView
+        android:id="@+id/textView_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/proba_uniforme_a"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView_n"
+        android:layout_marginStart="8dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="2"
+        android:imeOptions="actionNext"
+        android:hint="@string/proba_uniforme_a_hint"
+        android:inputType="number|numberSigned|numberDecimal"
+        app:layout_constraintStart_toEndOf="@+id/textView_a"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView_a" />
+
+    <TextView
+        android:id="@+id/textView_b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/proba_uniforme_b"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView_a"
+        android:layout_marginStart="8dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="2"
+        android:hint="@string/proba_uniforme_b_hint"
+        android:inputType="number|numberDecimal|numberSigned"
+        app:layout_constraintStart_toEndOf="@+id/textView_b"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView_b" />
+
+    <Button
+        android:id="@+id/btn_discrete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/proba_uniforme_btn_discrete"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView_b"
+        android:layout_marginStart="24dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Button
+        android:id="@+id/btn_continue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/proba_uniforme_btn_continue"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView_b"
+        android:layout_marginRight="24dp"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_esperance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/proba_esperance"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/btn_discrete"
+        android:layout_marginStart="8dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_esperance_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView_esperance"
+        app:layout_constraintLeft_toRightOf="@+id/textView_esperance"
+        android:layout_marginStart="8dp" />
+
+    <TextView
+        android:id="@+id/textView_variance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/proba_variance"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView_esperance"
+        android:layout_marginStart="8dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_variance_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView_variance"
+        app:layout_constraintLeft_toRightOf="@+id/textView_variance"
+        android:layout_marginStart="8dp" />
+
+    <TextView
+        android:id="@+id/textView_proba"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/proba_uniforme_proba"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView_variance"
+        android:layout_marginStart="8dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_proba_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView_proba"
+        app:layout_constraintLeft_toRightOf="@+id/textView_proba"
+        android:layout_marginStart="8dp" />
+
+
+</android.support.constraint.ConstraintLayout>

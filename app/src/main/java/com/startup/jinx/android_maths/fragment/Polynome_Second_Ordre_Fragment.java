@@ -167,7 +167,7 @@ public class Polynome_Second_Ordre_Fragment extends Fragment {
                 a = Double.parseDouble(Edit_a.getText().toString());
             }
         } catch (Exception e){
-            Edit_a.setError(getString(R.string.polynome_activity_edittext_error));
+            Edit_a.setError(getString(R.string.error_input));
         }
 
         try{
@@ -175,7 +175,7 @@ public class Polynome_Second_Ordre_Fragment extends Fragment {
                 b = Double.parseDouble(Edit_b.getText().toString());
             }
         } catch (Exception e){
-            Edit_b.setError(getString(R.string.polynome_activity_edittext_error));
+            Edit_b.setError(getString(R.string.error_input));
         }
 
         try {
@@ -183,7 +183,7 @@ public class Polynome_Second_Ordre_Fragment extends Fragment {
                 c = Double.parseDouble(Edit_c.getText().toString());
             }
         } catch (Exception e){
-            Edit_c.setError(getString(R.string.polynome_activity_edittext_error));
+            Edit_c.setError(getString(R.string.error_input));
         }
 
         //Changement de signe si le signe opératoire est négatif

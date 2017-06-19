@@ -159,7 +159,6 @@
         android:ems="2"
         android:imeOptions="actionNext"
         android:inputType="numberSigned"
-        android:textSize="50dp"
         app:layout_constraintBaseline_toBaselineOf="@+id/editText13"
         app:layout_constraintLeft_toRightOf="@+id/editText13" />
 

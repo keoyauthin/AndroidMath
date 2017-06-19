@@ -109,6 +109,25 @@ public class Math_Functions {
         return resultat;
     }
 
+    /**
+     * Vérifie que le minimum de l'interval saisi est inférieur à la valeur maximum.
+     *
+     * @param kMin the k min
+     * @param kMax the k max
+     * @return the boolean
+     */
+    public static boolean Check_Interval(double kMin, double kMax){
+
+        if(kMin < kMax){
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+
+    }
+
 
 
     /**

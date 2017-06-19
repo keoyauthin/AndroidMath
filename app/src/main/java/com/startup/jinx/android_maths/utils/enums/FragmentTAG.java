@@ -7,6 +7,9 @@ package com.startup.jinx.android_maths.utils.enums;
  */
 public enum FragmentTAG {
 
+
+    //TODO: UTILIE?
+
     /**
      * Polynome second ordre fragment tag.
      */

@@ -41,10 +41,10 @@ public class Dialog_Matrice extends Activity {
 
                 if ( (radioGroup_Row.getCheckedRadioButtonId() <= 0) || (radioGroup_Col.getCheckedRadioButtonId() <= 0) )
                     if((radioGroup_Row.getCheckedRadioButtonId() <= 0)) {
-                        radioButton_Row.setError(getString(R.string.matrice_erreur));
+                        radioButton_Row.setError(getString(R.string.error_input));
                     }
                     if ((radioGroup_Col.getCheckedRadioButtonId() <= 0)){
-                        radioButton_Col.setError(getString(R.string.matrice_erreur));
+                        radioButton_Col.setError(getString(R.string.error_input));
                     }
                 else{
                         String row = ((RadioButton) findViewById(radioGroup_Row.getCheckedRadioButtonId())).getText().toString();

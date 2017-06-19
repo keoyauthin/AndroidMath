@@ -88,13 +88,13 @@ public class Proba_Loi_Normale_Fragment extends Fragment {
         try {
             mu = Double.parseDouble(editText_esperance.getText().toString());
         }catch (Exception e){
-            editText_esperance.setError(getString(R.string.proba_normale_edittext_error));
+            editText_esperance.setError(getString(R.string.error_input));
         }
         if(cancel!=true){
             try {
                 sigma = Double.parseDouble(editText_ecarttype.getText().toString());
             }catch (Exception e){
-                editText_ecarttype.setError(getString(R.string.proba_normale_edittext_error));
+                editText_ecarttype.setError(getString(R.string.error_input));
             }
         }
 
@@ -102,18 +102,25 @@ public class Proba_Loi_Normale_Fragment extends Fragment {
             try {
                 kMin = Double.parseDouble(editText_KMin.getText().toString());
             }catch (Exception e){
-                editText_KMin.setError(getString(R.string.proba_normale_edittext_error));
+                editText_KMin.setError(getString(R.string.error_input));
             }
         }
         if(cancel!=true){
             try {
                 KMax = Double.parseDouble(editText_KMax.getText().toString());
             }catch (Exception e){
-                editText_KMax.setError(getString(R.string.proba_normale_edittext_error));
+                editText_KMax.setError(getString(R.string.error_input));
             }
         }
 
-        if (cancel!=true){
+        if(!Math_Functions.Check_Interval(kMin,KMax)){
+            editText_KMin.setError(getString(R.string.proba_interval_error));
+            editText_KMax.setError(getString(R.string.proba_interval_error));
+            cancel = true;
+        }
+
+        if (cancel!=true && Math_Functions.Check_Interval(kMin,KMax)){
+
             a = (kMin - mu) /sigma;
             b = (KMax - mu) / sigma;
 
@@ -122,7 +129,7 @@ public class Proba_Loi_Normale_Fragment extends Fragment {
 
             double resultat = Function_Normale(b) - Function_Normale(a);
 
-            textView_function_repartition.setText(String.valueOf(resultat));
+            textView_function_repartition.setText(String.valueOf(Math_Functions.Round_Double(resultat,3)));
         }
     }
 

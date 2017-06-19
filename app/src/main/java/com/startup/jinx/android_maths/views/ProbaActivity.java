@@ -1,5 +1,6 @@
 package com.startup.jinx.android_maths.views;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -47,6 +48,12 @@ public class ProbaActivity extends NavigationDrawer implements OnFragmentInterac
 
         setupViewPager(mViewPager);
         mTabLayout.setupWithViewPager(mViewPager);
+
+        Intent intent = getIntent();
+        if(intent != null){
+            String intent_ecart_type = intent.getStringExtra("ecart-type");
+        }
+
     }
 
     @Override
