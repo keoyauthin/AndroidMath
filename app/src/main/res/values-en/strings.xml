@@ -2,43 +2,15 @@
 <resources>
     <string name="app_name">Math_Utils</string>
     <string name="action_ok">OK</string>
+
     <string name="home_activity_title">Home</string>
-    <string name="info_dialog_message">Math_Utils</string>
-    <string name="info_dialog_title">About</string>
     <string name="matrice_activity_title">Matrix calculations</string>
-    <string name="moyenne_activity_title">Average</string>
     <string name="nav_drawer_close">Close the drawer</string>
     <string name="nav_drawer_grp_defaut_home">Home</string>
-    <string name="nav_drawer_grp_item_infos">About</string>
-    <string name="nav_drawer_grp_math_matrice_inverse">Reverse</string>
-    <string name="nav_drawer_grp_math_matrice_operations">Matrix operations</string>
-    <string name="nav_drawer_grp_math_matrice_vecteurs_propres">Eigenvector</string>
-    <string name="nav_drawer_grp_math_polynome_second_ordre">Second order</string>
-    <string name="nav_drawer_grp_math_polynome_troisieme_ordre">Third order</string>
-    <string name="nav_drawer_grp_math_proba_binomiale">Binomial distribution</string>
-    <string name="nav_drawer_grp_math_proba_normale">Normal distribution</string>
-    <string name="nav_drawer_grp_math_proba_poisson">Poisson distribution</string>
-    <string name="nav_drawer_grp_math_proba_test_khi">Chi-squared test</string>
-    <string name="nav_drawer_grp_math_proba_uniforme">Uniform distribution</string>
-    <string name="nav_drawer_grp_math_stat_auto">Automatic data entry</string>
-    <string name="nav_drawer_grp_math_stat_manuelle">Manual data entry</string>
     <string name="nav_drawer_open">Open the drawer</string>
-    <string name="polynome_activity_addition">+</string>
-    <string name="polynome_activity_calcul">Calculation</string>
     <string name="polynome_activity_calcul_delta">Calculation of the discriminant</string>
     <string name="polynome_activity_calcul_solutions">Calculation of solutions</string>
-    <string name="polynome_activity_delta_delta_ope">Delta = %1$ x4 x %2$ x %3$</string>
-    <string name="polynome_activity_delta_formule">"Delta = b²-4ac "</string>
-    <string name="polynome_activity_edittext_error">You must enter a numerical value</string>
-    <string name="polynome_activity_equation">= 0</string>
     <string name="polynome_activity_facorisation">Factorization</string>
-    <string name="polynome_activity_hint_a">a</string>
-    <string name="polynome_activity_hint_b">b</string>
-    <string name="polynome_activity_hint_c">c</string>
-    <string name="polynome_activity_hint_d">d</string>
-    <string name="polynome_activity_hint_image_X">X</string>
-    <string name="polynome_activity_hint_image_X2">X²</string>
-    <string name="polynome_activity_soustraction">-</string>
     <string name="polynome_activity_title">Polynomial</string>
     <string name="proba_activity_title">Probabilities</string>
     <string name="statistique_activity_title">Statistical series</string>
@@ -48,7 +20,37 @@
     <string name="action_cancel">Cancel</string>
     <string name="action_reset">Reset</string>
     <string name="matrice_col">Matrix columns</string>
-    <string name="matrice_erreur">You must enter a numerical value</string>
     <string name="matrice_erreurs">You must enter all values of the matrix</string>
     <string name="matrice_row">Matrix rows</string>
+    <string name="error_input">You must enter a numerical value</string>
+    <string name="matrice_btn_inverce">Inverce</string>
+    <string name="matrice_inverce_determinant_error">The matrix is not invertible</string>
+    <string name="matrice_inverce_error">The matrix must be square</string>
+    <string name="proba_binomiale_k">Number of successes :</string>
+    <string name="proba_binomiale_n">Number of independent experiments :</string>
+    <string name="proba_binomiale_p">Probability of success:</string>
+    <string name="proba_ecart_type">Standard deviation :</string>
+    <string name="proba_esperance">Expected value :</string>
+    <string name="proba_fonction_repartition">Cumulative distribution function :</string>
+    <string name="proba_interval">Over an interval of :</string>
+    <string name="proba_normale_ecarttype">Standart deviation:</string>
+    <string name="proba_normale_ecarttype_hint">Standart deviation:</string>
+    <string name="proba_normale_esperance">Expected value :</string>
+    <string name="proba_normale_esperance_hint">Expected value :</string>
+    <string name="proba_poisson_k">Number of occurrences:</string>
+    <string name="proba_poisson_lambda">Average number of events per interval:</string>
+    <string name="proba_uniforme_a">Minimum interval value:</string>
+    <string name="proba_uniforme_b">Maximum interval value:</string>
+    <string name="proba_uniforme_btn_continue">Uniform distribution</string>
+    <string name="proba_uniforme_btn_discrete">Discrete uniform distribution</string>
+    <string name="proba_uniforme_n">Number of possible values:</string>
+    <string name="proba_uniforme_proba">Probability:</string>
+    <string name="statistique_activity_delete_value">"Do you want to delete this value ? "</string>
+    <string name="statistique_activity_ecarttype">Standart deviation:</string>
+    <string name="statistique_activity_moyenne">Average:</string>
+    <string name="statistique_btn_proba_normale">Normal distribution</string>
+    <string name="statistique_activity_mediane">Median:</string>
+    <string name="statistique_ativity_mode">Mode:</string>
+    <string name="statistique_activity_change_value">"Do you want to modify  this value ? "</string>
+    <string name="proba_interval_error">The range of the interval is false</string>
 </resources>

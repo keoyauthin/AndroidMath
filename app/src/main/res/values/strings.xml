@@ -18,18 +18,18 @@
 
     <!-- String related to Polynome Activity -->
         <string name="polynome_activity_title">Polynômes</string>
-        <string name="polynome_activity_hint_a">a</string>
-        <string name="polynome_activity_hint_b">b</string>
-        <string name="polynome_activity_hint_c">c</string>
-        <string name="polynome_activity_hint_d">d</string>
-        <string name="polynome_activity_equation">= 0</string>
-        <string name="polynome_activity_addition">+</string>
-        <string name="polynome_activity_soustraction">-</string>
-        <string name="polynome_activity_hint_image_X2">X au carré</string>
-        <string name="polynome_activity_hint_image_X">X</string>
-        <string name="polynome_activity_delta_formule">Delta = b²-4ac </string>
+        <string name="polynome_activity_hint_a" translatable="false">a</string>
+        <string name="polynome_activity_hint_b" translatable="false">b</string>
+        <string name="polynome_activity_hint_c" translatable="false">c</string>
+        <string name="polynome_activity_hint_d" translatable="false">d</string>
+        <string name="polynome_activity_equation" translatable="false">= 0</string>
+        <string name="polynome_activity_addition" translatable="false">+</string>
+        <string name="polynome_activity_soustraction" translatable="false">-</string>
+        <string name="polynome_activity_hint_image_X2" translatable="false">X au carré</string>
+        <string name="polynome_activity_hint_image_X" translatable="false">X</string>
+        <string name="polynome_activity_delta_formule" translatable="false">Delta = b²-4ac </string>
         <string name="polynome_activity_calcul_delta">Calcul du discriminant</string>
-        <string name="polynome_activity_delta_delta_ope">Delta = %1$ x4 x %2$ x %3$</string>
+        <string name="polynome_activity_delta_delta_ope" translatable="false">Delta = %1$ x4 x %2$ x %3$</string>
         <string name="polynome_activity_calcul_solutions">Calcul des solutions</string>
         <string name="polynome_activity_facorisation">Factorisation</string>
         <string name="polynome_activity_zero_solution">Il n\'existe pas de solutions possibles pour cette équation</string>
@@ -54,14 +54,13 @@
         <string name="proba_activity_title">Probabilités</string>
 
         <string name="proba_esperance">Espérance :</string>
-        <string name="proba_variance">Variance :</string>
+        <string name="proba_variance" translatable="false">Variance :</string>
         <string name="proba_ecart_type">Ecart_Type : </string>
         <string name="proba_function" translatable="false">P(X = K) = </string>
         <string name="proba_interval">Sur un intervalle de :</string>
         <string name="proba_fonction_repartition">Foncion de répartition :</string>
 
 
-        <string name="nav_drawer_grp_math_proba_binomiale">Loi binomiale</string>
 
             <string name="proba_binomiale_n">Nombre d\'expériences réalisées :</string>
             <string name="proba_binomiale_n_hint" translatable="false">n</string>
@@ -73,16 +72,14 @@
             <string name="proba_binomiale_kMin_hint" translatable="false">KMin</string>
             <string name="proba_binomiale_KMax_hint" translatable="false">KMax</string>
 
-        <string name="nav_drawer_grp_math_proba_poisson">Loi de poisson</string>
 
             <string name="proba_poisson_lambda">Nombre moyen d\'occurences</string>
-            <string name="proba_poisson_lambda_hint">Lambda</string>
+            <string name="proba_poisson_lambda_hint" translatable="false">Lambda</string>
             <string name="proba_poisson_k">Nombres d\'occurences</string>
             <string name="proba_poisson_k_hint" translatable="false">k</string>
             <string name="proba_poisson_kMin_hint" translatable="false">KMin</string>
             <string name="proba_poisson_KMax_hint" translatable="false">KMax</string>
 
-        <string name="nav_drawer_grp_math_proba_normale">Loi normale</string>
             <string name="proba_normale_esperance">Espérance</string>
             <string name="proba_normale_esperance_hint">Espérance</string>
             <string name="proba_normale_ecarttype">Écart-type</string>
@@ -90,13 +87,12 @@
             <string name="proba_normale_kMin_hint" translatable="false">KMin</string>
             <string name="proba_normale_KMax_hint" translatable="false">KMax</string>
 
-        <string name="nav_drawer_grp_math_proba_uniforme">Loi uniforme</string>
             <string name="proba_uniforme_n">Nombre de valeurs possible :</string>
-            <string name="proba_uniforme_n_hint">n</string>
+            <string name="proba_uniforme_n_hint" translatable="false">n</string>
             <string name="proba_uniforme_a">Valeur minimale de l\'interval :</string>
-            <string name="proba_uniforme_a_hint">b</string>
+            <string name="proba_uniforme_a_hint" translatable="false">b</string>
             <string name="proba_uniforme_b">Valeur maximale de l\'interval : </string>
-            <string name="proba_uniforme_b_hint">b</string>
+            <string name="proba_uniforme_b_hint" translatable="false">b</string>
             <string name="proba_uniforme_btn_discrete">Loi discrète</string>
             <string name="proba_uniforme_btn_continue">Loi continue</string>
             <string name="proba_uniforme_proba">Probabilité :</string>
@@ -107,7 +103,8 @@
             <string name="matrice_col">Colonnes de la matrice</string>
             <string name="matrice_erreurs">Tous les valeurs doivent êtres renseignées </string>
             <string name="matrice_btn_inverce">Inverse</string>
-            <string name="matrice_inverce_error">La matrice doit être d\'ordre carée</string>
+            <string name="matrice_inverce_error">La matrice doit être carée</string>
+            <string name="matrice_inverce_determinant_error">La matrice n\'est pas inversible </string>
 
     <!-- String related to the navigation drawer -->
         <string name="nav_drawer_open">Ouvrir le menu de navigation</string>

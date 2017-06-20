@@ -389,6 +389,8 @@ public class MatriceActivity extends NavigationDrawer {
             if(resultCode == Activity.RESULT_OK) {
                 final int row = Integer.valueOf(data.getStringExtra("row"));
                 final int col = Integer.valueOf(data.getStringExtra("col"));
+
+
                 Build_Matrice(row, col);
 
                 btnCalcul.setOnClickListener(new View.OnClickListener() {
@@ -413,6 +415,31 @@ public class MatriceActivity extends NavigationDrawer {
                 });
             }
             if (resultCode == Activity.RESULT_CANCELED) {
+
+                final int row = 4;
+                final int col = 4;
+                Build_Matrice(row, col);
+
+                btnCalcul.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Math_Utils.hideKeyboard(MatriceActivity.this,  getWindow().getDecorView().getRootView() );
+                        if(spinner.getSelectedItem().toString().equals("-")){
+                            Soustaction_Matrices(col, row);
+                        }
+                        else{
+                            Addition_Matrices(col, row);
+                        }
+                    }
+                });
+
+                btnInverce.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Math_Utils.hideKeyboard(MatriceActivity.this, getWindow().getDecorView().getRootView());
+                        Inverce_Matrix(row, col);
+                    }
+                });
             }
         }
     }
@@ -1003,11 +1030,11 @@ public class MatriceActivity extends NavigationDrawer {
     }
 
     public void Inverce_Matrix(double row, double col){
-        if(row != col){
+        if(row != col || row == 1){
             Toast toast = Toast.makeText(getApplicationContext(),getString(R.string.matrice_inverce_error),Toast.LENGTH_LONG);
             toast.show();
         }else{
-            //Matrice_Inverce.setVisibility(View.VISIBLE);
+            Matrice_Inverce.setVisibility(View.VISIBLE);
             if(row == 2){
                 Inverce_Matrix_Order_two();
             }else if(row == 3){
@@ -1031,10 +1058,17 @@ public class MatriceActivity extends NavigationDrawer {
 
         determinant = a*d - b*c;
 
-        Matrice_Inverce_editText1.setText(String.valueOf(Math_Functions.Round_Double(  (1/determinant) * d,3  )));
-        Matrice_Inverce_editText2.setText(String.valueOf(Math_Functions.Round_Double(  (1/determinant) * (b*-1),3  )));
-        Matrice_Inverce_editText5.setText(String.valueOf(Math_Functions.Round_Double(  (1/determinant) * (c*-1),3  )));
-        Matrice_Inverce_editText6.setText(String.valueOf(Math_Functions.Round_Double(  (1/determinant) * a,3  )));
+        if(determinant != 0){
+            Matrice_Inverce_editText1.setText(String.valueOf(Math_Functions.Round_Double(  (1/determinant) * d,2  )));
+            Matrice_Inverce_editText2.setText(String.valueOf(Math_Functions.Round_Double(  (1/determinant) * (b*-1),2  )));
+            Matrice_Inverce_editText5.setText(String.valueOf(Math_Functions.Round_Double(  (1/determinant) * (c*-1),2  )));
+            Matrice_Inverce_editText6.setText(String.valueOf(Math_Functions.Round_Double(  (1/determinant) * a,2  )));
+        }else{
+            Toast toast = Toast.makeText(getApplicationContext(),getString(R.string.matrice_inverce_determinant_error),Toast.LENGTH_LONG);
+            toast.show();
+        }
+
+
     }
 
     public void Inverce_Matrix_Order_three(){
@@ -1050,15 +1084,20 @@ public class MatriceActivity extends NavigationDrawer {
         i = Double.parseDouble(Matrice3_editText11.getText().toString());
 
         determinant = a * (e*i - f*h) - ( b* (d*i - g*f)) + ( c * (d*h - g*e) ) ;
+        if(determinant != 0){
+            Matrice_Inverce_editText1.setText(String.valueOf(Math_Functions.Round_Double(  (1/determinant)  * (e*i - f*h) ,2)));
+            Matrice_Inverce_editText2.setText(String.valueOf(Math_Functions.Round_Double(  (1/determinant)  *( (b*i - h*c) *-1) ,2)));
+            Matrice_Inverce_editText3.setText(String.valueOf(Math_Functions.Round_Double(  (1/determinant)  * (f*b - e*c) ,2)));
+            Matrice_Inverce_editText5.setText(String.valueOf(Math_Functions.Round_Double(  (1/determinant)  *( (d*i - f*g) *-1) ,2)));
+            Matrice_Inverce_editText6.setText(String.valueOf(Math_Functions.Round_Double(  (1/determinant)  * (a*i - g*c) ,2)));
+            Matrice_Inverce_editText7.setText(String.valueOf(Math_Functions.Round_Double(  (1/determinant)  *( (a*f - d*c) *-1)  ,2)));
+            Matrice_Inverce_editText9.setText(String.valueOf(Math_Functions.Round_Double(  (1/determinant)  * (d*h - g*e) ,2)));
+            Matrice_Inverce_editText10.setText(String.valueOf(Math_Functions.Round_Double(  (1/determinant)  *( (a*h - g*b) *-1) ,2)));
+            Matrice_Inverce_editText11.setText(String.valueOf(Math_Functions.Round_Double(  (1/determinant)  * (a*e - b*d) ,2)));
+        }else{
+            Toast toast = Toast.makeText(getApplicationContext(),getString(R.string.matrice_inverce_determinant_error),Toast.LENGTH_LONG);
+            toast.show();
+        }
 
-        Matrice_Inverce_editText1.setText(String.valueOf(Math_Functions.Round_Double(  (1/determinant)  * (e*i - f*h) ,3)));
-        Matrice_Inverce_editText2.setText(String.valueOf(Math_Functions.Round_Double(  (1/determinant)  *( (b*i - h*c) *-1) ,3)));
-        Matrice_Inverce_editText3.setText(String.valueOf(Math_Functions.Round_Double(  (1/determinant)  * (f*b - e*c) ,3)));
-        Matrice_Inverce_editText5.setText(String.valueOf(Math_Functions.Round_Double(  (1/determinant)  *( (d*i - f*g) *-1) ,3)));
-        Matrice_Inverce_editText6.setText(String.valueOf(Math_Functions.Round_Double(  (1/determinant)  * (a*i - g*c) ,3)));
-        Matrice_Inverce_editText7.setText(String.valueOf(Math_Functions.Round_Double(  (1/determinant)  *( (a*f - d*c) *-1)  ,3)));
-        Matrice_Inverce_editText9.setText(String.valueOf(Math_Functions.Round_Double(  (1/determinant)  * (d*h - g*e) ,3)));
-        Matrice_Inverce_editText10.setText(String.valueOf(Math_Functions.Round_Double(  (1/determinant)  *( (a*h - g*b) *-1) ,3)));
-        Matrice_Inverce_editText11.setText(String.valueOf(Math_Functions.Round_Double(  (1/determinant)  * (a*e - b*d) ,3)));
     }
 }
