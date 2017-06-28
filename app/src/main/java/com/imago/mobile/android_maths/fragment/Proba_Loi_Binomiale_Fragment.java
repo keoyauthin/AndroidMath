@@ -12,7 +12,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.imago.mobile.android_maths.R;
-import com.imago.mobile.android_maths.functions.Math_Functions;
+import com.imago.mobile.android_maths.functions.Loi_Binomiale;
+import com.imago.mobile.android_maths.functions.Math_Functions2;
 import com.imago.mobile.android_maths.functions.Math_Utils;
 
 /**
@@ -177,7 +178,7 @@ public class Proba_Loi_Binomiale_Fragment extends Fragment {
             cancel = true;
         }
 
-        if(!Math_Functions.Check_Interval(kMin,kMax)){
+        if(!Math_Functions2.Check_Interval(kMin,kMax)){
             editText_kMin.setError(getString(R.string.proba_interval_error));
             editText_kMax.setError(getString(R.string.proba_interval_error));
             cancel = true;
@@ -200,18 +201,13 @@ public class Proba_Loi_Binomiale_Fragment extends Fragment {
      */
     public void Function_Binomiale(double n, double p, double k , double kMin, double kMax)
     {
-        double esperance, variance, ecarttype, fonction_repartition;
+        Loi_Binomiale loi_binomiale = new Loi_Binomiale(n,p,k, kMax, kMin);
 
-        esperance = Math_Functions.Esperance_Binomiale(n,p);
-        variance = Math_Functions.Variance_Binomiale(esperance,p);
-        ecarttype = Math_Functions.Ecart_Binomiale(variance);
-        fonction_repartition = Math_Functions.Function_Binomiale(n,p,kMax) - Math_Functions.Function_Binomiale(n,p,kMin-1);
-
-        textView_esperance.setText(String.valueOf(Math_Functions.Round_Double(esperance,3)));
-        textView_variance.setText(String.valueOf(Math_Functions.Round_Double(variance,3)));
-        textView_ecarttype.setText(String.valueOf(Math_Functions.Round_Double(ecarttype,3)));
-        textView_function_Binomiale_resulat.setText(String.valueOf(Math_Functions.Round_Double(Math_Functions.function_Binomiale(n,p,k),3)));
-        textView_fuction_repartition_resulat.setText(String.valueOf(Math_Functions.Round_Double(fonction_repartition,3)));
+        textView_esperance.setText(loi_binomiale.Esperance());
+        textView_variance.setText(loi_binomiale.Variance());
+        textView_ecarttype.setText(loi_binomiale.Ecart_type());
+        textView_function_Binomiale_resulat.setText(loi_binomiale.Proba());
+        textView_fuction_repartition_resulat.setText(loi_binomiale.Repartition_Function());
 
     }
 

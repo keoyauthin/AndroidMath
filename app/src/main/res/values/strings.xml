@@ -49,7 +49,7 @@
         <string name="statistique_activity_change_value">Voulez vous modifier cette valeur ?</string>
         <string name="statistique_btn_proba_normale">Loi Normale</string>
 
-    <!-- String related to Proba Activity -->
+    <!-- String related to Somme_Proba Activity -->
 
         <string name="proba_activity_title">Probabilités</string>
 

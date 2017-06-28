@@ -12,7 +12,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.imago.mobile.android_maths.R;
-import com.imago.mobile.android_maths.functions.Math_Functions;
+import com.imago.mobile.android_maths.functions.Math_Functions2;
 import com.imago.mobile.android_maths.functions.Math_Utils;
 
 /**
@@ -160,7 +160,7 @@ public class Proba_Loi_Poisson_Fragment extends Fragment {
             editText_kMax.setError(getString(R.string.error_input));
             cancel = true;
         }
-        if(!Math_Functions.Check_Interval(kMin,kMax)){
+        if(!Math_Functions2.Check_Interval(kMin,kMax)){
             editText_kMin.setError(getString(R.string.proba_interval_error));
             editText_kMax.setError(getString(R.string.proba_interval_error));
             cancel = true;
@@ -183,13 +183,13 @@ public class Proba_Loi_Poisson_Fragment extends Fragment {
 
         double fonction_repartition;
 
-        fonction_repartition = Math_Functions.Function_Poisson(lambda,kMax) - Math_Functions.Function_Poisson(lambda,kMin-1);
+        fonction_repartition = Math_Functions2.Function_Poisson(lambda,kMax) - Math_Functions2.Function_Poisson(lambda,kMin-1);
 
         textView_esperance.setText(String.valueOf(lambda));
         textView_variance.setText(String.valueOf(lambda));
-        textView_ecarttype.setText(String.valueOf(Math_Functions.Round_Double(Math_Functions.Ecart_Poisson(lambda),3)));
+        textView_ecarttype.setText(String.valueOf(Math_Functions2.Round_Double(Math_Functions2.Ecart_Poisson(lambda),3)));
 
-        textView_function_Poisson_resulat.setText(String.valueOf(Math_Functions.Round_Double(Math_Functions.function_Poisson(lambda,k),3)));
-        textView_function_repartition_resulat.setText(String.valueOf(Math_Functions.Round_Double(fonction_repartition,3)));
+        textView_function_Poisson_resulat.setText(String.valueOf(Math_Functions2.Round_Double(Math_Functions2.function_Poisson(lambda,k),3)));
+        textView_function_repartition_resulat.setText(String.valueOf(Math_Functions2.Round_Double(fonction_repartition,3)));
     }
 }

@@ -15,7 +15,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.imago.mobile.android_maths.R;
-import com.imago.mobile.android_maths.functions.Math_Functions;
+import com.imago.mobile.android_maths.functions.Math_Functions2;
 import com.imago.mobile.android_maths.functions.Math_Utils;
 
 
@@ -216,10 +216,10 @@ public class Polynome_Second_Ordre_Fragment extends Fragment {
         if(a==0){
             X1 = (a-c) /b;
             //TODO: Ajouter String + paramètres
-            resulat_X1.setText("X1 = " + String.valueOf(Math_Functions.Round_Double(X1,3)));
+            resulat_X1.setText("X1 = " + String.valueOf(Math_Functions2.Round_Double(X1,3)));
         }else
         {
-            delta = Math_Functions.Delta_Second_Ordre(a,b,c);
+            delta = Math_Functions2.Delta_Second_Ordre(a,b,c);
 
             linearLayoutDelta.setVisibility(View.VISIBLE);
 
@@ -227,18 +227,18 @@ public class Polynome_Second_Ordre_Fragment extends Fragment {
             //delta_ope.setText(getString(R.string.polynome_activity_delta_delta_ope), b, a ,c);
 
             delta_resultat.setVisibility(View.VISIBLE);
-            delta_resultat.setText("Delta_Second_Ordre = " + String.valueOf(Math_Functions.Round_Double(delta,3)));
+            delta_resultat.setText("Delta_Second_Ordre = " + String.valueOf(Math_Functions2.Round_Double(delta,3)));
             if(delta == 0){
                 X1 = ((b*-1)+Math.sqrt(delta)) / (2*a);
-                resulat_X1.setText("X1= " + String.valueOf(Math_Functions.Round_Double(X1,3)));
-                factorisation_resultat.setText("P(X) = " + String.valueOf(a) + "( x - " + String.valueOf(Math_Functions.Round_Double(X1,3)) + " )");
+                resulat_X1.setText("X1= " + String.valueOf(Math_Functions2.Round_Double(X1,3)));
+                factorisation_resultat.setText("P(X) = " + String.valueOf(a) + "( x - " + String.valueOf(Math_Functions2.Round_Double(X1,3)) + " )");
             }
             else if (delta > 0){
                 X1 = ((b*-1) + Math.sqrt(delta)) / (2*a);
                 X2 = ((b*-1) - Math.sqrt(delta)) / (2*a);
-                resulat_X1.setText("X1= " + String.valueOf(Math_Functions.Round_Double(X1,3)));
-                resultat_X2.setText("X2= " + String.valueOf(Math_Functions.Round_Double(X2,3)));
-                factorisation_resultat.setText("P(X) = " + String.valueOf(a) + "( x - (" + String.valueOf(Math_Functions.Round_Double(X1,3)) + " ))( x - (" + String.valueOf(Math_Functions.Round_Double(X2,3)) + "))" );
+                resulat_X1.setText("X1= " + String.valueOf(Math_Functions2.Round_Double(X1,3)));
+                resultat_X2.setText("X2= " + String.valueOf(Math_Functions2.Round_Double(X2,3)));
+                factorisation_resultat.setText("P(X) = " + String.valueOf(a) + "( x - (" + String.valueOf(Math_Functions2.Round_Double(X1,3)) + " ))( x - (" + String.valueOf(Math_Functions2.Round_Double(X2,3)) + "))" );
             }
             else if (delta <0){
                 ////Pas de solutions possibles

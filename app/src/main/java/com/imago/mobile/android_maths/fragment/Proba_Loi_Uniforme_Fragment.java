@@ -11,7 +11,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.imago.mobile.android_maths.R;
-import com.imago.mobile.android_maths.functions.Math_Functions;
+import com.imago.mobile.android_maths.functions.Math_Functions2;
 import com.imago.mobile.android_maths.functions.Math_Utils;
 
 /**
@@ -56,7 +56,7 @@ public class Proba_Loi_Uniforme_Fragment extends Fragment {
     btn_continue;
 
     /**
-     * Instantiates a new Proba loi uniforme fragment.
+     * Instantiates a new Somme_Proba loi uniforme fragment.
      */
     public Proba_Loi_Uniforme_Fragment(){
         //Required empty public constructor
@@ -132,9 +132,9 @@ public class Proba_Loi_Uniforme_Fragment extends Fragment {
             variance = (Math.pow(n,2)-1)/12;
             proba = 1/n;
 
-            textView_esperance.setText(String.valueOf(Math_Functions.Round_Double(esperance,3)));
-            textView_variance.setText(String.valueOf(Math_Functions.Round_Double(variance,3)));
-            textView_proba.setText(String.valueOf(Math_Functions.Round_Double(proba,3)));
+            textView_esperance.setText(String.valueOf(Math_Functions2.Round_Double(esperance,3)));
+            textView_variance.setText(String.valueOf(Math_Functions2.Round_Double(variance,3)));
+            textView_proba.setText(String.valueOf(Math_Functions2.Round_Double(proba,3)));
         }
 
     }
@@ -159,7 +159,7 @@ public class Proba_Loi_Uniforme_Fragment extends Fragment {
                 editText_b.setError(getString(R.string.error_input));
             }
         }
-        if (!Math_Functions.Check_Interval(a,b)){
+        if (!Math_Functions2.Check_Interval(a,b)){
             editText_a.setError(getString(R.string.proba_interval_error));
             editText_b.setError(getString(R.string.proba_interval_error));
             cancel = true;
@@ -170,9 +170,9 @@ public class Proba_Loi_Uniforme_Fragment extends Fragment {
             variance = ((Math.pow(b-a,2)-1)/12);
             proba = (1/(b-a));
 
-            textView_esperance.setText(String.valueOf(Math_Functions.Round_Double(esperance,3)));
-            textView_variance.setText(String.valueOf(Math_Functions.Round_Double(variance,3)));
-            textView_proba.setText(String.valueOf(Math_Functions.Round_Double(proba,3)));
+            textView_esperance.setText(String.valueOf(Math_Functions2.Round_Double(esperance,3)));
+            textView_variance.setText(String.valueOf(Math_Functions2.Round_Double(variance,3)));
+            textView_proba.setText(String.valueOf(Math_Functions2.Round_Double(proba,3)));
         }
     }
 }

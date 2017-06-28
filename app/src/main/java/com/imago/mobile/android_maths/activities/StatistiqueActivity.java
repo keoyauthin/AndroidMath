@@ -16,7 +16,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.imago.mobile.android_maths.R;
-import com.imago.mobile.android_maths.functions.Math_Functions;
+import com.imago.mobile.android_maths.functions.Math_Functions2;
 import com.imago.mobile.android_maths.functions.Math_Utils;
 import com.imago.mobile.android_maths.widgets.NavigationDrawer;
 
@@ -227,7 +227,7 @@ public class StatistiqueActivity extends NavigationDrawer {
             Moyenne = Moyenne + Double.parseDouble(numbers_list_string.get(i));
         }
         Moyenne = Moyenne / listView.getCount();
-        textView_moyenne.setText(String.valueOf(Math_Functions.Round_Double(Moyenne,3)));
+        textView_moyenne.setText(String.valueOf(Math_Functions2.Round_Double(Moyenne,3)));
 
         for(int i =0; i < listView.getCount();i++){
             ecarttype = ecarttype + Math.pow((Double.parseDouble(numbers_list_string.get(i)) - Moyenne),2);
@@ -237,7 +237,7 @@ public class StatistiqueActivity extends NavigationDrawer {
         }
 
         ecarttype = Math.sqrt(ecarttype/listView.getCount());
-        textView_ecarttype.setText(String.valueOf(Math_Functions.Round_Double(ecarttype,3)));
+        textView_ecarttype.setText(String.valueOf(Math_Functions2.Round_Double(ecarttype,3)));
 
         number_list_double = To_Double(numbers_list_string);
 
@@ -337,7 +337,7 @@ public class StatistiqueActivity extends NavigationDrawer {
         }else{
             mediane = number_list_double.get(((number_list_double.size()+1)/2)-1);;
         }
-        textView_mediane.setText(String.valueOf(Math_Functions.Round_Double(mediane,3)));
+        textView_mediane.setText(String.valueOf(Math_Functions2.Round_Double(mediane,3)));
 
     }
 

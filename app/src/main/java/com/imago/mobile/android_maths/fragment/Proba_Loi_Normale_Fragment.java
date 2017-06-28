@@ -12,7 +12,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.imago.mobile.android_maths.R;
-import com.imago.mobile.android_maths.functions.Math_Functions;
+import com.imago.mobile.android_maths.functions.Math_Functions2;
 import com.imago.mobile.android_maths.functions.Math_Utils;
 
 /**
@@ -113,23 +113,23 @@ public class Proba_Loi_Normale_Fragment extends Fragment {
             }
         }
 
-        if(!Math_Functions.Check_Interval(kMin,KMax)){
+        if(!Math_Functions2.Check_Interval(kMin,KMax)){
             editText_KMin.setError(getString(R.string.proba_interval_error));
             editText_KMax.setError(getString(R.string.proba_interval_error));
             cancel = true;
         }
 
-        if (cancel!=true && Math_Functions.Check_Interval(kMin,KMax)){
+        if (cancel!=true && Math_Functions2.Check_Interval(kMin,KMax)){
 
             a = (kMin - mu) /sigma;
             b = (KMax - mu) / sigma;
 
-            a = Math_Functions.Round_Double(a,2);
-            b = Math_Functions.Round_Double(b,2);
+            a = Math_Functions2.Round_Double(a,2);
+            b = Math_Functions2.Round_Double(b,2);
 
             double resultat = Function_Normale(b) - Function_Normale(a);
 
-            textView_function_repartition.setText(String.valueOf(Math_Functions.Round_Double(resultat,3)));
+            textView_function_repartition.setText(String.valueOf(Math_Functions2.Round_Double(resultat,3)));
         }
     }
 
