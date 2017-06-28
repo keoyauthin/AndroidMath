@@ -1,4 +1,4 @@
-package com.startup.jinx.android_maths.activities;
+package com.imago.mobile.android_maths.activities;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -12,11 +12,11 @@ import android.widget.FrameLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.startup.jinx.android_maths.R;
-import com.startup.jinx.android_maths.functions.Math_Functions;
-import com.startup.jinx.android_maths.functions.Math_Utils;
-import com.startup.jinx.android_maths.widgets.Dialog_Matrice;
-import com.startup.jinx.android_maths.widgets.NavigationDrawer;
+import com.imago.mobile.android_maths.R;
+import com.imago.mobile.android_maths.functions.Math_Functions;
+import com.imago.mobile.android_maths.functions.Math_Utils;
+import com.imago.mobile.android_maths.widgets.Dialog_Matrice;
+import com.imago.mobile.android_maths.widgets.NavigationDrawer;
 
 /**
  * Created by Mégane Vilain on ${DATE}.

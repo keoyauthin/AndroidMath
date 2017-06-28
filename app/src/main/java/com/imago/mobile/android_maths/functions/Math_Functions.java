@@ -1,4 +1,4 @@
-package com.startup.jinx.android_maths.functions;
+package com.imago.mobile.android_maths.functions;
 
 /**
  * Created by Mégane Vilain on 05/05/2017.

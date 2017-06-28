@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.startup.jinx.android_maths">
+    package="com.imago.mobile.android_maths">
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -8,58 +8,53 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".views.HomeActivity">
+        <activity android:name="com.imago.mobile.android_maths.activities.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".views.PolynomeActivity"
-            android:parentActivityName=".views.HomeActivity"
+            android:name="com.imago.mobile.android_maths.activities.PolynomeActivity"
+            android:parentActivityName="com.imago.mobile.android_maths.activities.HomeActivity"
             android:configChanges="orientation|screenSize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".views.HomeActivity" />
+                android:value="com.imago.mobile.android_maths.activities.HomeActivity" />
         </activity>
 
         <activity
-            android:name=".views.ProbaActivity"
+            android:name="com.imago.mobile.android_maths.activities.ProbaActivity"
             android:configChanges="orientation|screenSize"
-            android:parentActivityName=".views.HomeActivity">
+            android:parentActivityName="com.imago.mobile.android_maths.activities.HomeActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".views.HomeActivity" />
+                android:value="com.imago.mobile.android_maths.activities.HomeActivity" />
         </activity>
 
         <activity
-            android:name=".views.StatistiqueActivity"
+            android:name="com.imago.mobile.android_maths.activities.StatistiqueActivity"
             android:configChanges="orientation|screenSize"
-            android:parentActivityName=".views.HomeActivity">
+            android:parentActivityName="com.imago.mobile.android_maths.activities.HomeActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".views.HomeActivity" />
+                android:value="com.imago.mobile.android_maths.activities.HomeActivity" />
         </activity>
 
         <activity
-            android:name=".views.MatriceActivity"
+            android:name="com.imago.mobile.android_maths.activities.MatriceActivity"
             android:configChanges="orientation|screenSize"
-            android:parentActivityName=".views.HomeActivity">
+            android:parentActivityName="com.imago.mobile.android_maths.activities.HomeActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".views.HomeActivity" />
+                android:value="com.imago.mobile.android_maths.activities.HomeActivity" />
         </activity>
 
         <activity
-            android:name=".widgets.Dialog_Matrice"
+            android:name="com.imago.mobile.android_maths.widgets.Dialog_Matrice"
             android:theme="@android:style/Theme.Holo.Light.Dialog">
         </activity>
 
-        <activity
-            android:name=".widgets.Dialog_Moyenne"
-            android:theme="@android:style/Theme.Holo.Light.Dialog">
-
-        </activity>
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-package com.startup.jinx.android_maths;
+package com.imago.mobile.android_maths;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

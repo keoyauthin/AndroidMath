@@ -1,4 +1,4 @@
-package com.startup.jinx.android_maths.activities;
+package com.imago.mobile.android_maths.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,8 +10,8 @@ import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-import com.startup.jinx.android_maths.R;
-import com.startup.jinx.android_maths.widgets.NavigationDrawer;
+import com.imago.mobile.android_maths.R;
+import com.imago.mobile.android_maths.widgets.NavigationDrawer;
 
 /**
  * Created by Mégane Vilain on ${DATE}.

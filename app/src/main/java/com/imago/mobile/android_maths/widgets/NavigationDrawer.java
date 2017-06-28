@@ -1,4 +1,4 @@
-package com.startup.jinx.android_maths.widgets;
+package com.imago.mobile.android_maths.widgets;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,12 +11,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
-import com.startup.jinx.android_maths.R;
-import com.startup.jinx.android_maths.activities.HomeActivity;
-import com.startup.jinx.android_maths.activities.MatriceActivity;
-import com.startup.jinx.android_maths.activities.PolynomeActivity;
-import com.startup.jinx.android_maths.activities.ProbaActivity;
-import com.startup.jinx.android_maths.activities.StatistiqueActivity;
+import com.imago.mobile.android_maths.R;
+import com.imago.mobile.android_maths.activities.HomeActivity;
+import com.imago.mobile.android_maths.activities.MatriceActivity;
+import com.imago.mobile.android_maths.activities.PolynomeActivity;
+import com.imago.mobile.android_maths.activities.ProbaActivity;
+import com.imago.mobile.android_maths.activities.StatistiqueActivity;
 
 /**
  * Created by Mégane Vilain on 12/04/2017.

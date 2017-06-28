@@ -19,9 +19,6 @@ android {
     }
 }
 
-repositories{
-    maven{url 'https://repository-achartengine.forge.cloudbees.com/snapshot/'}
-}
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
@@ -39,6 +36,5 @@ dependencies {
     compile 'org.jetbrains:annotations-java5:15.0'
     compile 'com.google.code.gson:gson:2.7'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile'org.achartengine:achartengine:1.2.0'
     testCompile 'junit:junit:4.12'
 }

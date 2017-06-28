@@ -1,4 +1,4 @@
-package com.startup.jinx.android_maths.fragment;
+package com.imago.mobile.android_maths.fragment;
 
 import android.support.v4.app.Fragment;
 

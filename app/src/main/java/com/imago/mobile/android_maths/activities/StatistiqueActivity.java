@@ -1,4 +1,4 @@
-package com.startup.jinx.android_maths.activities;
+package com.imago.mobile.android_maths.activities;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -15,10 +15,10 @@ import android.widget.FrameLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.startup.jinx.android_maths.R;
-import com.startup.jinx.android_maths.functions.Math_Functions;
-import com.startup.jinx.android_maths.functions.Math_Utils;
-import com.startup.jinx.android_maths.widgets.NavigationDrawer;
+import com.imago.mobile.android_maths.R;
+import com.imago.mobile.android_maths.functions.Math_Functions;
+import com.imago.mobile.android_maths.functions.Math_Utils;
+import com.imago.mobile.android_maths.widgets.NavigationDrawer;
 
 import java.util.ArrayList;
 import java.util.List;

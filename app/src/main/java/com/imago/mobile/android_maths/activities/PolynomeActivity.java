@@ -1,4 +1,4 @@
-package com.startup.jinx.android_maths.activities;
+package com.imago.mobile.android_maths.activities;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -6,11 +6,11 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.widget.FrameLayout;
 
-import com.startup.jinx.android_maths.R;
-import com.startup.jinx.android_maths.adapter.ViewPagerAdapter;
-import com.startup.jinx.android_maths.fragment.Polynome_Second_Ordre_Fragment;
-import com.startup.jinx.android_maths.fragment.Polynome_Troisieme_Ordre_Fragment;
-import com.startup.jinx.android_maths.widgets.NavigationDrawer;
+import com.imago.mobile.android_maths.R;
+import com.imago.mobile.android_maths.adapter.ViewPagerAdapter;
+import com.imago.mobile.android_maths.fragment.Polynome_Second_Ordre_Fragment;
+import com.imago.mobile.android_maths.fragment.Polynome_Troisieme_Ordre_Fragment;
+import com.imago.mobile.android_maths.widgets.NavigationDrawer;
 
 /**
  * Created by Mégane Vilain on ${DATE}.

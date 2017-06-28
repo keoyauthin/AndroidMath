@@ -1,4 +1,4 @@
-package com.startup.jinx.android_maths.widgets;
+package com.imago.mobile.android_maths.widgets;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
-import com.startup.jinx.android_maths.R;
+import com.imago.mobile.android_maths.R;
 
 /**
  * Created by Mégane Vilain on 14/06/2017.

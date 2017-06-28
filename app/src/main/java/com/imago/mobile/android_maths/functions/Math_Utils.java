@@ -1,4 +1,4 @@
-package com.startup.jinx.android_maths.functions;
+package com.imago.mobile.android_maths.functions;
 
 import android.app.Activity;
 import android.view.inputmethod.InputMethodManager;

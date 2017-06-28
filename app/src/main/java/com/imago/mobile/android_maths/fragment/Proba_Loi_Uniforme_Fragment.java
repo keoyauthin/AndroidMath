@@ -1,4 +1,4 @@
-package com.startup.jinx.android_maths.fragment;
+package com.imago.mobile.android_maths.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -10,9 +10,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.startup.jinx.android_maths.R;
-import com.startup.jinx.android_maths.functions.Math_Functions;
-import com.startup.jinx.android_maths.functions.Math_Utils;
+import com.imago.mobile.android_maths.R;
+import com.imago.mobile.android_maths.functions.Math_Functions;
+import com.imago.mobile.android_maths.functions.Math_Utils;
 
 /**
  * Created by Mégane Vilain on 18/04/2017.

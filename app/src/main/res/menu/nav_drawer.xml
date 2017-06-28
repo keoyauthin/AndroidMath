@@ -6,7 +6,7 @@
         android:checkableBehavior="single"
         android:orderInCategory="0">
         <item
-            android:id="@+id/nav_drawer_grp_default_item_home"
+            android:id="@+id/nav_home"
             android:title="@string/nav_drawer_grp_defaut_home"
             android:icon="@drawable/ic_home_black_24dp"/>
     </group>
@@ -16,23 +16,23 @@
         android:checkableBehavior="single"
         android:orderInCategory="1">
         <item
-            android:id="@+id/nav_drawer_grp_math_item_polynomes"
+            android:id="@+id/nav_polynome"
             android:title="@string/polynome_activity_title"
             android:icon="@drawable/ic_icon_polynome">
         </item>
         <item
-            android:id="@+id/digital_nav_drawer_grp_math_item_stat"
+            android:id="@+id/nav_stat"
             android:title="@string/statistique_activity_title"
             android:icon="@drawable/ic_icon_analytics">
         </item>
         <item
-            android:id="@+id/digital_nav_drawer_grp_math_item_proba"
+            android:id="@+id/nav_proba"
             android:title="@string/proba_activity_title"
             android:icon="@drawable/ic_icon_probability">
         </item>
 
         <item
-            android:id="@+id/digital_nav_drawer_grp_math_item_matrice"
+            android:id="@+id/nav_matrice"
             android:title="@string/matrice_activity_title"
             android:icon="@drawable/ic_icon_matrix">
         </item>

@@ -1,4 +1,4 @@
-package com.startup.jinx.android_maths;
+package com.imago.mobile.android_maths;
 
 import org.junit.Test;
 

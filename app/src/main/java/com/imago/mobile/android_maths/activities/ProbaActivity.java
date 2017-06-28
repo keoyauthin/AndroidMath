@@ -1,22 +1,20 @@
-package com.startup.jinx.android_maths.activities;
+package com.imago.mobile.android_maths.activities;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.widget.FrameLayout;
 
-import com.startup.jinx.android_maths.R;
-import com.startup.jinx.android_maths.adapter.ViewPagerAdapter;
-import com.startup.jinx.android_maths.fragment.Proba_Loi_Binomiale_Fragment;
-import com.startup.jinx.android_maths.fragment.Proba_Loi_Normale_Fragment;
-import com.startup.jinx.android_maths.fragment.Proba_Loi_Poisson_Fragment;
-import com.startup.jinx.android_maths.fragment.Proba_Loi_Uniforme_Fragment;
-import com.startup.jinx.android_maths.fragment.Proba_Test_KHI_Fragment;
-import com.startup.jinx.android_maths.widgets.NavigationDrawer;
+import com.imago.mobile.android_maths.R;
+import com.imago.mobile.android_maths.adapter.ViewPagerAdapter;
+import com.imago.mobile.android_maths.fragment.Proba_Loi_Binomiale_Fragment;
+import com.imago.mobile.android_maths.fragment.Proba_Loi_Normale_Fragment;
+import com.imago.mobile.android_maths.fragment.Proba_Loi_Poisson_Fragment;
+import com.imago.mobile.android_maths.fragment.Proba_Loi_Uniforme_Fragment;
+import com.imago.mobile.android_maths.fragment.Proba_Test_KHI_Fragment;
+import com.imago.mobile.android_maths.widgets.NavigationDrawer;
 
 /**
  * Created by Mégane Vilain on ${DATE}.
