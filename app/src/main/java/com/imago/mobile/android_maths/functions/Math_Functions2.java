@@ -21,39 +21,6 @@ public class Math_Functions2 {
     }
 
     /**
-     * Calcule le factorielle d'un nombre et retourne le résultat.
-     *
-     * @param n nombre
-     * @return Résulat
-     */
-    public static double Factorielle(double n){
-
-        return n <= 1 ? 1 : n * Factorielle(n-1);
-    }
-
-    public static double Ecart_Poisson(double lambda){
-        return  Math.sqrt(lambda);
-    }
-
-    public static double function_Poisson(double lambda, double k){
-        double resultat =0;
-
-        resultat = Math.exp(lambda*-1) * Math.pow(lambda,k) / Factorielle(k);
-
-        return resultat;
-    }
-
-    public static double Function_Poisson(double lambda, double k){
-        double resultat = 0;
-
-        for(int i = 0; i<=k;i++){
-            resultat += function_Poisson(lambda,i);
-        }
-
-        return resultat;
-    }
-
-    /**
      * Vérifie que le minimum de l'interval saisi est inférieur à la valeur maximum.
      *
      * @param kMin the k min

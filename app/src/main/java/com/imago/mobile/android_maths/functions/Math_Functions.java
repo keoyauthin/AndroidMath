@@ -4,7 +4,7 @@ package com.imago.mobile.android_maths.functions;
  * Created by 9405943B on 28/06/2017.
  */
 
-public abstract class Math_Functions {
+ class Math_Functions {
 
     /**
      * Arrondit un nombre et reourne le résulat.

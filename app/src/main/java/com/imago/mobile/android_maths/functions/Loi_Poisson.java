@@ -15,7 +15,7 @@ public class Loi_Poisson extends Loi_Probabilite {
         this.Ecart_type = ecart_type;
         this.Proba = proba;
         this.Repartition_Function = repartition_function;
-        this.LAMBDA=lambda;
+        this.LAMBDA = lambda;
         this.K = k;
         this.KMIN = kMin;
         this.KMAX = kMax;
@@ -31,19 +31,21 @@ public class Loi_Poisson extends Loi_Probabilite {
 
     public String Ecart_type(){
         Ecart_type = Math.sqrt(Variance);
-        //TODO: Vérifier formule
         return  To_String(Round_Double(Ecart_type,3));
     }
 
-    public String Proba(){
-
+    public Double Proba(double k){
+        Proba = Math.exp(LAMBDA*-1) * Math.pow(LAMBDA,k) / Factorielle(k);
+        return Proba;
     }
 
-    public Double Somme_Proba(double k){
-
+    public String Proba(){
+        Proba = Math.exp(LAMBDA*-1) * Math.pow(LAMBDA,K) / Factorielle(K);
+        return To_String(Round_Double(Proba,3));
     }
 
     public String Repartition_Function(){
-
+        Repartition_Function = Somme_Proba(KMAX) - Somme_Proba(KMIN-1);
+        return To_String(Round_Double(Repartition_Function,3));
     }
 }

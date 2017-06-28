@@ -38,17 +38,14 @@ public class Loi_Binomiale extends Loi_Probabilite {
         return To_String(Round_Double(Ecart_type,3));
     }
 
+    public Double Proba(double k){
+        Proba = Factorielle(N) / (Factorielle(k) * Factorielle(N-k)) * Math.pow(P,k) * Math.pow(1-P,N-k);
+        return Proba;
+    }
+
     public String Proba(){
         Proba = Factorielle(N) / (Factorielle(K) * Factorielle(N-K)) * Math.pow(P,K) * Math.pow(1-P,N-K);
         return To_String(Round_Double(Proba,3));
-    }
-
-    public Double Somme_Proba(double k){
-        Repartition_Function = 0;
-        for(double i =0 ; i<=k;i++){
-            Repartition_Function += Factorielle(N) / (Factorielle(i) * Factorielle(N-i)) * Math.pow(P,i) * Math.pow(1-P,N-i);
-        }
-        return Repartition_Function;
     }
 
     public String Repartition_Function(){
