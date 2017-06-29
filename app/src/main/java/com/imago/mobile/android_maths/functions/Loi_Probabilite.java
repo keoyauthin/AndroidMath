@@ -4,7 +4,7 @@ package com.imago.mobile.android_maths.functions;
  * Created by 9405943B on 28/06/2017.
  */
 
-public abstract class Loi_Probabilite extends Math_Functions {
+public abstract class Loi_Probabilite  {
     double esperance, variance, ecart_type,proba, repartition_function;
 
     Loi_Probabilite(){
@@ -42,12 +42,6 @@ public abstract class Loi_Probabilite extends Math_Functions {
 
     String To_String(Double double_value){
         return String.valueOf(double_value);
-    }
-
-    public boolean Check_Interval(double kMin,double kMax){
-
-        return kMin<kMax;
-
     }
 
 }

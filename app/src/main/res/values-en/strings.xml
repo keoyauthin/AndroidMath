@@ -53,4 +53,11 @@
     <string name="statistique_ativity_mode">Mode:</string>
     <string name="statistique_activity_change_value">"Do you want to modify  this value ? "</string>
     <string name="proba_interval_error">The range of the interval is false</string>
+    <string name="proba_uniforme">Uniform distrubition</string>
+    <string name="proba_poisson">Poisson distribution</string>
+    <string name="proba_normale">Normal distribution</string>
+    <string name="proba_normale_KMax_hint" translatable="false"></string>
+    <string name="proba_khi">Chi-squared test</string>
+    <string name="polynome_activity_second_ordre">Quadratic equation</string>
+    <string name="polynome_activity_troisieme_ordre">Cubic equation</string>
 </resources>

@@ -17,7 +17,8 @@
         <activity
             android:name="com.imago.mobile.android_maths.activities.PolynomeActivity"
             android:parentActivityName="com.imago.mobile.android_maths.activities.HomeActivity"
-            android:configChanges="orientation|screenSize">
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="stateHidden">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.imago.mobile.android_maths.activities.HomeActivity" />
@@ -26,7 +27,8 @@
         <activity
             android:name="com.imago.mobile.android_maths.activities.ProbaActivity"
             android:configChanges="orientation|screenSize"
-            android:parentActivityName="com.imago.mobile.android_maths.activities.HomeActivity">
+            android:parentActivityName="com.imago.mobile.android_maths.activities.HomeActivity"
+            android:windowSoftInputMode="stateHidden">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.imago.mobile.android_maths.activities.HomeActivity" />
@@ -35,7 +37,8 @@
         <activity
             android:name="com.imago.mobile.android_maths.activities.StatistiqueActivity"
             android:configChanges="orientation|screenSize"
-            android:parentActivityName="com.imago.mobile.android_maths.activities.HomeActivity">
+            android:parentActivityName="com.imago.mobile.android_maths.activities.HomeActivity"
+            android:windowSoftInputMode="stateHidden">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.imago.mobile.android_maths.activities.HomeActivity" />
@@ -44,7 +47,8 @@
         <activity
             android:name="com.imago.mobile.android_maths.activities.MatriceActivity"
             android:configChanges="orientation|screenSize"
-            android:parentActivityName="com.imago.mobile.android_maths.activities.HomeActivity">
+            android:parentActivityName="com.imago.mobile.android_maths.activities.HomeActivity"
+            android:windowSoftInputMode="stateHidden">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.imago.mobile.android_maths.activities.HomeActivity" />

@@ -18,19 +18,23 @@
 
     <!-- String related to Polynome Activity -->
         <string name="polynome_activity_title">Polynômes</string>
+    
+        <string name="polynome_activity_second_ordre">Second degré</string>
+    
         <string name="polynome_activity_hint_a" translatable="false">a</string>
         <string name="polynome_activity_hint_b" translatable="false">b</string>
         <string name="polynome_activity_hint_c" translatable="false">c</string>
         <string name="polynome_activity_hint_d" translatable="false">d</string>
         <string name="polynome_activity_equation" translatable="false">= 0</string>
-        <string name="polynome_activity_addition" translatable="false">+</string>
-        <string name="polynome_activity_soustraction" translatable="false">-</string>
         <string name="polynome_activity_hint_image_X2" translatable="false">X au carré</string>
         <string name="polynome_activity_hint_image_X" translatable="false">X</string>
-        <string name="polynome_activity_delta_formule" translatable="false">Delta = b²-4ac </string>
+        <string name="polynome_activity_delta_formule" translatable="false">Delta =  b²-4ac </string>
         <string name="polynome_activity_calcul_delta">Calcul du discriminant</string>
-        <string name="polynome_activity_delta_delta_ope" translatable="false">Delta = %1$ x4 x %2$ x %3$</string>
+        <string name="polynome_activity_delta_ope" translatable="false">Delta = %1.3f² - (4 x  %2.3f x %3.3f)</string>
+        <string name="polynome_activity_delta_resultat" translatable="false">Delta = %1.3f</string>
         <string name="polynome_activity_calcul_solutions">Calcul des solutions</string>
+        <string name="polynome_activity_calcul_solutions_X1" translatable="false">X1 = %1.3f</string>
+        <string name="polynome_activity_calcul_solutions_X2" translatable="false">X2 = %1.3f</string>
         <string name="polynome_activity_facorisation">Factorisation</string>
         <string name="polynome_activity_zero_solution">Il n\'existe pas de solutions possibles pour cette équation</string>
 
@@ -38,6 +42,8 @@
             <item>+</item>
             <item>-</item>
         </string-array>
+    
+        <string name="polynome_activity_troisieme_ordre">Troisième ordre</string>
 
     <!-- String related to Statistique Activity -->
     <string name="statistique_activity_title">Séries statistiques</string>
@@ -52,6 +58,12 @@
     <!-- String related to Somme_Proba Activity -->
 
         <string name="proba_activity_title">Probabilités</string>
+    
+        <string name="proba_uniforme">Loi Uniforme</string>
+        <string name="proba_binomiale">Loi Binomiale</string>
+        <string name="proba_poisson">Loi de poisson</string>
+        <string name="proba_normale">Loi Normale</string>
+        <string name="proba_khi">Test de Khi</string>
 
         <string name="proba_esperance">Espérance :</string>
         <string name="proba_variance" translatable="false">Variance :</string>
@@ -59,9 +71,9 @@
         <string name="proba_function" translatable="false">P(X = K) = </string>
         <string name="proba_interval">Sur un intervalle de :</string>
         <string name="proba_fonction_repartition">Foncion de répartition :</string>
+        
 
-
-
+            
             <string name="proba_binomiale_n">Nombre d\'expériences réalisées :</string>
             <string name="proba_binomiale_n_hint" translatable="false">n</string>
             <string name="proba_binomiale_p">Probabilités de succès :</string>
@@ -90,7 +102,7 @@
             <string name="proba_uniforme_n">Nombre de valeurs possible :</string>
             <string name="proba_uniforme_n_hint" translatable="false">n</string>
             <string name="proba_uniforme_a">Valeur minimale de l\'interval :</string>
-            <string name="proba_uniforme_a_hint" translatable="false">b</string>
+            <string name="proba_uniforme_a_hint" translatable="false">a</string>
             <string name="proba_uniforme_b">Valeur maximale de l\'interval : </string>
             <string name="proba_uniforme_b_hint" translatable="false">b</string>
             <string name="proba_uniforme_btn_discrete">Loi discrète</string>

@@ -1,208 +1,214 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
-        android:layout_marginEnd="@dimen/activity_horizontal_margin"
-        android:layout_marginStart="@dimen/activity_horizontal_margin">
-
-
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/polynome_second_ordre_a"
-            android:inputType="numberDecimal|number|numberSigned"
-            android:imeOptions="actionNext"
-            android:hint="@string/polynome_activity_hint_a"
-            android:layout_marginEnd="8dp"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_icon_polynome"
-            android:layout_marginEnd="8dp"
-            android:contentDescription="@string/polynome_activity_hint_image_X2"/>
-        <Spinner
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/polynome_activity_spinner"></Spinner>
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/polynome_second_ordre_b"
-            android:imeOptions="actionNext"
-            android:inputType="numberDecimal|number"
-            android:hint="@string/polynome_activity_hint_b"
-            android:layout_marginEnd="8dp"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_x"
-            android:layout_marginEnd="8dp"
-            android:contentDescription="@string/polynome_activity_hint_image_X" />
-        <Spinner
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/polynome_activity_spinner2"></Spinner>
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/polynome_second_ordre_c"
-            android:imeOptions="actionDone"
-            android:inputType="numberDecimal|numberSigned|number"
-            android:hint="@string/polynome_activity_hint_c"
-            android:layout_marginEnd="8dp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/polynome_activity_equation"
-            android:textAppearance="@style/TextAppearance.AppCompat.Title"
-            android:layout_marginEnd="16dp"/>
-
-    </LinearLayout>
+    android:layout_height="match_parent" >
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
-        android:layout_marginEnd="@dimen/activity_horizontal_margin"
-        android:layout_marginStart="@dimen/activity_horizontal_margin"
-        android:orientation="horizontal">
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/polynome_activity_Calcul_btn"
-            android:text="@string/action_calcul"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:id="@+id/polynome_second_ordre_delta"
-        android:visibility="gone">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/blue_500"
-            android:text="@string/polynome_activity_calcul_delta"
-            android:textColor="@color/white"
-            android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
-
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:layout_marginBottom="@dimen/activity_vertical_margin"
             android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/polynome_second_ordre_a"
+                android:inputType="numberDecimal|number|numberSigned"
+                android:imeOptions="actionNext"
+                android:hint="@string/polynome_activity_hint_a"
+                android:layout_marginEnd="8dp"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_icon_polynome"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="@string/polynome_activity_hint_image_X2"/>
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/polynome_activity_spinner"></Spinner>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/polynome_second_ordre_b"
+                android:imeOptions="actionNext"
+                android:inputType="numberDecimal|number"
+                android:hint="@string/polynome_activity_hint_b"
+                android:layout_marginEnd="8dp"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_x"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="@string/polynome_activity_hint_image_X" />
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/polynome_activity_spinner2"></Spinner>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/polynome_second_ordre_c"
+                android:imeOptions="actionDone"
+                android:inputType="numberDecimal|numberSigned|number"
+                android:hint="@string/polynome_activity_hint_c"
+                android:layout_marginEnd="8dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/polynome_activity_equation"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:layout_marginEnd="16dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
             android:layout_marginStart="@dimen/activity_horizontal_margin"
-            android:background="@color/dark_purple_50"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/polynome_activity_Calcul_btn"
+                android:theme="@style/AppTheme.RaisedButtonCustom"
+                android:text="@string/action_calcul"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/polynome_second_ordre_delta"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/blue_500"
+                android:text="@string/polynome_activity_calcul_delta"
+                android:textColor="@color/white"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:background="@color/dark_purple_50"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/polynome_activity_delta_formule"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/polynome_second_ordre_delta_ope"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/polynome_second_ordre_delta_resultat"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/polynome_second_ordre_resultats"
+            android:visibility="gone"
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/polynome_activity_delta_formule"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+                android:background="@color/blue_500"
+                android:text="@string/polynome_activity_calcul_solutions"
+                android:textColor="@color/white"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
 
-            <TextView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/polynome_second_ordre_delta_ope"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:background="@color/dark_purple_50"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/polynome_second_ordre_resultat_X1"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/polynome_second_ordre_delta_resultat"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/polynome_second_ordre_resultat_X2"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
+            </LinearLayout>
 
         </LinearLayout>
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/polynome_second_ordre_resultats"
-        android:visibility="gone"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/blue_500"
-            android:text="@string/polynome_activity_calcul_solutions"
-            android:textColor="@color/white"
-            android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:layout_marginBottom="@dimen/activity_vertical_margin"
-            android:layout_marginEnd="@dimen/activity_horizontal_margin"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
-            android:background="@color/dark_purple_50"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/polynome_second_ordre_resultat_X1"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/polynome_second_ordre_resultat_X2"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/polynome_second_ordre_factorisation"
-        android:orientation="vertical"
-        android:visibility="gone">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/blue_500"
-            android:text="@string/polynome_activity_facorisation"
-            android:textAppearance="@style/TextAppearance.AppCompat.Title"
-            android:textColor="@color/white"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:layout_marginBottom="@dimen/activity_vertical_margin"
-            android:layout_marginEnd="@dimen/activity_horizontal_margin"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
-            android:background="@color/dark_purple_50">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/polynome_second_ordre_factorisation_resultat"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+            android:id="@+id/polynome_second_ordre_factorisation"
+            android:orientation="vertical"
+            android:visibility="gone">
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/blue_500"
+                android:text="@string/polynome_activity_facorisation"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@color/white"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:background="@color/dark_purple_50">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/polynome_second_ordre_factorisation_resultat"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
+            </LinearLayout>
 
         </LinearLayout>
 
     </LinearLayout>
 
+</ScrollView>
 
-</LinearLayout>
 

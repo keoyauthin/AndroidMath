@@ -16,7 +16,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.imago.mobile.android_maths.R;
-import com.imago.mobile.android_maths.functions.Math_Functions2;
 import com.imago.mobile.android_maths.functions.Math_Utils;
 import com.imago.mobile.android_maths.widgets.NavigationDrawer;
 
@@ -74,10 +73,6 @@ public class StatistiqueActivity extends NavigationDrawer {
      */
     Button btnCalcul;
 
-    /**
-     * Boutton servant à aller sur la vue Loi normale.
-     */
-    Button btnProbaNormale;
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -103,11 +98,15 @@ public class StatistiqueActivity extends NavigationDrawer {
 
         btnAdd = (Button) findViewById(R.id.btnAdd);
         btnCalcul = (Button) findViewById(R.id.btnCalcul);
-        btnProbaNormale = (Button) findViewById(R.id.btn_proba_normale);
 
         numbers_list_string = new ArrayList<String>();
+        number_list_double = new ArrayList<Double>();
 
-        final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, numbers_list_string);
+        listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
+
+        //TODO:Rajouter la suppresion des items selectionnés
+
+        final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_multiple_choice, numbers_list_string);
 
         listView.setAdapter(arrayAdapter);
 
@@ -115,9 +114,8 @@ public class StatistiqueActivity extends NavigationDrawer {
             @Override
             public void onClick(View view) {
                 try{
-                    Double.parseDouble(editText_Number.getText().toString());
+                    number_list_double.add(Double.parseDouble(editText_Number.getText().toString()));
                 }catch (Exception e){
-                    //TODO: Bonne valeur
                     editText_Number.setError(getString(R.string.error_input));
                 }
                 if(editText_Number.getText().toString().equals(""))
@@ -172,7 +170,7 @@ public class StatistiqueActivity extends NavigationDrawer {
             @Override
             public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
                 try{
-                    Double.parseDouble(editText_Number.getText().toString());
+                    number_list_double.add(Double.parseDouble(editText_Number.getText().toString()));
                 }catch (Exception e){
                     //TODO: Bonne valeur
                     editText_Number.setError(getString(R.string.error_input));
@@ -203,14 +201,6 @@ public class StatistiqueActivity extends NavigationDrawer {
             }
         });
 
-        btnProbaNormale.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(StatistiqueActivity.this, ProbaActivity.class);
-                intent.putExtra("ecart-type", textView_ecarttype.getText().toString());
-                startActivity(intent);
-            }
-        });
     }
 
     /**
@@ -218,16 +208,16 @@ public class StatistiqueActivity extends NavigationDrawer {
      */
     public void Calcul(){
 
-        number_list_double = new ArrayList<Double>();
-
         double Moyenne = 0 , ecarttype =0;
-        listView.getCount();
+
+        listView.getCheckedItemIds();
+
 
         for(int i =0; i < listView.getCount();i++){
             Moyenne = Moyenne + Double.parseDouble(numbers_list_string.get(i));
         }
         Moyenne = Moyenne / listView.getCount();
-        textView_moyenne.setText(String.valueOf(Math_Functions2.Round_Double(Moyenne,3)));
+        textView_moyenne.setText(String.valueOf(Math_Utils.Round_Double(Moyenne,3)));
 
         for(int i =0; i < listView.getCount();i++){
             ecarttype = ecarttype + Math.pow((Double.parseDouble(numbers_list_string.get(i)) - Moyenne),2);
@@ -237,7 +227,7 @@ public class StatistiqueActivity extends NavigationDrawer {
         }
 
         ecarttype = Math.sqrt(ecarttype/listView.getCount());
-        textView_ecarttype.setText(String.valueOf(Math_Functions2.Round_Double(ecarttype,3)));
+        textView_ecarttype.setText(String.valueOf(Math_Utils.Round_Double(ecarttype,3)));
 
         number_list_double = To_Double(numbers_list_string);
 
@@ -247,7 +237,6 @@ public class StatistiqueActivity extends NavigationDrawer {
 
         Mode(number_list_double);
 
-        //btnProbaNormale.setVisibility(View.VISIBLE);
 
     }
 
@@ -337,7 +326,7 @@ public class StatistiqueActivity extends NavigationDrawer {
         }else{
             mediane = number_list_double.get(((number_list_double.size()+1)/2)-1);;
         }
-        textView_mediane.setText(String.valueOf(Math_Functions2.Round_Double(mediane,3)));
+        textView_mediane.setText(String.valueOf(Math_Utils.Round_Double(mediane,3)));
 
     }
 

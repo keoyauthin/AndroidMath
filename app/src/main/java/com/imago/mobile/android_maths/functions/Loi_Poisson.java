@@ -22,16 +22,16 @@ public class Loi_Poisson extends Loi_Probabilite {
     }
 
     public String Esperance(){
-        return To_String(Round_Double(Esperance,3));
+        return To_String(Math_Utils.Round_Double(Esperance,3));
     }
 
     public String Variance(){
-        return To_String(Round_Double(Variance,3));
+        return To_String(Math_Utils.Round_Double(Variance,3));
     }
 
     public String Ecart_type(){
         Ecart_type = Math.sqrt(Variance);
-        return  To_String(Round_Double(Ecart_type,3));
+        return  To_String(Math_Utils.Round_Double(Ecart_type,3));
     }
 
     public Double Proba(double k){
@@ -41,11 +41,11 @@ public class Loi_Poisson extends Loi_Probabilite {
 
     public String Proba(){
         Proba = Math.exp(LAMBDA*-1) * Math.pow(LAMBDA,K) / Factorielle(K);
-        return To_String(Round_Double(Proba,3));
+        return To_String(Math_Utils.Round_Double(Proba,3));
     }
 
     public String Repartition_Function(){
         Repartition_Function = Somme_Proba(KMAX) - Somme_Proba(KMIN-1);
-        return To_String(Round_Double(Repartition_Function,3));
+        return To_String(Math_Utils.Round_Double(Repartition_Function,3));
     }
 }

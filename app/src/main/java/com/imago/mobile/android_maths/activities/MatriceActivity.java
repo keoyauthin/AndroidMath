@@ -13,7 +13,6 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.imago.mobile.android_maths.R;
-import com.imago.mobile.android_maths.functions.Math_Functions2;
 import com.imago.mobile.android_maths.functions.Math_Utils;
 import com.imago.mobile.android_maths.widgets.Dialog_Matrice;
 import com.imago.mobile.android_maths.widgets.NavigationDrawer;
@@ -1051,10 +1050,10 @@ public class MatriceActivity extends NavigationDrawer {
         determinant = a*d - b*c;
 
         if(determinant != 0){
-            Matrice_Inverce_editText1.setText(String.valueOf(Math_Functions2.Round_Double(  (1/determinant) * d,2  )));
-            Matrice_Inverce_editText2.setText(String.valueOf(Math_Functions2.Round_Double(  (1/determinant) * (b*-1),2  )));
-            Matrice_Inverce_editText5.setText(String.valueOf(Math_Functions2.Round_Double(  (1/determinant) * (c*-1),2  )));
-            Matrice_Inverce_editText6.setText(String.valueOf(Math_Functions2.Round_Double(  (1/determinant) * a,2  )));
+            Matrice_Inverce_editText1.setText(String.valueOf(Math_Utils.Round_Double(  (1/determinant) * d,2  )));
+            Matrice_Inverce_editText2.setText(String.valueOf(Math_Utils.Round_Double(  (1/determinant) * (b*-1),2  )));
+            Matrice_Inverce_editText5.setText(String.valueOf(Math_Utils.Round_Double(  (1/determinant) * (c*-1),2  )));
+            Matrice_Inverce_editText6.setText(String.valueOf(Math_Utils.Round_Double(  (1/determinant) * a,2  )));
         }else{
             Toast toast = Toast.makeText(getApplicationContext(),getString(R.string.matrice_inverce_determinant_error),Toast.LENGTH_LONG);
             toast.show();
@@ -1077,15 +1076,15 @@ public class MatriceActivity extends NavigationDrawer {
 
         determinant = a * (e*i - f*h) - ( b* (d*i - g*f)) + ( c * (d*h - g*e) ) ;
         if(determinant != 0){
-            Matrice_Inverce_editText1.setText(String.valueOf(Math_Functions2.Round_Double(  (1/determinant)  * (e*i - f*h) ,2)));
-            Matrice_Inverce_editText2.setText(String.valueOf(Math_Functions2.Round_Double(  (1/determinant)  *( (b*i - h*c) *-1) ,2)));
-            Matrice_Inverce_editText3.setText(String.valueOf(Math_Functions2.Round_Double(  (1/determinant)  * (f*b - e*c) ,2)));
-            Matrice_Inverce_editText5.setText(String.valueOf(Math_Functions2.Round_Double(  (1/determinant)  *( (d*i - f*g) *-1) ,2)));
-            Matrice_Inverce_editText6.setText(String.valueOf(Math_Functions2.Round_Double(  (1/determinant)  * (a*i - g*c) ,2)));
-            Matrice_Inverce_editText7.setText(String.valueOf(Math_Functions2.Round_Double(  (1/determinant)  *( (a*f - d*c) *-1)  ,2)));
-            Matrice_Inverce_editText9.setText(String.valueOf(Math_Functions2.Round_Double(  (1/determinant)  * (d*h - g*e) ,2)));
-            Matrice_Inverce_editText10.setText(String.valueOf(Math_Functions2.Round_Double(  (1/determinant)  *( (a*h - g*b) *-1) ,2)));
-            Matrice_Inverce_editText11.setText(String.valueOf(Math_Functions2.Round_Double(  (1/determinant)  * (a*e - b*d) ,2)));
+            Matrice_Inverce_editText1.setText(String.valueOf(Math_Utils.Round_Double(  (1/determinant)  * (e*i - f*h) ,2)));
+            Matrice_Inverce_editText2.setText(String.valueOf(Math_Utils.Round_Double(  (1/determinant)  *( (b*i - h*c) *-1) ,2)));
+            Matrice_Inverce_editText3.setText(String.valueOf(Math_Utils.Round_Double(  (1/determinant)  * (f*b - e*c) ,2)));
+            Matrice_Inverce_editText5.setText(String.valueOf(Math_Utils.Round_Double(  (1/determinant)  *( (d*i - f*g) *-1) ,2)));
+            Matrice_Inverce_editText6.setText(String.valueOf(Math_Utils.Round_Double(  (1/determinant)  * (a*i - g*c) ,2)));
+            Matrice_Inverce_editText7.setText(String.valueOf(Math_Utils.Round_Double(  (1/determinant)  *( (a*f - d*c) *-1)  ,2)));
+            Matrice_Inverce_editText9.setText(String.valueOf(Math_Utils.Round_Double(  (1/determinant)  * (d*h - g*e) ,2)));
+            Matrice_Inverce_editText10.setText(String.valueOf(Math_Utils.Round_Double(  (1/determinant)  *( (a*h - g*b) *-1) ,2)));
+            Matrice_Inverce_editText11.setText(String.valueOf(Math_Utils.Round_Double(  (1/determinant)  * (a*e - b*d) ,2)));
         }else{
             Toast toast = Toast.makeText(getApplicationContext(),getString(R.string.matrice_inverce_determinant_error),Toast.LENGTH_LONG);
             toast.show();

@@ -50,8 +50,8 @@ public class PolynomeActivity extends NavigationDrawer  {
 
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
 
-        adapter.addFragment(new Polynome_Second_Ordre_Fragment(),"Second Ordre");
-        adapter.addFragment(new Polynome_Troisieme_Ordre_Fragment(),"Troisième Ordre");
+        adapter.addFragment(new Polynome_Second_Ordre_Fragment(),getString(R.string.polynome_activity_second_ordre));
+        adapter.addFragment(new Polynome_Troisieme_Ordre_Fragment(),getString(R.string.polynome_activity_troisieme_ordre));
 
         mViewPager.setAdapter(adapter);
     }

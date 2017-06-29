@@ -1,146 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/test"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:layout_marginStart="64dp"
     android:layout_marginEnd="64dp"
+    android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".activities.StatistiqueActivity">
+        <EditText
+            android:id="@+id/editText_Number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:imeOptions="actionDone"
+            android:inputType="numberSigned|numberDecimal"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="32dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginStart="8dp" />
 
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:theme="@style/AppTheme.RaisedButtonCustom"
+            android:text="@string/action_add"
+            android:visibility="visible"
+            app:layout_constraintBaseline_toBaselineOf="@+id/editText_Number"
+            app:layout_constraintLeft_toRightOf="@+id/editText_Number" />
 
-    <EditText
-        android:id="@+id/editText_Number"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:imeOptions="actionDone"
-        android:inputType="numberSigned|numberDecimal"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="32dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginStart="8dp" />
+        <Button
+            android:id="@id/btnCalcul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:theme="@style/AppTheme.RaisedButtonCustom"
+            android:text="@string/action_calcul"
+            android:visibility="visible"
+            app:layout_constraintBaseline_toBaselineOf="@+id/editText_Number"
+            app:layout_constraintLeft_toRightOf="@+id/btnAdd" />
 
-    <Button
-        android:id="@+id/btnAdd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/action_add"
-        app:layout_constraintLeft_toRightOf="@+id/editText_Number"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editText_Number"
-        android:layout_marginStart="8dp" />
+        <TextView
+            android:id="@+id/textView_Moyenne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/statistique_activity_moyenne"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/editText_Number"
+            android:layout_marginStart="8dp"
+            app:layout_constraintLeft_toLeftOf="parent" />
 
-    <Button
-        android:id="@id/btnCalcul"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/action_calcul"
-        android:layout_marginStart="8dp"
-        app:layout_constraintLeft_toRightOf="@+id/btnAdd"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editText_Number"/>
+        <TextView
+            android:id="@+id/textView_Moyenne_Data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            app:layout_constraintLeft_toRightOf="@+id/textView_Moyenne"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView_Moyenne" />
 
-    <TextView
-        android:id="@+id/textView_Moyenne"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/statistique_activity_moyenne"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/editText_Number"
-        android:layout_marginStart="8dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        <TextView
+            android:id="@+id/textView_ecarttype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/statistique_activity_ecarttype"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView_Moyenne"
+            android:layout_marginStart="8dp"
+            app:layout_constraintLeft_toLeftOf="parent" />
 
-    <TextView
-        android:id="@+id/textView_Moyenne_Data"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        app:layout_constraintLeft_toRightOf="@+id/textView_Moyenne"
-        android:layout_marginStart="8dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView_Moyenne" />
+        <TextView
+            android:id="@+id/textView_ecarttype_Data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView_ecarttype"
+            app:layout_constraintLeft_toRightOf="@+id/textView_ecarttype"
+            android:layout_marginStart="8dp" />
 
-    <TextView
-        android:id="@+id/textView_ecarttype"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/statistique_activity_ecarttype"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/textView_Moyenne"
-        android:layout_marginStart="8dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        <TextView
+            android:id="@+id/textView_Mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/statistique_ativity_mode"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView_ecarttype"
+            android:layout_marginStart="8dp"
+            app:layout_constraintLeft_toLeftOf="parent" />
 
-    <TextView
-        android:id="@+id/textView_ecarttype_Data"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView_ecarttype"
-        app:layout_constraintLeft_toRightOf="@+id/textView_ecarttype"
-        android:layout_marginStart="8dp" />
+        <TextView
+            android:id="@+id/textView_Mode_Data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            app:layout_constraintLeft_toRightOf="@+id/textView_Mode"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView_Mode" />
 
-    <TextView
-        android:id="@+id/textView_Mode"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/statistique_ativity_mode"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/textView_ecarttype"
-        android:layout_marginStart="8dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        <TextView
+            android:id="@+id/textView_mediane"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/statistique_activity_mediane"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView_Mode"
+            android:layout_marginStart="8dp"
+            app:layout_constraintLeft_toLeftOf="parent" />
 
-    <TextView
-        android:id="@+id/textView_Mode_Data"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        app:layout_constraintLeft_toRightOf="@+id/textView_Mode"
-        android:layout_marginStart="8dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView_Mode" />
+        <TextView
+            android:id="@+id/textView_mediane_Data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@+id/textView_mediane"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView_mediane" />
 
-    <TextView
-        android:id="@+id/textView_mediane"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/statistique_activity_mediane"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/textView_Mode"
-        android:layout_marginStart="8dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
-
-    <TextView
-        android:id="@+id/textView_mediane_Data"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintLeft_toRightOf="@+id/textView_mediane"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        android:layout_marginStart="8dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView_mediane" />
-
-    <Button
-        android:id="@+id/btn_proba_normale"
-        android:visibility="invisible"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/statistique_btn_proba_normale"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        app:layout_constraintTop_toBottomOf="@+id/textView_mediane"
-        app:layout_constraintLeft_toLeftOf="parent"/>
 
     <ListView
         android:id="@+id/listView"
+        style="@android:style/Widget.Holo.ListView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:visibility="visible"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_proba_normale" />
-
-
+        app:layout_constraintLeft_toRightOf="@+id/btnCalcul"
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+

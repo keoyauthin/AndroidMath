@@ -25,17 +25,17 @@ public class Loi_Binomiale extends Loi_Probabilite {
 
     public String Esperance(){
         Esperance= N * P;
-        return To_String(Round_Double(Esperance,3));
+        return To_String(Math_Utils.Round_Double(Esperance,3));
     }
 
     public String Variance(){
         Variance = Esperance * (1- P);
-        return To_String(Round_Double(Variance,3));
+        return To_String(Math_Utils.Round_Double(Variance,3));
     }
 
     public String Ecart_type(){
         Ecart_type = Math.sqrt(Variance);
-        return To_String(Round_Double(Ecart_type,3));
+        return To_String(Math_Utils.Round_Double(Ecart_type,3));
     }
 
     public Double Proba(double k){
@@ -45,13 +45,13 @@ public class Loi_Binomiale extends Loi_Probabilite {
 
     public String Proba(){
         Proba = Factorielle(N) / (Factorielle(K) * Factorielle(N-K)) * Math.pow(P,K) * Math.pow(1-P,N-K);
-        return To_String(Round_Double(Proba,3));
+        return To_String(Math_Utils.Round_Double(Proba,3));
     }
 
     public String Repartition_Function(){
 
         Repartition_Function = Somme_Proba(KMAX) - Somme_Proba(KMIN-1);
-        return To_String(Round_Double(Repartition_Function,3));
+        return To_String(Math_Utils.Round_Double(Repartition_Function,3));
     }
 
 }

@@ -13,8 +13,6 @@ import android.widget.TextView;
 
 import com.imago.mobile.android_maths.R;
 import com.imago.mobile.android_maths.functions.Loi_Poisson;
-import com.imago.mobile.android_maths.functions.Loi_Probabilite;
-import com.imago.mobile.android_maths.functions.Math_Functions2;
 import com.imago.mobile.android_maths.functions.Math_Utils;
 
 /**
@@ -119,7 +117,6 @@ public class Proba_Loi_Poisson_Fragment extends Fragment {
         });
 
 
-
         return view;
     }
 
@@ -162,7 +159,7 @@ public class Proba_Loi_Poisson_Fragment extends Fragment {
             editText_kMax.setError(getString(R.string.error_input));
             cancel = true;
         }
-        if(!Math_Functions2.Check_Interval(kMin,kMax)){
+        if(kMax <= kMin){
             editText_kMin.setError(getString(R.string.proba_interval_error));
             editText_kMax.setError(getString(R.string.proba_interval_error));
             cancel = true;
@@ -184,8 +181,6 @@ public class Proba_Loi_Poisson_Fragment extends Fragment {
     public void Function_Poisson(double lambda, double k, double kMin, double kMax){
 
         Loi_Poisson loi_poisson = new Loi_Poisson(lambda,k, kMin,kMax);
-
-        //fonction_repartition = Math_Functions2.Function_Poisson(lambda,kMax) - Math_Functions2.Function_Poisson(lambda,kMin-1);
 
         textView_esperance.setText(loi_poisson.Esperance());
         textView_variance.setText(loi_poisson.Variance());

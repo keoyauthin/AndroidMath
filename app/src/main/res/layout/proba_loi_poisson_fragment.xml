@@ -1,203 +1,207 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/textView_lambda"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/proba_poisson_lambda"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="32dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        <TextView
+            android:id="@+id/textView_lambda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/proba_poisson_lambda"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="32dp"
+            app:layout_constraintLeft_toLeftOf="parent" />
 
-    <EditText
-        android:id="@+id/editText_lambda"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="number"
-        android:hint="@string/proba_poisson_lambda_hint"
-        android:imeOptions="actionNext"
-        tools:layout_editor_absoluteY="258dp"
-        app:layout_constraintLeft_toRightOf="@+id/textView_lambda"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView_lambda"
-        android:layout_marginStart="8dp" />
+        <EditText
+            android:id="@+id/editText_lambda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="@string/proba_poisson_lambda_hint"
+            android:imeOptions="actionNext"
+            app:layout_constraintLeft_toRightOf="@+id/textView_lambda"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView_lambda"
+            android:layout_marginStart="8dp" />
 
-    <TextView
-        android:id="@+id/textView_k"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/proba_poisson_k"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/textView_lambda"
-        android:layout_marginStart="32dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        <TextView
+            android:id="@+id/textView_k"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/proba_poisson_k"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView_lambda"
+            android:layout_marginStart="32dp"
+            app:layout_constraintLeft_toLeftOf="parent" />
 
-    <EditText
-        android:id="@+id/editText_k"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="number"
-        android:imeOptions="actionNext"
-        android:hint="@string/proba_poisson_k_hint"
-        tools:layout_editor_absoluteY="205dp"
-        app:layout_constraintLeft_toRightOf="@+id/textView_k"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView_k"
-        android:layout_marginStart="8dp" />
+        <EditText
+            android:id="@+id/editText_k"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:imeOptions="actionNext"
+            android:hint="@string/proba_poisson_k_hint"
+            app:layout_constraintLeft_toRightOf="@+id/textView_k"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView_k"
+            android:layout_marginStart="8dp" />
 
-    <TextView
-        android:id="@+id/textView_interval"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/proba_fonction_repartition"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/textView_k"
-        android:layout_marginStart="32dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        <TextView
+            android:id="@+id/textView_interval"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/proba_fonction_repartition"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView_k"
+            android:layout_marginStart="32dp"
+            app:layout_constraintLeft_toLeftOf="parent" />
 
-    <EditText
-        android:id="@+id/editText_kMin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="@string/proba_poisson_kMin_hint"
-        android:inputType="number|numberDecimal|numberSigned"
-        android:imeOptions="actionNext"
-        app:layout_constraintLeft_toRightOf="@+id/textView_interval"
-        android:layout_marginStart="8dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView_interval" />
+        <EditText
+            android:id="@+id/editText_kMin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/proba_poisson_kMin_hint"
+            android:inputType="number|numberDecimal|numberSigned"
+            android:imeOptions="actionNext"
+            app:layout_constraintLeft_toRightOf="@+id/textView_interval"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView_interval" />
 
-    <EditText
-        android:id="@+id/editText_kMax"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="@string/proba_poisson_KMax_hint"
-        android:inputType="number|numberDecimal|numberSigned"
-        android:imeOptions="actionDone"
-        app:layout_constraintLeft_toRightOf="@+id/editText_kMin"
-        android:layout_marginStart="32dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView_interval" />
+        <EditText
+            android:id="@+id/editText_kMax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/proba_poisson_KMax_hint"
+            android:inputType="number|numberDecimal|numberSigned"
+            android:imeOptions="actionDone"
+            app:layout_constraintLeft_toRightOf="@+id/editText_kMin"
+            android:layout_marginStart="32dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView_interval" />
 
-    <Button
-        android:id="@+id/btnCalcul"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/action_calcul"
-        android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@+id/textView_interval"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        <Button
+            android:id="@+id/btnCalcul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.RaisedButtonCustom"
+            android:text="@string/action_calcul"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView_interval"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent" />
 
-    <TextView
-        android:id="@+id/textView_esperance"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/proba_esperance"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/btnCalcul"
-        android:layout_marginStart="32dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        <TextView
+            android:id="@+id/textView_esperance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/proba_esperance"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/btnCalcul"
+            android:layout_marginStart="32dp"
+            app:layout_constraintLeft_toLeftOf="parent" />
 
-    <TextView
-        android:id="@id/textView_esperance_resultat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        app:layout_constraintLeft_toRightOf="@+id/textView_esperance"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView_esperance"
-        android:layout_marginStart="8dp" />
+        <TextView
+            android:id="@id/textView_esperance_resultat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            app:layout_constraintLeft_toRightOf="@+id/textView_esperance"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView_esperance"
+            android:layout_marginStart="8dp" />
 
-    <TextView
-        android:id="@+id/textView_variance"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/proba_variance"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/textView_esperance"
-        android:layout_marginStart="32dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        <TextView
+            android:id="@+id/textView_variance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/proba_variance"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView_esperance"
+            android:layout_marginStart="32dp"
+            app:layout_constraintLeft_toLeftOf="parent" />
 
-    <TextView
-        android:id="@id/textView_variance_resultat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        app:layout_constraintLeft_toRightOf="@+id/textView_variance"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView_variance"
-        android:layout_marginStart="8dp" />
+        <TextView
+            android:id="@id/textView_variance_resultat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            app:layout_constraintLeft_toRightOf="@+id/textView_variance"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView_variance"
+            android:layout_marginStart="8dp" />
 
-    <TextView
-        android:id="@+id/textView_ecarttype"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/proba_ecart_type"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/textView_variance"
-        android:layout_marginStart="32dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        <TextView
+            android:id="@+id/textView_ecarttype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/proba_ecart_type"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView_variance"
+            android:layout_marginStart="32dp"
+            app:layout_constraintLeft_toLeftOf="parent" />
 
-    <TextView
-        android:id="@id/textView_ecarttype_resultat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        app:layout_constraintLeft_toRightOf="@+id/textView_ecarttype"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView_ecarttype"
-        android:layout_marginStart="8dp" />
+        <TextView
+            android:id="@id/textView_ecarttype_resultat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            app:layout_constraintLeft_toRightOf="@+id/textView_ecarttype"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView_ecarttype"
+            android:layout_marginStart="8dp" />
 
-    <TextView
-        android:id="@+id/textView_function_Binomiale"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/proba_function"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/textView_ecarttype"
-        android:layout_marginStart="32dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        <TextView
+            android:id="@+id/textView_function_Binomiale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/proba_function"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView_ecarttype"
+            android:layout_marginStart="32dp"
+            app:layout_constraintLeft_toLeftOf="parent" />
 
-    <TextView
-        android:id="@id/textView_function_Binomiale_resulat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        app:layout_constraintLeft_toRightOf="@+id/textView_function_Binomiale"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView_function_Binomiale"
-        android:layout_marginStart="8dp" />
+        <TextView
+            android:id="@id/textView_function_Binomiale_resulat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            app:layout_constraintLeft_toRightOf="@+id/textView_function_Binomiale"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView_function_Binomiale"
+            android:layout_marginStart="8dp" />
 
-    <TextView
-        android:id="@+id/textView_function_repartition"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/proba_fonction_repartition"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/textView_function_Binomiale"
-        android:layout_marginStart="32dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        <TextView
+            android:id="@+id/textView_function_repartition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/proba_fonction_repartition"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView_function_Binomiale"
+            android:layout_marginStart="32dp"
+            app:layout_constraintLeft_toLeftOf="parent" />
 
-    <TextView
-        android:id="@id/textView_function_repartition_resulat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        app:layout_constraintLeft_toRightOf="@+id/textView_function_repartition"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView_function_repartition"
-        android:layout_marginStart="8dp" />
+        <TextView
+            android:id="@id/textView_function_repartition_resulat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            app:layout_constraintLeft_toRightOf="@+id/textView_function_repartition"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView_function_repartition"
+            android:layout_marginStart="8dp" />
 
-</android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>

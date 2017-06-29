@@ -12,7 +12,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.imago.mobile.android_maths.R;
-import com.imago.mobile.android_maths.functions.Math_Functions2;
 import com.imago.mobile.android_maths.functions.Math_Utils;
 
 /**
@@ -82,7 +81,7 @@ public class Proba_Loi_Normale_Fragment extends Fragment {
     }
 
     private void Check_Values(){
-        double kMin=0, KMax=0, a , b, sigma=0, mu=0;
+        double kMin=0, kMax =0, a , b, sigma=0, mu=0;
         boolean cancel = false;
 
         try {
@@ -107,29 +106,29 @@ public class Proba_Loi_Normale_Fragment extends Fragment {
         }
         if(cancel!=true){
             try {
-                KMax = Double.parseDouble(editText_KMax.getText().toString());
+                kMax = Double.parseDouble(editText_KMax.getText().toString());
             }catch (Exception e){
                 editText_KMax.setError(getString(R.string.error_input));
             }
         }
 
-        if(!Math_Functions2.Check_Interval(kMin,KMax)){
+        if(kMax <= kMin){
             editText_KMin.setError(getString(R.string.proba_interval_error));
             editText_KMax.setError(getString(R.string.proba_interval_error));
             cancel = true;
         }
 
-        if (cancel!=true && Math_Functions2.Check_Interval(kMin,KMax)){
+        if (cancel!=true){
 
             a = (kMin - mu) /sigma;
-            b = (KMax - mu) / sigma;
+            b = (kMax - mu) / sigma;
 
-            a = Math_Functions2.Round_Double(a,2);
-            b = Math_Functions2.Round_Double(b,2);
+            a = Math_Utils.Round_Double(a,2);
+            b = Math_Utils.Round_Double(b,2);
 
             double resultat = Function_Normale(b) - Function_Normale(a);
 
-            textView_function_repartition.setText(String.valueOf(Math_Functions2.Round_Double(resultat,3)));
+            textView_function_repartition.setText(String.valueOf(Math_Utils.Round_Double(resultat,3)));
         }
     }
 

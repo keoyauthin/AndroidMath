@@ -15,7 +15,6 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.imago.mobile.android_maths.R;
-import com.imago.mobile.android_maths.functions.Math_Functions2;
 import com.imago.mobile.android_maths.functions.Math_Utils;
 
 
@@ -81,6 +80,19 @@ public class Polynome_Second_Ordre_Fragment extends Fragment {
         //Required empty public constructor
     }
 
+    /**
+     * Calcule le discrimant et renvoie le résultat
+     *
+     * @param a  a
+     * @param b  b
+     * @param c  c
+     * @return Résulats
+     */
+    public static double Delta_Second_Ordre(double a, double b, double c){
+
+        return (b*b) - (4*a*c);
+    }
+
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
@@ -114,13 +126,11 @@ public class Polynome_Second_Ordre_Fragment extends Fragment {
         delta_resultat = (TextView) view.findViewById(R.id.polynome_second_ordre_delta_resultat);
         factorisation_resultat = (TextView) view.findViewById(R.id.polynome_second_ordre_factorisation_resultat);
 
-
         linearLayoutDelta = (LinearLayout) view.findViewById(R.id.polynome_second_ordre_delta);
         linearLayoutResultats = (LinearLayout) view.findViewById(R.id.polynome_second_ordre_resultats);
         linearLayoutFactorisation = (LinearLayout) view.findViewById(R.id.polynome_second_ordre_factorisation);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this.getContext(),R.array.signe_operatoire_spinner,android.R.layout.simple_spinner_item);
-
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spinner.setAdapter(adapter);
@@ -143,6 +153,7 @@ public class Polynome_Second_Ordre_Fragment extends Fragment {
                 Check_Values();
             }
         });
+
 
         return  view;
     }
@@ -214,33 +225,39 @@ public class Polynome_Second_Ordre_Fragment extends Fragment {
         linearLayoutFactorisation.setVisibility(View.VISIBLE);
 
         if(a==0){
+
             X1 = (a-c) /b;
-            //TODO: Ajouter String + paramètres
-            resulat_X1.setText("X1 = " + String.valueOf(Math_Functions2.Round_Double(X1,3)));
+            resulat_X1.setText(getString(R.string.polynome_activity_calcul_solutions_X1 ,Math_Utils.Round_Double(X1,3)));
+
         }else
         {
-            delta = Math_Functions2.Delta_Second_Ordre(a,b,c);
+            delta = Delta_Second_Ordre(a,b,c);
 
             linearLayoutDelta.setVisibility(View.VISIBLE);
 
-            delta_ope.setText("Delta_Second_Ordre = " + String.valueOf(b) +"² +  4 x " + String.valueOf(a) + " x " +String.valueOf(c) );
-            //delta_ope.setText(getString(R.string.polynome_activity_delta_delta_ope), b, a ,c);
+            delta_ope.setText(getString(R.string.polynome_activity_delta_ope, a,b,c ));
 
             delta_resultat.setVisibility(View.VISIBLE);
-            delta_resultat.setText("Delta_Second_Ordre = " + String.valueOf(Math_Functions2.Round_Double(delta,3)));
+            delta_resultat.setText(getString(R.string.polynome_activity_delta_resultat ,Math_Utils.Round_Double(delta,3)));
+
             if(delta == 0){
+
                 X1 = ((b*-1)+Math.sqrt(delta)) / (2*a);
-                resulat_X1.setText("X1= " + String.valueOf(Math_Functions2.Round_Double(X1,3)));
-                factorisation_resultat.setText("P(X) = " + String.valueOf(a) + "( x - " + String.valueOf(Math_Functions2.Round_Double(X1,3)) + " )");
+
+                resulat_X1.setText(getString(R.string.polynome_activity_calcul_solutions_X1 ,Math_Utils.Round_Double(X1,3)));
+                factorisation_resultat.setText("P(X) = " + String.valueOf(a) + "( x - " + String.valueOf(Math_Utils.Round_Double(X1,3)) + " )");
             }
             else if (delta > 0){
+
                 X1 = ((b*-1) + Math.sqrt(delta)) / (2*a);
                 X2 = ((b*-1) - Math.sqrt(delta)) / (2*a);
-                resulat_X1.setText("X1= " + String.valueOf(Math_Functions2.Round_Double(X1,3)));
-                resultat_X2.setText("X2= " + String.valueOf(Math_Functions2.Round_Double(X2,3)));
-                factorisation_resultat.setText("P(X) = " + String.valueOf(a) + "( x - (" + String.valueOf(Math_Functions2.Round_Double(X1,3)) + " ))( x - (" + String.valueOf(Math_Functions2.Round_Double(X2,3)) + "))" );
+
+                resulat_X1.setText(getString(R.string.polynome_activity_calcul_solutions_X1 ,Math_Utils.Round_Double(X1,3)));
+                resultat_X2.setText(getString(R.string.polynome_activity_calcul_solutions_X1 ,Math_Utils.Round_Double(X2,3)));
+                factorisation_resultat.setText("P(X) = " + String.valueOf(a) + "( x - (" + String.valueOf(Math_Utils.Round_Double(X1,3)) + " ))( x - (" + String.valueOf(Math_Utils.Round_Double(X2,3)) + "))" );
             }
             else if (delta <0){
+
                 ////Pas de solutions possibles
                 resulat_X1.setText(R.string.polynome_activity_zero_solution);
             }

@@ -25,4 +25,16 @@ public class Math_Utils {
                     (), 0);
         }
     }
+
+    /**
+     * Arrondit un nombre et reourne le résulat.
+     *
+     * @param number  Nombre à arrondir
+     * @param nbapVig Nombres de chiffres après la virgule
+     * @return Résultat
+     */
+    public static double Round_Double(double number, double nbapVig)
+    {
+        return(double)((int)(number * Math.pow(10,nbapVig) + .5)) / Math.pow(10,nbapVig);
+    }
 }

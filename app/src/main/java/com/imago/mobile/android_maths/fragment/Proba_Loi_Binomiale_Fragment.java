@@ -13,8 +13,6 @@ import android.widget.TextView;
 
 import com.imago.mobile.android_maths.R;
 import com.imago.mobile.android_maths.functions.Loi_Binomiale;
-import com.imago.mobile.android_maths.functions.Loi_Poisson;
-import com.imago.mobile.android_maths.functions.Math_Functions2;
 import com.imago.mobile.android_maths.functions.Math_Utils;
 
 /**
@@ -183,7 +181,7 @@ public class Proba_Loi_Binomiale_Fragment extends Fragment {
 
         loi_binomiale = new Loi_Binomiale(n,p,k, kMax, kMin);
 
-        if(!loi_binomiale.Check_Interval(kMin,kMax)){
+        if(kMax <= kMin){
             editText_kMin.setError(getString(R.string.proba_interval_error));
             editText_kMax.setError(getString(R.string.proba_interval_error));
             cancel = true;

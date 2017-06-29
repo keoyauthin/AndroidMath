@@ -1,99 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginTop="64dp"
-    android:layout_marginEnd="32dp"
-    android:layout_marginStart="32dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
-    <include
-        android:id="@+id/matrice1"
-        layout="@layout/matrice"
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="8dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
-
-
-    <include
-        android:id="@+id/matrice2"
-        layout="@layout/matrice"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="32dp"
         android:layout_marginStart="32dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent" />
+        xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <Spinner
-        android:id="@+id/matrice_activity_spinner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:minWidth="100dp"
-        android:orientation="horizontal"
-        android:spinnerMode="dialog"
-        app:layout_constraintBottom_toBottomOf="@id/matrice1"
-        app:layout_constraintEnd_toStartOf="@id/matrice2"
-        app:layout_constraintStart_toEndOf="@id/matrice1"
-        app:layout_constraintTop_toTopOf="@id/matrice1"></Spinner>
-
-    <Button
-        android:id="@+id/btnCalcul"
-        style="@style/Widget.AppCompat.Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/action_calcul"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/matrice1" />
-
-    <include
-        android:id="@+id/matrice3"
-        layout="@layout/matrice"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/btnCalcul"
-        android:visibility="invisible"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"/>
-
-    <Button
-        android:id="@+id/btnInverce"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/matrice_btn_inverce"
-        android:visibility="invisible"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/matrice3"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent" />
-
-    <include
-        android:id="@+id/matrice_inverse"
-        layout="@layout/matrice"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:visibility="invisible"
-        app:layout_constraintTop_toBottomOf="@+id/btnInverce"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"/>
+        <include
+            android:id="@+id/matrice1"
+            layout="@layout/matrice"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintLeft_toLeftOf="parent" />
 
 
-</android.support.constraint.ConstraintLayout>
+        <include
+            android:id="@+id/matrice2"
+            layout="@layout/matrice"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <Spinner
+            android:id="@+id/matrice_activity_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="100dp"
+            android:orientation="horizontal"
+            android:spinnerMode="dialog"
+            app:layout_constraintBottom_toBottomOf="@id/matrice1"
+            app:layout_constraintEnd_toStartOf="@id/matrice2"
+            app:layout_constraintStart_toEndOf="@id/matrice1"
+            app:layout_constraintTop_toTopOf="@id/matrice1"></Spinner>
+
+        <Button
+            android:id="@+id/btnCalcul"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/action_calcul"
+            android:theme="@style/AppTheme.RaisedButtonCustom"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/matrice1" />
+
+        <include
+            android:id="@+id/matrice3"
+            layout="@layout/matrice"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/btnCalcul"
+            android:visibility="invisible"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <Button
+            android:id="@+id/btnInverce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.RaisedButtonCustom"
+            android:text="@string/matrice_btn_inverce"
+            android:visibility="invisible"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/matrice3"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <include
+            android:id="@+id/matrice_inverse"
+            layout="@layout/matrice"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:visibility="invisible"
+            app:layout_constraintTop_toBottomOf="@+id/btnInverce"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

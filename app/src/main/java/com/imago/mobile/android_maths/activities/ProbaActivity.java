@@ -59,11 +59,11 @@ public class ProbaActivity extends NavigationDrawer {
 
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
 
-        adapter.addFragment(new Proba_Loi_Uniforme_Fragment(),"Loi Uniforme");
-        adapter.addFragment(new Proba_Loi_Binomiale_Fragment(),"Loi Binomiale");
-        adapter.addFragment(new Proba_Loi_Poisson_Fragment(),"Loi de Poisson");
-        adapter.addFragment(new Proba_Loi_Normale_Fragment(),"Loi Normale");
-        adapter.addFragment(new Proba_Test_KHI_Fragment(),"Test de KHI");
+        adapter.addFragment(new Proba_Loi_Uniforme_Fragment(),getString(R.string.proba_uniforme));
+        adapter.addFragment(new Proba_Loi_Binomiale_Fragment(),getString(R.string.proba_binomiale));
+        adapter.addFragment(new Proba_Loi_Poisson_Fragment(),getString(R.string.proba_poisson));
+        adapter.addFragment(new Proba_Loi_Normale_Fragment(),getString(R.string.proba_normale));
+        adapter.addFragment(new Proba_Test_KHI_Fragment(),getString(R.string.proba_khi));
 
         mViewPager.setAdapter(adapter);
     }
